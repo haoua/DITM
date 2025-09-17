@@ -14,12 +14,20 @@
 	<li>{SAVEBOX_IMG} {SAVEBOX}</li>
 </ul>
 
-<!----------------------------------------------->
+<!---------------------------------->
 <!-- BARRE DE GESTION -------------->
-<div class="my-5">
+<div class="my-5 flex justify-end">
 	<!-- Bouton: répondre -->
 	<!-- BEGIN switch_post_reply -->
-	<a href="{REPLY_PM_URL}" rel="nofollow" title="{REPLY_PM_IMG}" class="replypm_button buttons">Répondre au message</a>
+	<div class="bg-white w-fit rounded shadow">
+		<a href="{REPLY_PM_URL}" rel="nofollow" title="{REPLY_PM_IMG}" class="newpm_button p-3 text-gradient flex items-center">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mr-1" viewBox="0 0 16 16">
+				<path d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.7 8.7 0 0 0-1.921-.306 7 7 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254l-.042-.028a.147.147 0 0 1 0-.252l.042-.028zM7.8 10.386q.103 0 .223.006c.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96z"/>
+			</svg>
+
+			Répondre au message
+		</a>
+	</div>
 	<!-- END switch_post_reply -->
 </div>
 
@@ -30,16 +38,22 @@
 	<!-- AFFICHAGE DU MESSAGE -------------->
 
 	<!-- Titre -->
-	<div class="title_container rounded mb-3">
-		<h1 class="page-title">{POST_SUBJECT}</h1>
+	<div class="title_container rounded-t flex p-4 gap-2 text-white bg-gradient">
+		<h1 class="text-center uppercase flex-1">{POST_SUBJECT}</h1>
+		
+		<div>
+			<div class="mp-single__sender_img">
+				{AVATAR_FROM}
+			</div>
+			{MESSAGE_FROM}
+		</div>
 	</div>
 
-	<div class="mp-wrapper py-2">
+	<div class="mp-wrapper">
 	<!-- MP container (profil + message) -->
-		<div class="mp-container">
+		<div class="flex gap-2 bg-zinc-200">
 		<!-- Profil de l'expéditeur -->
-			<div class="message_profil text-center rounded p-2">
-
+			<div class="message_profil text-center p-2">
 				<!-- avatar -->
 				{AVATAR_FROM}
 
