@@ -36,23 +36,31 @@
     <div class="bg-zinc-200 rounded p-2">
 
     <!-- Filtrer tous les messsages -->
-        <div class="text-right">
+        <div class="text-right mt-1 mb-3">
             <select name="msgdays">{S_SELECT_MSG_DAYS}</select>&nbsp;
             <input class="button2" type="submit" name="submit_msgdays" value="Filtrer" />
         </div>
 
         <!-- Début d'un message privé -->
         <!-- BEGIN listrow -->
-        <div class="flex bg-white shadow rounded items-center p-3 my-2">
-            <div class="sender_img"></div>
+        <div class="flex bg-white shadow rounded items-center p-3 my-4">
             <!-- Image MP -->
-            <div class="mp_img"><img src="{listrow.PRIVMSG_FOLDER_IMG}" /></div>
+            <div class="mp_img">
+                <img class="h-14" src="{listrow.PRIVMSG_FOLDER_IMG}" />
+            </div>
 
-            <div class="mp_infos">
-                <!-- Titre du MP -->
-                <a href="{listrow.U_READ}" class="topictitle {listrow.MSG_UNANSWERED}">{listrow.SUBJECT}</a><br />
-                <!-- Expéditeur et date -->
-                <div><span class="user_sender">{listrow.FROM}</span> - {listrow.DATE}</div>
+            <div class="sender_img w-14 h-14 bg-cover rounded shadow p-1 bg-zinc-200 mx-3">
+                <div class="w-full h-full border rounded"></div>
+            </div>
+
+
+            <div class="mp_infos flex flex-1">
+                <div class="flex-1">
+                    <!-- Titre du MP -->
+                    <a href="{listrow.U_READ}" class="topictitle {listrow.MSG_UNANSWERED}">{listrow.SUBJECT}</a><br />
+                    <!-- Expéditeur et date -->
+                    <span class="user_sender">{listrow.FROM}</span> - {listrow.DATE}
+                </div>
               
                 <!-- Bouton de sélection -->
                 <input class="right" type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" />
@@ -66,14 +74,18 @@
         <center>{L_NO_MESSAGES}</center>
         <!-- END switch_no_messages -->
 
-      <!-- Capacité de la boîte de réception -->
+        
+        <div class="flex mt-3">
+
+        
+        <!-- Capacité de la boîte de réception -->
             <!-- BEGIN switch_box_size_notice -->
             <span>{BOX_SIZE_STATUS}</span>
             <!-- END switch_box_size_notice -->
       
-        <!-- Tout sélectionner/déselectionner -->
-        <span class="right"><a href="javascript:select_switch_privmsg(true);">{L_MARK_ALL}</a> ou <a href="javascript:select_switch_privmsg(false);">{L_UNMARK_ALL}</a></span>
-        <br />
+            <!-- Tout sélectionner/déselectionner -->
+            <span class="right"><a href="javascript:select_switch_privmsg(true);">{L_MARK_ALL}</a> ou <a href="javascript:select_switch_privmsg(false);">{L_UNMARK_ALL}</a></span>    
+        </div>
     </div>
 
 
@@ -117,51 +129,38 @@
 <!-- Sauter vers un forum -->
 {JUMPBOX}
 
-<br style="clear:both" />
-
 <script type="text/javascript">
+    /* On affiche l'avatar de l'utilisateur qui a envoyé un message  */
     let user_img = [];
     $(".user_sender a[href^=\'/u\']").each(function(){
         let img;
         let uID = $(this).attr('href').substring(2);
         uID = uID.replace("?tt=1", "");
-        if(!user_img[uID]){
-            $.get($(this)[0].href, function (d) {
-                (a = $('#user_avatar img', $(d))).length;
-                console.log(a[0].src);
-                img = a[0].src;
-                user_img[uID] = img;
-            })
-        }
-
-        $('.sender_img').html('<img src="'+user_img[uID]+'">')
-        /*
-        let uID = $(this).attr('href').substring(2);
-        let img;
-        uID = uID.replace("?tt=1", "");
+        console.log('uID = '+uID);
         if(user_img[uID] === undefined){
-            img = $('#user_avatar img', $(this)[0].href).length;
-            user_img[uID] = img;
+            console.log("non");
+            $.get($(this)[0].href, function (d) {
+                (a = $('#user_avatar img', $(d))).length && (user_img = handleUserImage(a[0].src, user_img, uID)) && console.log(user_img);
+            });       
         }else{
-            img = user_img[uID];
+            console.log('oui');
+            handleUserImage(user_img[uID])
         }
-        console.log('image');
-        console.log(img);
-        console.log('image');
-
-        $('.sender_img').html(img)
-
-        console.log($(this)[0].href);
-        console.log(uID);
-        */
     });
-$(function () {
-  try {
-    $.get($('.user_sender a[href^=\'/u\']') [0].href, function (d) {
-      (a = $('#user_avatar img', $(d))).length && $('.sender_img').html(a);
-      console.log(a[0].src);
-    })
-  } catch(e) {}
-});
+
+    $(".mp_img img").each(function(){
+        if($(this).attr("src").indexOf("new") == -1){
+            $(this).parent().parent().find(".sender_img").addClass('grayscale');
+        }
+    });
+
+
+    function handleUserImage(img_url, imgs_array = [], uID = 0){
+        if(uID != 0){
+            imgs_array[uID] = img_url;
+        }
+        $('.sender_img').css('background-image', 'url("'+img_url+'")');
+        return imgs_array;
+    }
 </script>
             

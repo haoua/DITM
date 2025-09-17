@@ -6,6 +6,8 @@ links-bar => my-5
 
 ## Les trucs à checker lors de l'installation
 * Pagination de la liste des membres
+* Pagination des MPs (j'ai rien fait j'avoue)
+* Chargement des petits avatars sur les MPs
 
 ## Notes
 ### Les titres
@@ -15,3 +17,18 @@ links-bar => my-5
 ### Memberlist
 * Ajouter des liens (présentation etc)
 * Afficher utilisateur en ligne
+
+## TO DO TOUT DE SUITE
+* MP
+* Recherche
+* Affichage des catégories
+* QEEL
+* ~~Member List~~
+* Affichage d'un forum
+* Affichage d'un message
+* Modif profil ?
+* PA
+* Infos importante en haut ?
+* Notification
+* Mentions
+* Mentions automatique recherche

@@ -2429,7 +2429,7 @@ vertical-align: middle;
 }
 
 /****** ------------------------------------------------------------------------------ 
-****** MESSAGES PRIVES -------------------------------------------------------------- ******/
+****** MESSAGES PRIVES ------------------------------------------------------- ******/
 
 /*** ------------------------------- ***/
 /*** LISTE DES MPs ----------------- ***/
@@ -2448,13 +2448,8 @@ vertical-align: middle;
 	gap: 5px;
 }
 
-/* Affichage d'un MP dans la liste */
-.mp_row {
-	background: var(--color6);
-	display: grid;
-	grid-template-columns: 55px auto;
-	grid-gap: 10px;
-}
+/* Marge pour l'icon répondu */
+.ion-reply::before {margin-right: 5px;}
 
 /*** ------------------------------- ***/
 /*** AFFICHAGE D'UN MESSAGE PRIVÉ -- ***/
