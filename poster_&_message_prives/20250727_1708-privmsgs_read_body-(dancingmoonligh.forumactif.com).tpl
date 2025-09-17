@@ -16,7 +16,7 @@
 
 <!----------------------------------------------->
 <!-- BARRE DE GESTION -------------->
-<div class="links_bar">
+<div class="my-5">
 	<!-- Bouton: répondre -->
 	<!-- BEGIN switch_post_reply -->
 	<a href="{REPLY_PM_URL}" rel="nofollow" title="{REPLY_PM_IMG}" class="replypm_button buttons">Répondre au message</a>
@@ -26,7 +26,7 @@
 
 
 <form action="{S_PRIVMSGS_ACTION}" method="post">
-	<!----------------------------------------------->
+	<!-------------------------------------->
 	<!-- AFFICHAGE DU MESSAGE -------------->
 
 	<!-- Titre -->
