@@ -87,81 +87,12 @@
 <!-- QUI EST EN LIGNE ---------------------->
 
 <!-- BEGIN disable_viewonline -->
-<div class="flex rounded" style="background: var(--gradient);">
-	<div class="py-2 px-2 flex flex-col gap-4 w-1/3">
-		<!-- Ligne 1 : 2 blocs groupe en ligne -->
-		<div class="flex gap-4">
-			<div class="flex-1 rounded shadow hover:text-white text-center bg-white hover:bg-orange-500 text-orange-500 duration-700 ease-in-out flex items-center justify-center h-[50px]" style="line-height: 50px;">Born of the Sun</div>
-			<div class="flex-1 rounded shadow hover:text-white text-center bg-white hover:bg-blue-500 text-blue-500 duration-700 ease-in-out flex items-center justify-center h-[50px]">Cracked from the Swamp</div>
-		</div>
-
-		<!-- Ligne 2 : Anniversaire -->
-		<div id="birthday_list" class="bg-white rounded shadow w-full p-2 text-center">
-			<span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cake2" viewBox="0 0 16 16" style="display: inline-block;">
-				<path d="m3.494.013-.595.79A.747.747 0 0 0 3 1.814v2.683q-.224.051-.432.107c-.702.187-1.305.418-1.745.696C.408 5.56 0 5.954 0 6.5v7c0 .546.408.94.823 1.201.44.278 1.043.51 1.745.696C3.978 15.773 5.898 16 8 16s4.022-.227 5.432-.603c.701-.187 1.305-.418 1.745-.696.415-.261.823-.655.823-1.201v-7c0-.546-.408-.94-.823-1.201-.44-.278-1.043-.51-1.745-.696A12 12 0 0 0 13 4.496v-2.69a.747.747 0 0 0 .092-1.004l-.598-.79-.595.792A.747.747 0 0 0 12 1.813V4.3a22 22 0 0 0-2-.23V1.806a.747.747 0 0 0 .092-1.004l-.598-.79-.595.792A.747.747 0 0 0 9 1.813v2.204a29 29 0 0 0-2 0V1.806A.747.747 0 0 0 7.092.802l-.598-.79-.595.792A.747.747 0 0 0 6 1.813V4.07c-.71.05-1.383.129-2 .23V1.806A.747.747 0 0 0 4.092.802zm-.668 5.556L3 5.524v.967q.468.111 1 .201V5.315a21 21 0 0 1 2-.242v1.855q.488.036 1 .054V5.018a28 28 0 0 1 2 0v1.964q.512-.018 1-.054V5.073c.72.054 1.393.137 2 .242v1.377q.532-.09 1-.201v-.967l.175.045c.655.175 1.15.374 1.469.575.344.217.356.35.356.356s-.012.139-.356.356c-.319.2-.814.4-1.47.575C11.87 7.78 10.041 8 8 8c-2.04 0-3.87-.221-5.174-.569-.656-.175-1.151-.374-1.47-.575C1.012 6.639 1 6.506 1 6.5s.012-.139.356-.356c.319-.2.814-.4 1.47-.575M15 7.806v1.027l-.68.907a.94.94 0 0 1-1.17.276 1.94 1.94 0 0 0-2.236.363l-.348.348a1 1 0 0 1-1.307.092l-.06-.044a2 2 0 0 0-2.399 0l-.06.044a1 1 0 0 1-1.306-.092l-.35-.35a1.935 1.935 0 0 0-2.233-.362.935.935 0 0 1-1.168-.277L1 8.82V7.806c.42.232.956.428 1.568.591C3.978 8.773 5.898 9 8 9s4.022-.227 5.432-.603c.612-.163 1.149-.36 1.568-.591m0 2.679V13.5c0 .006-.012.139-.356.355-.319.202-.814.401-1.47.576C11.87 14.78 10.041 15 8 15c-2.04 0-3.87-.221-5.174-.569-.656-.175-1.151-.374-1.47-.575-.344-.217-.356-.35-.356-.356v-3.02a1.935 1.935 0 0 0 2.298.43.935.935 0 0 1 1.08.175l.348.349a2 2 0 0 0 2.615.185l.059-.044a1 1 0 0 1 1.2 0l.06.044a2 2 0 0 0 2.613-.185l.348-.348a.94.94 0 0 1 1.082-.175c.781.39 1.718.208 2.297-.426"></path>
-				</svg></span> {L_WHOSBIRTHDAY_TODAY}
-		</div>
-
-		<!-- Ligne 3 : Stats messages -->
-		<div class="w-full text-center">
-			<!-- Total posts : X messages / Total users : X membres -->
-			Il y a <span id="qeel_posts">{TOTAL_POSTS}</span> et <span id="qeel_members">{TOTAL_USERS}</span>
-		</div>
-
-		<!-- Ligne 4 : Connectés -->
-		<div class="bg-white flex-1 rounded shadow p-2 text-justify" id="online_users">
-			{LOGGED_IN_USER_LIST}
-		</div>
-	</div>
-
-	<div class="py-2 px-2 flex flex-col gap-4 w-1/3">
-		<!-- Ligne 1 : 2 blocs groupe en ligne -->
-		<div class="flex gap-4">
-
-			<div class="flex-1 rounded shadow hover:text-white text-center bg-white hover:bg-pink-500 text-pink-500 duration-700 flex items-center justify-center h-[50px]" style="line-height: 50px;">Charmed Strangers</div>
-			<div class="flex-1 rounded shadow text-center bg-white hover:bg-teal-500 text-teal-500 hover:text-white duration-700 flex items-center justify-center h-[50px]">
-				Passing Souls
-			</div>
-		</div>
-
-		<!-- Ligne 2 : Stats users en ligne -->
-		<div class="bg-white rounded shadow p-2 text-justify" id="total_users">
-			{TOTAL_USERS_ONLINE}
-		</div>
-
-		<!-- Ligne 3 :  Dernier inscrit -->
-		<div class="bg-white rounded shadow p-2 flex items-center gap-2 text-center" id="last_user_parent">
-			<div id="1last_user">
-				<span id="lastuser_avatar" style="width:70px;height:70px;margin-right:15px;"></span>
-				<p id="newest_user">
-					<span id="newest_username" class="font-bold text-lg text-white">{NEWEST_USER}</span><br>
-					vient d'arriver
-				</p>
-			</div>
-		</div>
-
-		<!-- Ligne 4 : crédits -->
-		<div class="bg-white rounded shadow p-2 text-sm leading-tight h-full text-justify">
-			<p>Toutes les idées & textes appartiennent à l'entièreté du forum ainsi que de son staff. Toute reproduction est interdite. Merci à toutes les personnes ayant participées : Neikal, Ezae, Prism, Brighty, Ekko, Valar.</p>
-		</div>
-	</div>
-
-	<div class="py-2 px-2 flex flex-col gap-4 w-1/3">
-		<div class="flex-1 h-32 rounded shadow p-2 bg-white text-justify overflow-auto" id="last_connected">
-			{L_CONNECTED_MEMBERS}
-		</div>
-
-		<!-- Ligne 5 : image en bas -->
-		<div class="h-32 rounded shadow overflow-hidden">
-			<img src="https://i.imgur.com/F1qQJsA.jpeg" alt="image bas" class="w-full h-full object-cover" />
-		</div>
-	</div>
-</div>
-
 <div class="bg-zinc-200 shadow my-3 p-2 rounded">
-	<div class="flex">
+	<div class="flex gap-2">
 		<div class="flex-2">
+			<div class="bg-white flex-1 rounded shadow p-2 text-justify" id="online_users">
+				{LOGGED_IN_USER_LIST}
+			</div>
 			<div class="flex">
 				<div class="flex items-center mr-3 uppercase font-sm">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 512 512" class="mr-1"><path d="M293.5 25.08c-19.9 21.16-44 43.18-75.6 51.3 9.6 13.18 16.6 28.02 22.6 40.22 4.7-.8 9.4-1.3 14.2-1.3 1.8 0 3.6.1 5.4.2-4.6-8.7-7.1-17.98-8.3-25.81l-.7-4.73 3.5-3.23c15.3-14.1 36.1-22.27 57.8-30.82-8.1-8.47-14.2-17.16-18.9-25.83zM254.7 133.3c-27.1 0-52.6 18.2-71.9 50.1-19.3 31.9-31.7 76.9-31.7 126.7s12.4 94.8 31.7 126.7c19.3 31.9 44.8 50.1 71.9 50.1 27.1 0 52.6-18.2 71.9-50.1 19.3-31.9 31.7-76.9 31.7-126.7s-12.4-94.8-31.7-126.7c-19.3-31.9-44.8-50.1-71.9-50.1zm-98.5 12.1c-18.1 0-36.8 16-51.2 45.9-14.42 29.8-23.69 72.2-23.69 119.1 0 46.9 9.27 89.3 23.69 119.1 14.4 29.9 33.1 45.9 51.2 45.9 8.3 0 16.8-3.4 24.9-9.9-4.9-6-9.5-12.5-13.7-19.4-21.4-35.3-34.3-83.2-34.3-136s12.9-100.7 34.3-136c4.1-6.8 8.6-13.2 13.4-19-8-6.4-16.4-9.7-24.6-9.7zm205.4 2.4c-9.6 0-19.3 4.5-28.5 13.1 3.1 4.2 6.1 8.6 8.9 13.2 21.4 35.3 34.3 83.2 34.3 136s-12.9 100.7-34.3 136c-3.5 5.8-7.2 11.2-11.2 16.3 9.8 10.1 20.4 15.4 30.8 15.4 18.1 0 36.8-16 51.2-45.9 14.4-29.8 23.7-72.2 23.7-119.1 0-46.9-9.3-89.3-23.7-119.1-14.4-29.9-33.1-45.9-51.2-45.9zm-267.77.9c-17.89 0-36.02 14.8-50.05 42.4-14.02 27.6-23.07 66.8-23.07 110.2 0 43.4 9.05 82.6 23.07 110.2 14.03 27.6 32.16 42.4 50.05 42.4 1.32 0 2.63-.1 3.95-.3-3.22-5-6.23-10.5-9.01-16.3-15.96-33.1-25.46-77.7-25.46-126.9s9.5-93.8 25.46-126.9c5.76-12 12.53-22.6 20.13-31.3-5-2.3-10.06-3.5-15.07-3.5zm324.37 1.5c-3.8 0-7.6.7-11.4 2 8.5 9.1 15.9 20.6 22.2 33.7 16 33.1 25.5 77.7 25.5 126.9S445 406.6 429 439.7c-2.6 5.5-5.5 10.7-8.5 15.6 17.1-1.2 34.3-15.9 47.7-42.3 14.1-27.6 23.1-66.8 23.1-110.2 0-43.4-9-82.6-23.1-110.2-14-27.6-32.1-42.4-50-42.4z"></path></svg>
@@ -192,7 +123,7 @@
 		</div>
 	</div>
 	<div class="w-full">
-		<span id="DITM_last_user">{NEWEST_USER}</span>, bienvenue à la Nouvelle-Orléans !
+		<span id="newest_user">{NEWEST_USER}</span>, bienvenue à la Nouvelle-Orléans !
 		<span id="lastuser_avatar" style="width:70px;height:70px;margin-right:15px;"></span>
 	</div>
 </div>
@@ -202,27 +133,38 @@
 
 <!-- Changement de texte des informations du QEEL -->
 <script type="text/javascript">
-	$("#last_user").html($("#last_user").html().replace("L'utilisateur enregistré le plus récent est", ""));
-	$("#DITM_last_user").html($("#DITM_last_user").html().replace("L'utilisateur enregistré le plus récent est", ""));
+	/* $("#last_user").html($("#last_user").html().replace("L'utilisateur enregistré le plus récent est", "")); */
+	console.log("HAOUA");
+	console.log("HAOUA");
+	console.log("HAOUA");
+	console.log("HAOUA");
+	console.log("HAOUA");
+	console.log("HAOUA");
+	console.log("HAOUA");
+	console.log("HAOUA");
+	$("#newest_user").html($("#newest_user").html().replace("L'utilisateur enregistré le plus récent est", ""));
 
-	$("#qeel_posts").html($("#qeel_posts").html().replace("Nos membres ont posté un total de", ""));
+	/*
+
+	$("#qeel_posts").html($("#qeel_posts").html().replace("Nos membres ont posté un total de", "")); */
 	$("#DITM_qeel_posts").html($("#DITM_qeel_posts").html().replace("Nos membres ont posté un total de", ""));
-
+/*
 	$("#qeel_members").html($("#qeel_members").html().replace("Nous avons", ""));
 	$("#qeel_members").html($("#qeel_members").html().replace("enregistrés", ""));
-
+*/
 	$("#DITM_qeel_members").html($("#DITM_qeel_members").html().replace("Nous avons", ""));
 	$("#DITM_qeel_members").html($("#DITM_qeel_members").html().replace("enregistrés", ""));
 	$("#DITM_qeel_members").html($("#DITM_qeel_members").html().replace("enregistré", ""));
+	/*
 
 	$("#total_users").html($("#total_users").html().replace("Il y a en tout", ""));
 	$("#total_users").html($("#total_users").html().replace("utilisateur en ligne", "connecté"));
 	$("#total_users").html($("#total_users").html().replace("utilisateurs en ligne", "connectés"));
-
+*/
 	$("#DITM_qeel_online").html($("#DITM_qeel_online").html().replace("Il y a en tout", ""));
 	$("#DITM_qeel_online").html($("#DITM_qeel_online").html().replace("utilisateur en ligne", "connecté"));
 	$("#DITM_qeel_online").html($("#DITM_qeel_online").html().replace("utilisateurs en ligne", "connectés"));
-
+/*
 	$("#online_users").html($("#online_users").html().replace("Utilisateurs enregistrés", "En ligne"));
 	$("#DITM_qeel_online").html($("#DITM_qeel_online").html().substring(1, $("#DITM_qeel_online").html().indexOf('::')-1));
 
@@ -231,7 +173,7 @@
 	$("#birthday_list").html($("#birthday_list").html().replace("Membres fêtant leur anniversaire aujourd'hui :", ""));
 	$("#DITM_birthday_list").html($("#DITM_birthday_list").html().replace("Membres fêtant leur anniversaire aujourd'hui :", ""));
 	$("#DITM_birthday_list").html($("#DITM_birthday_list").html().replace("Aucun membre ne fête son anniversaire aujourd'hui", "Pas d'anniversaire"));
-
+*/
 </script>
 
 

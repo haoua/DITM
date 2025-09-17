@@ -1513,7 +1513,7 @@ a.groups:last-child {
 
 /* QEEL DITM */
 #newest_username a span{color:#fff!important;}
-#birthday_list br{display:none;} 
+#DITM_birthday_list br, #birthday_list br{display:none;} 
 #last_connected{
 	max-height: 10.5rem;
 }
