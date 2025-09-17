@@ -2,6 +2,7 @@
 
 ## Modification
 page-title => DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2
+links-bar => my-5
 
 ## Les trucs à checker lors de l'installation
 * Pagination de la liste des membres

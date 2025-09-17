@@ -19,19 +19,21 @@
 <!-- Début des interactions par MP -->
 <form action="{S_PRIVMSGS_ACTION}" method="post" name="privmsg_list">
 
-    <!----------------------------------------------->
+    <!---------------------------------->
     <!-- BARRE DE GESTION -------------->
-    <div class="links_bar">
+    <div class="my-5">
         <!-- Bouton "nouveau" -->
-        <a href="/privmsg?mode=post" class="newpm_button buttons">Nouveau message privé</a>
+        <div class="bg-white w-fit rounded shadow">
+            <a href="/privmsg?mode=post" class="newpm_button p-3 text-gradient">Nouveau message privé</a>
+        </div>
     </div>
 
 
-    <!----------------------------------------------->
+    <!------------------------------->
     <!-- LISTE DES MPs -------------->
 
     <!-- Conteneur-->
-    <div class="container rounded p-2">
+    <div class="bg-zinc-200 rounded p-2">
 
     <!-- Filtrer tous les messsages -->
         <div class="text-right">
@@ -41,8 +43,8 @@
 
         <!-- Début d'un message privé -->
         <!-- BEGIN listrow -->
-        <div class="mp_row rounded items-center p-3 my-2">
-
+        <div class="flex bg-white shadow rounded items-center p-3 my-2">
+            <div class="sender_img"></div>
             <!-- Image MP -->
             <div class="mp_img"><img src="{listrow.PRIVMSG_FOLDER_IMG}" /></div>
 
@@ -50,7 +52,7 @@
                 <!-- Titre du MP -->
                 <a href="{listrow.U_READ}" class="topictitle {listrow.MSG_UNANSWERED}">{listrow.SUBJECT}</a><br />
                 <!-- Expéditeur et date -->
-                <span>{listrow.FROM} - {listrow.DATE}</span>
+                <div><span class="user_sender">{listrow.FROM}</span> - {listrow.DATE}</div>
               
                 <!-- Bouton de sélection -->
                 <input class="right" type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" />
@@ -117,4 +119,49 @@
 
 <br style="clear:both" />
 
+<script type="text/javascript">
+    let user_img = [];
+    $(".user_sender a[href^=\'/u\']").each(function(){
+        let img;
+        let uID = $(this).attr('href').substring(2);
+        uID = uID.replace("?tt=1", "");
+        if(!user_img[uID]){
+            $.get($(this)[0].href, function (d) {
+                (a = $('#user_avatar img', $(d))).length;
+                console.log(a[0].src);
+                img = a[0].src;
+                user_img[uID] = img;
+            })
+        }
+
+        $('.sender_img').html('<img src="'+user_img[uID]+'">')
+        /*
+        let uID = $(this).attr('href').substring(2);
+        let img;
+        uID = uID.replace("?tt=1", "");
+        if(user_img[uID] === undefined){
+            img = $('#user_avatar img', $(this)[0].href).length;
+            user_img[uID] = img;
+        }else{
+            img = user_img[uID];
+        }
+        console.log('image');
+        console.log(img);
+        console.log('image');
+
+        $('.sender_img').html(img)
+
+        console.log($(this)[0].href);
+        console.log(uID);
+        */
+    });
+$(function () {
+  try {
+    $.get($('.user_sender a[href^=\'/u\']') [0].href, function (d) {
+      (a = $('#user_avatar img', $(d))).length && $('.sender_img').html(a);
+      console.log(a[0].src);
+    })
+  } catch(e) {}
+});
+</script>
             
