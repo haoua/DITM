@@ -37,38 +37,29 @@
 	<!-------------------------------------->
 	<!-- AFFICHAGE DU MESSAGE -------------->
 
-	<!-- Titre -->
-	<div class="title_container rounded-t flex p-4 gap-2 text-white bg-gradient">
-		<h1 class="text-center uppercase flex-1">{POST_SUBJECT}</h1>
-		
-		<div>
-			<div class="mp-single__sender_img">
-				{AVATAR_FROM}
-			</div>
-			{MESSAGE_FROM}
-		</div>
-	</div>
-
-	<div class="mp-wrapper">
-	<!-- MP container (profil + message) -->
-		<div class="flex gap-2 bg-zinc-200">
-		<!-- Profil de l'expéditeur -->
-			<div class="message_profil text-center p-2">
-				<!-- avatar -->
-				{AVATAR_FROM}
-
-				<!-- pseudo -->
-				<div class="message_from rounded mt-3">
-					{MESSAGE_FROM}
-					<!-- BEGIN switch_user_contact -->
-					{PROFILE_IMG}
-					<!-- END switch_user_contact -->
+	<div class="shadow">
+		<!-- Titre -->
+		<div class="title_container rounded-t p-4 text-white bg-gradient">
+			<div class="flex gap-2">
+				<div class="mp-single__sender_img">
+					{AVATAR_FROM}
 				</div>
+
+				<div>
+					{MESSAGE_FROM} <br>
+					{POST_DATE}
+				</div>
+
+				<h1 class="text-right uppercase flex-1">{POST_SUBJECT}</h1>
 			</div>
+		</div>
+
+		<div class="mp-wrapper">
+		<!-- MP container (profil + message) -->
 			
-			<div class="container p-2 rounded">
+			<div class="p-2 rounded-b bg-zinc-200">
 				<!-- Conteneur des informations du message -->
-				<div class="message_infos">
+				<div class="hidden message_infos">
 
 					<!-- De XX à XX, date -->
 					<span>{L_FROM} {MESSAGE_FROM} {L_TO} {MESSAGE_TO}, {POST_DATE}</span>
@@ -99,23 +90,23 @@
 			</div>
 			<!-- Fin du conteneur message -->
 		</div>
-	  
-		<!----------------------------------------------->
-		<!-- BOUTONS DE GESTION -------------->
-		<br/>
-		<fieldset class="submit-buttons">
-			{S_HIDDEN_FIELDS}
-			<!-- BEGIN switch_save -->
-			<input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" />&nbsp;&nbsp;
-			<!-- END switch_save -->
-
-			<!-- BEGIN switch_move_profile -->
-			<input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" />&nbsp;&nbsp;
-			<!-- END switch_move_profile -->
-
-			<input class="button2" type="submit" name="delete" value="{L_DELETE_MSG}" />
-		</fieldset>
 	</div>
+		
+	<!------------------------------------>
+	<!-- BOUTONS DE GESTION -------------->
+	<fieldset class="submit-buttons">
+		{S_HIDDEN_FIELDS}
+		<!-- BEGIN switch_save -->
+		<input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" />&nbsp;&nbsp;
+		<!-- END switch_save -->
+
+		<!-- BEGIN switch_move_profile -->
+		<input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" />&nbsp;&nbsp;
+		<!-- END switch_move_profile -->
+
+		<input class="button2" type="submit" name="delete" value="{L_DELETE_MSG}" />
+	</fieldset>
+	
 
 	<!-- Fin de l'affichage du message -->
 </form>
