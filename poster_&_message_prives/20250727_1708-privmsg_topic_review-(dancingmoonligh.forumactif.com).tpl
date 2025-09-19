@@ -1,4 +1,4 @@
-<div class="bg_gradient rounded shadow p-2 my-3">
+<div class="bg-zinc-200 rounded shadow p-2 my-3">
   
     <!-- BEGIN switch_inline_mode -->
     <h2>{L_TOPIC_REVIEW}</h2>

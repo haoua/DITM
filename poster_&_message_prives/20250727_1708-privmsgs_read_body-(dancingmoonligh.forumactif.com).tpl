@@ -14,12 +14,30 @@
 	<li>{SAVEBOX_IMG} {SAVEBOX}</li>
 </ul>
 
-<!----------------------------------------------->
+<!---------------------------------->
 <!-- BARRE DE GESTION -------------->
-<div class="my-5">
+<div class="my-5 flex justify-end">
 	<!-- Bouton: répondre -->
 	<!-- BEGIN switch_post_reply -->
-	<a href="{REPLY_PM_URL}" rel="nofollow" title="{REPLY_PM_IMG}" class="replypm_button buttons">Répondre au message</a>
+	<div class="bg-white w-fit rounded shadow">
+		<a href="{REPLY_PM_URL}" rel="nofollow" title="{REPLY_PM_IMG}" class="newpm_button p-3 text-gradient flex items-center">
+			<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="mr-1 text-one" viewBox="0 0 16 16">
+				<path d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.7 8.7 0 0 0-1.921-.306 7 7 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254l-.042-.028a.147.147 0 0 1 0-.252l.042-.028zM7.8 10.386q.103 0 .223.006c.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96z"/>
+			</svg>
+
+			Répondre au message
+		</a>
+	</div>
+
+	<div class="bg-gradient w-fit rounded shadow ml-2">
+		<a href="{REPLY_PM_URL}" rel="nofollow" title="{REPLY_PM_IMG}" class="newpm_button p-3 text-white flex items-center">
+			<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="mr-1" viewBox="0 0 16 16">
+				<path d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.7 8.7 0 0 0-1.921-.306 7 7 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254l-.042-.028a.147.147 0 0 1 0-.252l.042-.028zM7.8 10.386q.103 0 .223.006c.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96z"/>
+			</svg>
+
+			Répondre au message
+		</a>
+	</div>
 	<!-- END switch_post_reply -->
 </div>
 
@@ -29,32 +47,30 @@
 	<!-------------------------------------->
 	<!-- AFFICHAGE DU MESSAGE -------------->
 
-	<!-- Titre -->
-	<div class="title_container rounded mb-3">
-		<h1 class="page-title">{POST_SUBJECT}</h1>
-	</div>
-
-	<div class="mp-wrapper py-2">
-	<!-- MP container (profil + message) -->
-		<div class="mp-container">
-		<!-- Profil de l'expéditeur -->
-			<div class="message_profil text-center rounded p-2">
-
-				<!-- avatar -->
-				{AVATAR_FROM}
-
-				<!-- pseudo -->
-				<div class="message_from rounded mt-3">
-					{MESSAGE_FROM}
-					<!-- BEGIN switch_user_contact -->
-					{PROFILE_IMG}
-					<!-- END switch_user_contact -->
+	<div class="shadow mb-5">
+		<!-- Titre -->
+		<div class="title_container rounded-t p-4 text-white bg-gradient">
+			<div class="flex gap-2">
+				<div class="mp-single__sender_img relative">
+					{AVATAR_FROM}
+					<div class="absolute border rounded-full top-0 m-1 w-12 h-12"></div>
 				</div>
+
+				<div>
+					{MESSAGE_FROM} <br>
+					{POST_DATE}
+				</div>
+
+				<h1 class="text-right uppercase flex-1">{POST_SUBJECT}</h1>
 			</div>
+		</div>
+
+		<div class="mp-wrapper">
+		<!-- MP container (profil + message) -->
 			
-			<div class="container p-2 rounded">
+			<div class="p-2 rounded-b bg-zinc-200">
 				<!-- Conteneur des informations du message -->
-				<div class="message_infos">
+				<div class="hidden message_infos">
 
 					<!-- De XX à XX, date -->
 					<span>{L_FROM} {MESSAGE_FROM} {L_TO} {MESSAGE_TO}, {POST_DATE}</span>
@@ -85,23 +101,23 @@
 			</div>
 			<!-- Fin du conteneur message -->
 		</div>
-	  
-		<!----------------------------------------------->
-		<!-- BOUTONS DE GESTION -------------->
-		<br/>
-		<fieldset class="submit-buttons">
-			{S_HIDDEN_FIELDS}
-			<!-- BEGIN switch_save -->
-			<input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" />&nbsp;&nbsp;
-			<!-- END switch_save -->
-
-			<!-- BEGIN switch_move_profile -->
-			<input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" />&nbsp;&nbsp;
-			<!-- END switch_move_profile -->
-
-			<input class="button2" type="submit" name="delete" value="{L_DELETE_MSG}" />
-		</fieldset>
 	</div>
+		
+	<!------------------------------------>
+	<!-- BOUTONS DE GESTION -------------->
+	<fieldset class="submit-buttons">
+		{S_HIDDEN_FIELDS}
+		<!-- BEGIN switch_save -->
+		<input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" />&nbsp;&nbsp;
+		<!-- END switch_save -->
+
+		<!-- BEGIN switch_move_profile -->
+		<input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" />&nbsp;&nbsp;
+		<!-- END switch_move_profile -->
+
+		<input class="button2" type="submit" name="delete" value="{L_DELETE_MSG}" />
+	</fieldset>
+	
 
 	<!-- Fin de l'affichage du message -->
 </form>
