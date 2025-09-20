@@ -1,4 +1,4 @@
-<!----------------------------------------------->
+<!---------------------------------->
 <!-- BARRE DE GESTION -------------->
 
 <div class="links_bar">
@@ -23,7 +23,7 @@
 </div>
 
 
-<!----------------------------------------------->
+<!---------------------------->
 <!-- CATEGORIES -------------->
 
 <!-- Conteneur d'une catégorie -->
@@ -41,99 +41,64 @@
 
 
     <!-- Conteneur liste des forums -->
-    <div class="forums rounded bg-zinc-200 p-3">
+    <div class="forums rounded bg-zinc-200 p-3 mb-5 shadow">
 
 	<!-- END tablehead -->
 
         <!-- BEGIN forumrow -->
         <!-- Affichage d'un forum -->
-        <div class="forum row {catrow.forumrow.FOLDER_CLASSNAME} mb-5 bg-white rounded">
+        <div class="forum row {catrow.forumrow.FOLDER_CLASSNAME} bg-white rounded">
             <!-- Titre forum -->
-			<div class="DITM_forum-container flex flex-col rounded shadow mb-3 p-3 gap-3 bg-no-repeat bg-right" style="background-image: url('{catrow.forumrow.FORUM_FOLDER_IMG}');background-color: rgba(255,255,255,0.8);background-blend-mode: lighten;background-position:730px center;">
-                
-				<div class="forum_details flex items-center justify-between">
-					<div class="forumtitle bg-zinc-100 rounded shadow">
-						<a href="{catrow.forumrow.U_VIEWFORUM}" class="bg-gradient text-white uppercase rounded px-5 py-1">{catrow.forumrow.FORUM_NAME}</a>
-					</div>
-					<!-- Compteur sujets et message -->
-					<span class="forum_stats">{catrow.forumrow.TOPICS}&nbsp;{L_TOPICS}&nbsp; • &nbsp;{catrow.forumrow.POSTS}&nbsp;{L_POSTS}</span>
-				</div>
+			<div class="DITM_forum-container flex flex-col rounded shadow mb-1 p-3 gap-3 bg-no-repeat bg-right" style="background-image: url('{catrow.forumrow.FORUM_FOLDER_IMG}');background-color: rgba(255,255,255,0.8);background-blend-mode: lighten;background-position:730px center;">
 
 				<div class="flex">
-					<div class="forum_avatar lastpostavatar rounded">
+					<div class="forum_avatar lastpostavatar rounded bg-gradient">
 						<!-- Avatar du dernier posteur -->
 						<!-- BEGIN avatar -->
 						{catrow.forumrow.avatar.LAST_POST_AVATAR}
 						<!-- END avatar -->
 					</div>
-					<div class="px-2" style="flex:9;max-height: 100px;">
+					<div class="px-2" style="flex:9;">
 						<div class="flex items-center gap-1 mb-1">
-							<!-- Titre du dernier message -->
-							<!-- BEGIN switch_topic_title -->
-							<a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}" class="lastpost_link">
-								{catrow.forumrow.LATEST_TOPIC_NAME}
-							</a>
-							<!-- END switch_topic_title -->
-
-							<!-- Date et auteur -->      
-							{catrow.forumrow.USER_LAST_POST}
+							<!-- Titre forum -->
+							<a href="{catrow.forumrow.U_VIEWFORUM}" class="bg-gradient text-white uppercase rounded px-5 py-1">{catrow.forumrow.FORUM_NAME}</a>
+							<a href="{catrow.forumrow.U_VIEWFORUM}" class="font-yeseva text-gradient font-normal text-2xl">{catrow.forumrow.FORUM_NAME}</a>
+							
 						</div>
 
-						<div class="text-justify">{catrow.forumrow.FORUM_DESC}</div>
+						<div class="text-justify overflow-auto pr-2" style="max-height: 67px;">{catrow.forumrow.FORUM_DESC}</div>
 					</div>
-					<div class="flex flex-col hide-decoration" style="flex:3;">
-						{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
-					</div>
-				</div>
+					<div class="">
+						<div class="flex gap-3 justify-around">
+							<!-- Compteur sujets et message -->
+							<div class="flex items-center">
+								<span class="text-one font-yeseva text-2xl mr-1">{catrow.forumrow.TOPICS}</span> <span class="uppercase text-xs">{L_TOPICS}</span>
+							</div>
 
-				<div>
-					{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
-				</div>
-				
-    		<div class="forum_section hidden">
-      
-              	<!-- image de description -->
-              	<div class="img_area overflow-auto rounded">                
-              		<!-- Liens de sous-forum -->
-                	<span id="subforum">{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</span>
-            	</div>
-              
-          		<!-- Description -->
-                <div class="forum_desc text-justify rounded p-2 overflow-auto">{catrow.forumrow.FORUM_DESC}</div>
-              
-                <div class="forum_avatar lastpostavatar">
-                    <!-- Avatar du dernier posteur -->
-                    <!-- BEGIN avatar -->
-                    {catrow.forumrow.avatar.LAST_POST_AVATAR}
-                    <!-- END avatar -->
-                </div>
-              
-				<!-- Conteneur du du dernier message -->
-				<div class="forum_lastpost lastpost p-2 rounded">
-  					<div class="forum_lastpost_a">
-    					<span>
+							<div class="flex items-center">
+								<span class="text-two font-yeseva text-2xl mr-1">{catrow.forumrow.POSTS}</span> <span class="uppercase text-xs">{L_POSTS}</span>
+							</div>
+						</div>
+						<div>
 							<!-- Titre du dernier message -->
 							<!-- BEGIN switch_topic_title -->
 							<a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}" class="lastpost_link">
 								{catrow.forumrow.LATEST_TOPIC_NAME}
-							</a><br />
-      						<!-- END switch_topic_title -->
+							</a><br>
+							<!-- END switch_topic_title -->
 
-							<!-- Date et auteur -->      
+							 <!-- Date et auteur -->      
 							{catrow.forumrow.USER_LAST_POST}
-						</span>
+						</div>
 					</div>
 				</div>
-      
-				
-      			<div class=" hidden forum-img">
-	                <!-- Statut du forum : sans réponse, nouvelle réponse, vérouillé -->
-	                <img class="forum-img" src="{catrow.forumrow.FORUM_FOLDER_IMG}" />
-          		</div>
-       		</div>
+			</div>				
     	</div>
+
+		<div class="bg-white rounded shadow mb-5 p-3 uppercase">
+			{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
+		</div>
 		<!-- Fin affichage d'un forum -->
-	</div>
     <!-- END forumrow -->
 
 <!-- BEGIN tablefoot -->

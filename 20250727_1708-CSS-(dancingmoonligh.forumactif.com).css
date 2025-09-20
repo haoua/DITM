@@ -1362,13 +1362,11 @@ a.mainmenu img {
 .forum_avatar {
 	width: 100px;
 	height: 100px;
-	background-color: var(--color6);
 }
 
 .forum_avatar img {
 	width: 100px;
 	height: 100px;
-	background: var(--color5);
 	object-fit: cover;
 	object-position: center;
 	border-radius: .25rem;

@@ -50,7 +50,7 @@
 	<div class="shadow mb-5">
 		<!-- Titre -->
 		<div class="title_container rounded-t p-4 text-white bg-gradient">
-			<div class="flex gap-2">
+			<div class="flex gap-2 items-center">
 				<div class="mp-single__sender_img relative">
 					{AVATAR_FROM}
 					<div class="absolute border rounded-full top-0 m-1 w-12 h-12"></div>
