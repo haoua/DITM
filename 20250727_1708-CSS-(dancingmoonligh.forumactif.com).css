@@ -542,20 +542,22 @@ select:focus-visible {
 /*** EDITEUR DE TEXTE -------------- ***/
 /* Editeur de texte */
 .sceditor-container {
-	border: var(--border) !important;
+	font-weight: normal;
+	border: none!important;
 	background-color: var(--neutral) !important;
 }
 
 /* Barre d'outils de l'éditeur de texte*/
 div.sceditor-toolbar {
-	background: var(--neutral) !important;
-	border-bottom: var(--border) !important;
+	background: var(--gra) !important;
+	border-bottom: none!important;
+	padding: 7px 0;
 }
 
 /* Conteneur des groupes d'outils */
 div.sceditor-group {
-	background: var(--neutralDark) !important;
-	border-bottom: var(--border) !important;
+	background: white !important;
+	border-bottom: none !important;
 }
 
 /* Bouton d'un outil */
@@ -574,7 +576,6 @@ a.sceditor-button {
 	background: var(--neutral) !important;
 	box-shadow: none !important;
 	border: none !important;
-	outline: 1px solid var(--neutralDarker);
 }
 
 /* Conteneur de la zone de texte */
@@ -752,7 +753,7 @@ a.specials_links:empty {
 	border-radius: 5px;
 	align-items: center;
 	display: flex;
-	text-align: center;
+	/* text-align: center; */
 	justify-content: flex-end;
 	padding: 14px;
 }
@@ -785,7 +786,7 @@ a.specials_links:empty {
 	border-radius: 5px;
 }
 
-ul#fa_menulist, ul#notif_list {
+ul#fa_menulist {
 	border: var(--color6);
 	background:var(--back);
 	border-radius: 5px;
@@ -797,16 +798,29 @@ ul#fa_menulist, ul#notif_list {
 	display: none;
 }
 
-ul#notif_list .contentText.ellipsis {
-	font-size: var(--size4) !important;
-	background: var(--color6) !important;
+ul#notif_list {
+	top: 61px;
+	z-index: 999;
+	position: absolute;
+	display: none;
+	border-radius: 0.25rem; /* rounded */
+
+	/* bg-zinc-200 */
+	--tw-bg-opacity: 1;
+	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1));
 }
 
-#notif_list a {
-	background: var(--color6);
-	color: var(--accentClr) !important;
-	margin-right: 0px;
-	font-weight: bolder;
+ul#notif_list .contentText.ellipsis {
+	font-size: var(--size4) !important;
+	margin-right: 1.25rem;
+}
+
+#notif_list a{
+	color: initial!important;
+}
+
+#notif_list .unread a {
+	color: rgb(var(--one)) !important;
 }
 
 ul#notif_list .delete {
@@ -878,7 +892,7 @@ li.fa_separator {
 
 /*--- LISTE DES NOTIFICATIONS ---*/
 #notif_list {
-	width: 380px;
+	width: 420px;
 	padding: 5px;
 	flex-direction: column-reverse;
 }
@@ -893,12 +907,14 @@ li.fa_separator {
 	border-top: none
 }
 
-#notif_list .unread{ 
-	background: var(--bg5);
-	font-weight: bold;
+#notif_list .unread {
+	border-radius: 0.25rem;
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
-
 
 #fa_toolbar #fa_right #notif_list li a.delete {
 	position: absolute;
@@ -916,12 +932,28 @@ li.fa_separator {
 }
 
 #notif_list .see_all {
-	background: -webkit-linear-gradient(45deg, var(--color1), var(--color2));
-	border-radius: 5px;
-	margin-top: 5px;
+	background: var(--gra);
+	border-radius: 0.25rem;
+	margin-top: 0.25rem;
 	order: -1;
-	display: flex;
-	justify-content: center;
+	text-align:center;
+	text-transform: uppercase;
+
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#notif_list .see_all a {
+	color: #fff!important;
+}
+
+#notif_list .see_all:hover{
+	background: white;
+}
+
+#notif_list .see_all:hover a{
+	color: rgb(var(--two))!important;
 }
 
 #fa_toolbar #live_notif {
@@ -930,10 +962,6 @@ li.fa_separator {
 	right: 0px !important;
 }
 
-.see_all a {
-	background: transparent!important;
-	color: #fff!important
-}
 
 #fa_toolbar #live_notif .fa_notification {
 	border-radius: 5px;
@@ -1285,38 +1313,12 @@ a.mainmenu img {
 /* PAGE D'ACCUEIL ---*/
 .introduction {}
 
+
 /*** ------------------------------- ***/
 /*** CATEGORIES -------------------- ***/
-
-.category {
-	border-radius: 10px;
-	padding: 10px;
-}
-
 /* Titre d'une catégorie */
-.cate_title {
-	background-image: var(--gradient);
-}
-
 .cate_title_a {
-	text-decoration: none;
-	font: "monsterrat", sans-serif;
-	font-size: 14px;
-	text-transform: uppercase;
-	color: var(--colortitre);
-}
-
-/* conteneur d'un forum*/
-.forum-container {
-	background-image: var(--gradient);
-}
-
-.forum_section {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	gap: 10px;
+	font-size: 18px;
 }
 
 .forum:last-child {
@@ -1327,35 +1329,6 @@ a.mainmenu img {
 .forumtitle_a {
 	color: var(--color6);
 	background: var(--color5);  
-}
-
-.img_area {
-	width: 200px;
-	height: 100px;
-	background-color: var(--color6);
-}
-
-/*image statut du forum */
-.forum-img {
-	width: 50px;
-	height: 100px;
-	background-color: var(--color6);
-	border-radius: 3px;
-	object-fit: cover;
-}
-/*description du forum*/
-.forum_desc {
-	height: 100px;
-	width: 280px;
-	background-color: var(--color6);
-
-	/* Scroll invisible */
-	scrollbar-width: none;         /* Firefox */
-	-ms-overflow-style: none;      /* IE 10+ */
-}
-
-.forum_desc::-webkit-scrollbar, #subforum::-webkit-scrollbar {
-	display: none;
 }
 
 /*conteneur avatar du dernier posteur*/
@@ -1372,30 +1345,11 @@ a.mainmenu img {
 	border-radius: .25rem;
 }
 
-/* dernier message*/
-.forum_lastpost {
-	width: 180px;
-	height: 100px;
-	background-color: var(--color6);
+/* dernier message */
+.forum-row__last_post_infos img{
+	display: initial;
 }
 
-.forum_lastpost_a {
-	display: inline;
-	text-decoration: none;
-	font-size: 13px;
-	text-transform: none;
-}
-
-.lastpost-wrapper {
-	display: inline-flex;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-top: 20px;
-}
-
-.forum_details {
-	border-bottom: 1px solid var(--color6);
-}
 
 /* liens des sous forums */
 .hide-decoration{font-size: 0;}
@@ -1603,9 +1557,20 @@ a.groups:last-child {
 	align-items: center;
 }
 
-
 .topicslist_row:last-child {
 	margin-bottom: 0;
+}
+
+.forum-row__sublinks{
+	font-size: 0;
+	width: 160px;
+	height: 100px;
+}
+
+.forum-row__sublinks a{
+	display: block;
+	font-size: 0.75rem;
+	line-height: 1rem;
 }
 
 /* Image du sujet */
@@ -1623,6 +1588,11 @@ a.groups:last-child {
 	background: var(--color6);
 	padding: 10px;
 	border-radius: 3px;
+}
+
+.last-post-icon img{
+	display: inline;
+	margin-left: 0.25rem; /* .ml-1 */
 }
 
 /*titre du sujet*/
@@ -1873,9 +1843,9 @@ button.rep-button .rep-nb {
 	border-radius: 3px;
 }
 
-	.DITM_post_profile {
-		max-width: 220px;
-	}
+.DITM_post_profile {
+	max-width: 220px;
+}
 
 .post_avatar img {
 	width: 200px;
@@ -1999,16 +1969,46 @@ a.fa-mention {
 }
 
 /* REPONSE RAPIDE --- */
-/*supression de la mention "réponse rapide" */
-.quickreply div.h3 {
+/*supression de la mention "réponse rapide" + saut de ligne */
+.quickreply div.h3, .quickreply br {
 	display: none;
 }
 
-/*centrer la réponse rapide*/
-.quickreply {
+#quickreply_content #textarea_content {
+	border-radius: 0.25rem;
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.quickreply textarea{
+	border-bottom-right-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+}
+
+/* Gestion des boutons */
+#quick_reply > div:nth-child(2) {
 	display: flex;
-	justify-content: center;
-	padding: 10px;
+	gap: 0.25rem; /* gap-2 */
+}
+
+#quick_reply > div:nth-child(2) .button2{
+	flex: 1;
+	border-radius: 0.25rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	background: white;
+	color: rgb(var(--one));
+}
+
+#quick_reply > div:nth-child(2) .button2:last-of-type {
+ 	background: var(--gra);
+	color: white;
 }
 
 /* Retire le cadre de la réponse rapide pour les invités */
@@ -2168,8 +2168,6 @@ border-radius: 0.25rem;
 
 /*** ----------------------------
 *** PAGE DE PROFIL -------- ***/
-
-
 .profile_content {
 height: 265px;
 overflow: auto;
@@ -2265,25 +2263,25 @@ margin-right: 5px;
 
 /* Bouton édition d'un champ de profil */
 .ajax-profil_edit {
-cursor: pointer;
-position: absolute;
-top: 0;
-left: 0px;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0px;
 }
 
 /* Bouton édition d'un champ de profil */
 .ajax-profil_edit {
-cursor: pointer;
-position: absolute;
-top: 0;
-left: -15px;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: -15px;
 }
 
 /* Bouton validation des modifications */
 .ajax-profil_valid {
-cursor: pointer;
-margin-left: 4px;
-vertical-align: middle;
+	cursor: pointer;
+	margin-left: 4px;
+	vertical-align: middle;
 }
 
 /*** ------------------------------- ***/
@@ -2522,38 +2520,32 @@ vertical-align: middle;
 
 /*** ------------------------------- ***/
 /*** EDITION DE PROFIL ------------- ***/
-
 /* Onglets dans la modification de profil */
 #tabs ul {
 	font-size: 12px;
 	display: flex;
 	justify-content: space-between;
-	margin: 20px 0 10px;
+	margin-bottom: 1.25rem;
 }
 
-/*onglet*/
-#tabs li {
-	padding: 5px 2px;
-	border: 1px solid var(--color5);
-	border-radius: 5px;
+#tabs li a {
+	border-radius: 0.25rem;
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 }
 
-/* Onglet selectionné */
-#tabs li.activetab {
-	background: var(--neutralDark);
-	border: var(--border);
-	border-radius: 5px;
+/* Onglet actif + survol */
+#tabs li.activetab a, #tabs li:hover a {
+	background: var(--gra);
+	color: white;
 }
 
-/* onglet au survol */
-#tabs li:hover {
-	background: var(--neutralDark);
-	border-radius: 5px;
-	border: var(--border);
-}
-
-/* Suppression de l'onglet "amis et ignorés" */
-div#tabs li:nth-child(5) {
+/* Suppression de l'onglet "amis et ignorés" / Membres suivis / Favoris */
+#tabs li:nth-child(4), #tabs li:nth-child(5), #tabs li:nth-child(8) {
 	display: none;
 }
 
@@ -2588,6 +2580,32 @@ div#tabs li:nth-child(5) {
 .panel.row2.sig {
 	text-align: center;
 	margin-top: 10px;
+}
+
+.profile_field_list{
+	display: flex;
+}
+
+.profile_field_list li{
+	margin-right: 0.75rem;
+}
+
+#profile-edit__main dt{
+	min-width: 250px;
+}
+
+#profile-edit__main dd{
+	width: 100%;
+}
+
+#profile-edit__main input:not([type='reset']) {
+	border-radius: 0.25rem;
+	--tw-bg-opacity: 1;
+	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1));
+}
+
+#profile-edit__main input:not([type='checkbox']):not([type='submit']):not([type='reset']) {    
+	width: 100%;
 }
 
 /*** ------------------------------- ***/
@@ -2952,7 +2970,7 @@ text-align: right;
 
 /*** ------------------------------- ***/
 /*** SURCHARGE TAILWINDCSS --------- ***/
-img{display:initial;}
+img{display:initial}
 /* .bg-white{background:var(--whiteBG);} */
 .container{
 	max-width: 100%!important;

@@ -27,7 +27,7 @@ buttons =>
 ## TO DO TOUT DE SUITE
 * MP
 * Recherche
-* Affichage des catégories
+* ~~Affichage des catégories~~
 * QEEL
 * ~~Member List~~
 * Affichage d'un forum
@@ -38,3 +38,4 @@ buttons =>
 * Notification
 * Mentions
 * Mentions automatique recherche
+* Sous forums ?!

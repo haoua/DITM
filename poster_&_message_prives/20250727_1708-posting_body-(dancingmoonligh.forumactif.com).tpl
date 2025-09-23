@@ -312,8 +312,8 @@
 <!-- SAUTER VERS UN FORUM -------------->
 
 <!-- BEGIN switch_jumpbox -->
-<form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false}">
-    <p class="right">{L_JUMP_TO}:&nbsp;{S_JUMPBOX_SELECT}&nbsp;<input class="button2" type="submit" value="{L_GO}" /></p>
+<form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false}" class="text-right">
+    {L_JUMP_TO}:&nbsp;{S_JUMPBOX_SELECT}&nbsp;<input class="button2" type="submit" value="{L_GO}" />
 </form>
 <!-- END switch_jumpbox -->
 

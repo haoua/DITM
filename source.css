@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    #notif_list .unread{
+        @apply rounded bg-white shadow;
+    }
+
+    ul#notif_list .contentText.ellipsis {
+        @apply mr-3;
+    }
+
+    #tabs ul{
+        @apply mb-5;
+    }
+
+    #tabs ul a{
+        @apply bg-white rounded px-2 py-1;
+    }
+
+    #profile-edit__main input{
+        @apply rounded bg-zinc-200 w-full;
+    }
+
+    #quickreply_content #textarea_content{
+        @apply bg-white rounded shadow;
+    }
+
+    #quick_reply > div:nth-child(2) .button2{
+        @apply rounded shadow px-2 py-1;
+    }
+}

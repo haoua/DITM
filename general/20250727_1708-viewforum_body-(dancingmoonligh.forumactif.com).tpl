@@ -7,28 +7,18 @@
 <!----------------------------------------------->
 <!-- LIEN DE NAVIGATION -------------->
 
-<div class="flex gap-2 items-center">
-    <div class="navigation_links rounded p-2 flex-1">
+<div class="navigation_links">
 
-        <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
-        <div class="navigation_chain">
-            {NAV_CAT_DESC}
-        </div>
+    <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
+    <span class="navigation_chain">
+        {NAV_CAT_DESC}
+    </span>
 
-        <!-- Pagination -->
-        <span class="right pagination page-topic">
-            {PAGINATION}
-        </span>
-        
+    <!-- Pagination -->
+    <span class="right pagination page-topic">
+        {PAGINATION}
+    </span>
 
-    </div>
-
-    <div class="flex-0">
-        <!-- Boutons : nouveau, répondre, verrouillé -->
-        <!-- BEGIN switch_user_authpost -->
-        <a class="p-2 rounded" style="background-color: var(--color5);" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">Nouveau sujet</a>
-        <!-- END switch_user_authpost -->
-    </div>
 </div>
 
 
