@@ -447,7 +447,11 @@ a:hover {
 /* TITRES DES PAGES --- ***/
 
 /* Utilisé pour des titres de pages */
-h1,
+h1{
+	font-size: var(--title-size)!important;
+	font-weight: 700;
+}
+
 h1.page-title {
 	color: #fff;
 	font-size: var(--title-size);
