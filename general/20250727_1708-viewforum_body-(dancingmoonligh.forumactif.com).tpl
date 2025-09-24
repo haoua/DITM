@@ -2,17 +2,15 @@
 {BOARD_INDEX}
 <br />
 
-
-
 <!----------------------------------------------->
-<!-- LIEN DE NAVIGATION -------------->
+<!-- LIEN DE NAVIGATION ------------------------->
 
-<div class="navigation_links">
+<div class="bg-gradient text-white rounded p-2">
 
     <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
-    <span class="navigation_chain">
+    <div class="navigation_chain">
         {NAV_CAT_DESC}
-    </span>
+    </div>
 
     <!-- Pagination -->
     <span class="right pagination page-topic">
@@ -23,9 +21,9 @@
 
 
 <!----------------------------------------------->
-<!-- BARRE DE GESTION -------------->
+<!-- BARRE DE GESTION --------------------------->
 
-<div class="links_bar">
+<div class="my-5">
 
     <!-- Boutons : nouveau, répondre, verrouillé -->
     <!-- BEGIN switch_user_authpost -->
@@ -43,24 +41,22 @@
 
 
 <!----------------------------------------------->
-<!-- LISTE DES SUJETS -------------->
+<!-- LISTE DES SUJETS --------------------------->
 <!--(template: topics_list_box) -->
 
-    <!-- Titre liste des sujets -->
+<!-- Titre liste des sujets -->
 
-    <!-- Description du forum -->
-    <!-- BEGIN switch_forum_desc -->
-    <div class="forum-page_desc hidden">
-        {SINGLE_FORUM_DESC}
-    </div>
-    <!-- END switch_forum_desc -->
+<!-- Description du forum -->
+<!-- BEGIN switch_forum_desc -->
+<div class="forum-page_desc hidden">
+    {SINGLE_FORUM_DESC}
+</div>
+<!-- END switch_forum_desc -->
 
-<div class="container-forum">
-
+<div class="bg-zinc-200 rounded p-2">
     <!-- Liste des sujets -->
     {TOPICS_LIST_BOX}
 </div>
-
 
 
 
@@ -91,9 +87,9 @@
 
 
 <!----------------------------------------------->
-<!-- BARRE DE GESTION -------------->
+<!-- BARRE DE GESTION --------------------------->
 
-<div class="links_bar">
+<div class="my-5">
 
     <!-- Bouton : nouveau -->
     <!-- BEGIN switch_user_authpost -->
@@ -112,10 +108,10 @@
 
 
 <!-- Conteneur : utilisateurs et pagination -->
-<div class="navigation_links">
+<div class="bg-gradient text-white rounded p-2">
 
     <!-- Utilisateurs parcourant ce forum -->
-    <span id="users_here">
+    <span id="users_here hidden">
         {LOGGED_IN_USER_LIST}
     </span>
     <!-- Modification de la phrase "utilisateur parcourant ce forum" -->
@@ -140,7 +136,7 @@
 
 
 <!----------------------------------------------->
-<!-- SAUTER VERS UN FORUM -------------->
+<!-- SAUTER VERS UN FORUM ----------------------->
 
 <div class="right">
     <form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox"
@@ -155,7 +151,7 @@
 
 
 <!----------------------------------------------->
-<!-- LIENS UTILES -------------->
+<!-- LIENS UTILES ------------------------------->
 
 <a href="{U_EGOSEARCH_JS_PLUS_MENU}">Voir ses messages</a><br />
 <a href="{U_NEWPOSTS_JS_PLUS_MENU}">Nouveaux messages depuis la dernière visite</a><br />
@@ -164,7 +160,7 @@
 <br /><br />
 
 <!----------------------------------------------->
-<!-- OUTILS DE MODERATION ------------>
+<!-- OUTILS DE MODERATION ----------------------->
 <div id="moderation_forum_tools">
     {S_AUTH_LIST}
 </div>

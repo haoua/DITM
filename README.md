@@ -2,7 +2,9 @@
 
 ## Modification
 page-title => DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2
+
 links-bar => my-5
+
 buttons =>         
 ```
 <div class="bg-white w-fit rounded shadow">
@@ -25,6 +27,8 @@ buttons =>
 * Afficher utilisateur en ligne
 ### Optimisation
 * CSS avec compilation tailwind 
+### Nouveau message
+* Points / Nombre de mots
 
 ## TO DO TOUT DE SUITE
 * MP
@@ -41,3 +45,12 @@ buttons =>
 * Mentions
 * Mentions automatique recherche
 * Sous forums ?!
+* Barre de navigation
+* Message Admin
+* Pré lien
+* Présentation
+* Poster un nouveau message : 
+    * Prévisualisation
+    * Vérifier le poste d'un nouveau sujet
+    * Titre du message + description pour les messages à supprimer
+    * Smiley fond gris ?

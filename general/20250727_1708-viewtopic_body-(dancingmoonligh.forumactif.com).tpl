@@ -310,9 +310,9 @@
 <!-------------------------------->
 <!-- REPONSE RAPIDE -------------->
 
-<div class="container quickreply" id="quickreply_content">
+<div class="bg-zinc-200 rounded shadow quickreply p-2" id="quickreply_content">
     <!-- BEGIN switch_user_logged_in -->
-    {QUICK_REPLY_FORM}
+        {QUICK_REPLY_FORM}
     <!-- END switch_user_logged_in -->
 </div>
 

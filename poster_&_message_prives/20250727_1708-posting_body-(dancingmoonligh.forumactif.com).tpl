@@ -305,14 +305,11 @@
     <!----------------------------------------------->
     <!-- SECTION : SONDAGE -------------->
     {POLLBOX}
-    
 </form>
-
 
 
 <!----------------------------------------------->
 <!-- SAUTER VERS UN FORUM -------------->
-
 <!-- BEGIN switch_jumpbox -->
 <form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false}" class="text-right">
     {L_JUMP_TO}:&nbsp;{S_JUMPBOX_SELECT}&nbsp;<input class="button2" type="submit" value="{L_GO}" />
@@ -330,7 +327,6 @@
 
 <!----------------------------------------------->
 <!---------------->
-
 <!-- BEGIN switch_privmsg -->
 <div id="find_username" class="jqmWindow"></div>
 <div id="group_pm_explain" class="jqmWindow"></div>
@@ -338,16 +334,16 @@
 <script src="{JQUERY_DIR}jqmodal/jqmodal.js" type="text/javascript"></script>
 <!-- END switch_privmsg -->
 <script type="text/javascript">
-//<![CDATA[
-$(function(){
-<!-- BEGIN switch_privmsg -->
-    privmsg_add_username('{U_SEARCH_USER}', '<br /><input class="inputbox" style="width:15%;margin:1px 0" type="text" name="username[]" />');
-<!-- END switch_privmsg -->
-<!-- BEGIN switch_image_resize -->
-    resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} });
-<!-- END switch_image_resize -->
-});
-//]]>
+    //<![CDATA[
+    $(function(){
+    <!-- BEGIN switch_privmsg -->
+        privmsg_add_username('{U_SEARCH_USER}', '<br /><input class="inputbox" style="width:15%;margin:1px 0" type="text" name="username[]" />');
+    <!-- END switch_privmsg -->
+    <!-- BEGIN switch_image_resize -->
+        resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} });
+    <!-- END switch_image_resize -->
+    });
+    //]]>
 </script>
 
 {SCEDITOR}

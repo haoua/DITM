@@ -1,7 +1,7 @@
 <!---------------------------------->
 <!-- BARRE DE GESTION -------------->
 
-<div class="links_bar">
+<div class="my-5">
     <!-- BEGIN switch_user_logged_in -->
     <span>
         <!-- Messages depuis la dernière visite -->

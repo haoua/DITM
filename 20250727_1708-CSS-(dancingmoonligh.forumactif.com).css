@@ -598,6 +598,12 @@ a.sceditor-button {
 	outline: none
 }
 
+.sceditor-container textarea{
+	--tw-bg-opacity: 1;
+	background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1))!important;
+	font-weight: initial;
+}
+
 /*Boîte Smiley*/
 html#sceditor_smilies,
 body#sce_smilies_body {
@@ -1484,7 +1490,6 @@ a.groups:last-child {
 /* Chaîne de navigation et pagination
 * (réutilisé dans l'affichage d'un sujet (viewtopic_body)) */
 .navigation_links {
-	background: var(--gradient);
 }
 
 /* chaîne de lien de navigation : catégorie > forum > sous-fo */
