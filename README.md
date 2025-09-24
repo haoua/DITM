@@ -23,6 +23,8 @@ buttons =>
 ### Memberlist
 * Ajouter des liens (présentation etc)
 * Afficher utilisateur en ligne
+### Optimisation
+* CSS avec compilation tailwind 
 
 ## TO DO TOUT DE SUITE
 * MP
@@ -35,7 +37,7 @@ buttons =>
 * Modif profil ?
 * PA
 * Infos importante en haut ?
-* Notification
+* ~~Notification~~
 * Mentions
 * Mentions automatique recherche
 * Sous forums ?!

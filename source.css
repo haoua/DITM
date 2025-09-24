@@ -30,4 +30,8 @@
     #quick_reply > div:nth-child(2) .button2{
         @apply rounded shadow px-2 py-1;
     }
+
+    .sceditor-container textarea{
+        @apply bg-zinc-100;
+    }
 }

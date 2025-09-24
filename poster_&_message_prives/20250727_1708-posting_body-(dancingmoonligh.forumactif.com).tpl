@@ -1,15 +1,16 @@
 <br/>{ERROR_BOX}
+
 <form action="{S_POST_ACTION}" method="post" name="post" enctype="multipart/form-data">
 
     <!----------------------------------------------->
     <!-- ENTETE DE LA PAGE -------------->
 
-<!--Titre de la page -->
-<div class="title_container">
-<h1 class="page-title">{L_POST_A}</h1></div>
+    <!--Titre de la page -->
+    <div class="title_container">
+        <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_POST_A}</h1>
+    </div>
 
-    <div class="container">
-
+    <div class="bg-zinc-200 rounded-b p-2">
         <!-- Affichage de la prévisualisation (template : posting_topic_review ) -->
         {POST_PREVIEW_BOX}
 
@@ -48,10 +49,10 @@
         </div>
         <!-- END switch_quote_limit -->
         
-        <!----------------------------------------------->
+        <!--------------------------------------------------------->
         <!-- CONTENU DE LA SECTION POSTER UN MESSAGE -------------->
 
-        <div class="panel" id="postingbox">
+        <div class="bg-white rounded p-2 my-3" id="postingbox">
             <!-- BEGIN switch_post_a -->
             <h3>{L_POST_A}</h3>
             <!-- END switch_post_a -->
@@ -157,34 +158,34 @@
                 <div class="clear"></div>
             </fieldset>
         </div>
-      
+    
         <!----------------------------------------------->
         <!-- BOUTONS (envoyer, prévisu,...) -------------->
-            <fieldset class="submit-buttons posting-buttons">
-                {S_HIDDEN_FORM_FIELDS}
-                <input type="hidden" name="lt" value="{LAST_TOPIC_ID}" />
-                <!-- BEGIN switch_preview -->
-                <input class="button2" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" />&nbsp;
-                <!-- END switch_preview -->
-                <!-- BEGIN switch_draft -->
-                &nbsp;<input class="button2 {BTN_DRAFT_CLASS}" type="submit" name="draft" value="{L_DRAFT}" title="{L_DRAFT_TITLE}" tabindex="7" accesskey="d" {switch_draft.DISABLED_DRAFT} />&nbsp;
-                <!-- END switch_draft -->
-                <!-- BEGIN switch_publish -->
-                &nbsp;<input class="button2" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" />&nbsp;
-                <!-- END switch_publish -->
-                &nbsp;<input class="button1" type="submit" name="post" value="{L_SUBMIT}" title="{L_SUBMIT_TITLE}" tabindex="6" accesskey="s" {DISABLED_SUBMIT} />
-                <!-- BEGIN switch_signature -->
-                &nbsp;<input type="hidden" name="submit" value="{L_SUBMIT}" />
-                <!-- END switch_signature -->
-                <!-- BEGIN switch_warning_msg -->
-                <br/>
-                <span class="info">{switch_warning_msg.WARNING_CONTENT}</span>
-                <!-- END switch_warning_msg -->
-            </fieldset>
+        <fieldset class="submit-buttons posting-buttons flex justify-around">
+            {S_HIDDEN_FORM_FIELDS}
+            <input type="hidden" name="lt" value="{LAST_TOPIC_ID}" />
+            <!-- BEGIN switch_preview -->
+            <input class="button2 w-1/6 rounded shadow py-1 bg-white text-one" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" />&nbsp;
+            <!-- END switch_preview -->
+            <!-- BEGIN switch_draft -->
+            <input class="button2 w-1/6 rounded shadow py-1 bg-white text-two {BTN_DRAFT_CLASS}" type="submit" name="draft" value="{L_DRAFT}" title="{L_DRAFT_TITLE}" tabindex="7" accesskey="d" {switch_draft.DISABLED_DRAFT} />&nbsp;
+            <!-- END switch_draft -->
+            <!-- BEGIN switch_publish -->
+            <input class="button2" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" />&nbsp;
+            <!-- END switch_publish -->
+            <input class="button1 w-1/6 rounded shadow py-1 bg-gradient text-white" type="submit" name="post" value="{L_SUBMIT}" title="{L_SUBMIT_TITLE}" tabindex="6" accesskey="s" {DISABLED_SUBMIT} />
+            <!-- BEGIN switch_signature -->
+            <input type="hidden" name="submit" value="{L_SUBMIT}" />
+            <!-- END switch_signature -->
+            <!-- BEGIN switch_warning_msg -->
+            <br/>
+            <span class="info">{switch_warning_msg.WARNING_CONTENT}</span>
+            <!-- END switch_warning_msg -->
+        </fieldset>
 
     </div>
-  <br/>
-  
+<br/>
+
     <!----------------------------------------------->
     <!-- SECTION : DÉS -------------->
 
@@ -232,72 +233,73 @@
     <!-- END switch_roll_dice -->
 
 
-    <!----------------------------------------------->
+    <!--------------------------------------------->
     <!-- SECTION : OPTION DU MESSAGE -------------->
-    
-    <div class="panel">
-    <h3>{L_OPTIONS}</h3>
-        <!-- BEGIN switch_topic_modif -->
-        <fieldset class="fields1">
-            <!-- BEGIN switch_icon_checkbox -->
-            <dl>
-                <label>{POST_ICON_TITLE}</label>
-                <dd>
-                    <!-- BEGIN row -->
-                    <!-- BEGIN cell -->
-                    <label><input type="radio" name="post_icon" value="{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" id="post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" {switch_topic_modif.switch_icon_checkbox.row.cell.ICON_CHECKED} />&nbsp;<span onclick="document.forms['post'].post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}.checked=true">{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_IMG}</span></label>
-                    <!-- END cell -->
-                    <!-- END row -->
-                </dd>
-            </dl>
-            <!-- END switch_icon_checkbox -->
-            <dl>
-                <dt><label for="modif_topic_title">{L_TOPIC_TITLE_MODIFY}</label></dt>
-                <dd>
-                    <input type="text" class="inputbox medium" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
-                    <!-- BEGIN switch_topic_button -->
-                    &nbsp;<input type="button" class="button2" value="{L_SOLVED_WITHOUT_BRAKETS}" onclick="set_solved(this.form.elements['modif_topic_title'],'{L_SOLVED}')" style="display:none" id="button_solved" />
-                    <script type="text/javascript">
-                        //<![CDATA[
-                        document.getElementById('button_solved').style.display = 'inline';
-                        //]]>
+    <h3 class="font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_OPTIONS}</h3>
+    <div class="bg-zinc-200 p-2 rounded-b">
+        <div class="bg-white p-2 rounded shadow">
+            <!-- BEGIN switch_topic_modif -->
+            <fieldset class="fields1">
+                <!-- BEGIN switch_icon_checkbox -->
+                <dl>
+                    <label>{POST_ICON_TITLE}</label>
+                    <dd>
+                        <!-- BEGIN row -->
+                        <!-- BEGIN cell -->
+                        <label><input type="radio" name="post_icon" value="{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" id="post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" {switch_topic_modif.switch_icon_checkbox.row.cell.ICON_CHECKED} />&nbsp;<span onclick="document.forms['post'].post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}.checked=true">{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_IMG}</span></label>
+                        <!-- END cell -->
+                        <!-- END row -->
+                    </dd>
+                </dl>
+                <!-- END switch_icon_checkbox -->
+                <dl>
+                    <dt><label for="modif_topic_title">{L_TOPIC_TITLE_MODIFY}</label></dt>
+                    <dd>
+                        <input type="text" class="inputbox medium" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
+                        <!-- BEGIN switch_topic_button -->
+                        &nbsp;<input type="button" class="button2" value="{L_SOLVED_WITHOUT_BRAKETS}" onclick="set_solved(this.form.elements['modif_topic_title'],'{L_SOLVED}')" style="display:none" id="button_solved" />
+                        <script type="text/javascript">
+                            //<![CDATA[
+                            document.getElementById('button_solved').style.display = 'inline';
+                            //]]>
 
-                    </script>
-                    <!-- END switch_topic_button -->
-                </dd>
-            </dl>
-        </fieldset>
-        <hr class="dashed" />
-        <!-- END switch_topic_modif -->
-        <fieldset class="fields1">
-            <!-- BEGIN switch_html_checkbox -->
-            <label><input type="checkbox" name="disable_html" {S_HTML_CHECKED} />&nbsp;{L_DISABLE_HTML}</label><br />
-            <!-- END switch_html_checkbox -->
+                        </script>
+                        <!-- END switch_topic_button -->
+                    </dd>
+                </dl>
+            </fieldset>
+            <hr class="dashed" />
+            <!-- END switch_topic_modif -->
+            <fieldset class="fields1">
+                <!-- BEGIN switch_html_checkbox -->
+                <label><input type="checkbox" name="disable_html" {S_HTML_CHECKED} />&nbsp;{L_DISABLE_HTML}</label><br />
+                <!-- END switch_html_checkbox -->
 
-            <!-- BEGIN switch_bbcode_checkbox -->
-            <label><input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} />&nbsp;{L_DISABLE_BBCODE}</label><br />
-            <!-- END switch_bbcode_checkbox -->
+                <!-- BEGIN switch_bbcode_checkbox -->
+                <label><input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} />&nbsp;{L_DISABLE_BBCODE}</label><br />
+                <!-- END switch_bbcode_checkbox -->
 
-            <!-- BEGIN switch_smilies_checkbox -->
-            <label><input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} />&nbsp;{L_DISABLE_SMILIES}</label><br />
-            <!-- END switch_smilies_checkbox -->
+                <!-- BEGIN switch_smilies_checkbox -->
+                <label><input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} />&nbsp;{L_DISABLE_SMILIES}</label><br />
+                <!-- END switch_smilies_checkbox -->
 
-            <!-- BEGIN switch_signature_checkbox -->
-            <label><input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} />&nbsp;{L_ATTACH_SIGNATURE}</label><br />
-            <!-- END switch_signature_checkbox -->
+                <!-- BEGIN switch_signature_checkbox -->
+                <label><input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} />&nbsp;{L_ATTACH_SIGNATURE}</label><br />
+                <!-- END switch_signature_checkbox -->
 
-            <!-- BEGIN switch_notify_checkbox -->
-            <label><input type="checkbox" name="notify" {S_NOTIFY_CHECKED} />&nbsp;{L_NOTIFY_ON_REPLY}</label><br />
-            <!-- END switch_notify_checkbox -->
+                <!-- BEGIN switch_notify_checkbox -->
+                <label><input type="checkbox" name="notify" {S_NOTIFY_CHECKED} />&nbsp;{L_NOTIFY_ON_REPLY}</label><br />
+                <!-- END switch_notify_checkbox -->
 
-            <!-- BEGIN switch_delete_checkbox -->
-            <label><input type="checkbox" name="delete" />&nbsp;{L_DELETE_POST}</label><br />
-            <!-- END switch_delete_checkbox -->
+                <!-- BEGIN switch_delete_checkbox -->
+                <label><input type="checkbox" name="delete" />&nbsp;{L_DELETE_POST}</label><br />
+                <!-- END switch_delete_checkbox -->
 
-            <!-- BEGIN switch_type_toggle -->
-            <br />{S_TYPE_TOGGLE}
-            <!-- END switch_type_toggle -->
-        </fieldset>
+                <!-- BEGIN switch_type_toggle -->
+                <br />{S_TYPE_TOGGLE}
+                <!-- END switch_type_toggle -->
+            </fieldset>
+        </div>
     </div>
 
     <!----------------------------------------------->
@@ -349,5 +351,3 @@ $(function(){
 </script>
 
 {SCEDITOR}
-
-            
