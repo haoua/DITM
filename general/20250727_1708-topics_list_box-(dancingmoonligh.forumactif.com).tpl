@@ -13,12 +13,19 @@
 
 
 <!-- Conteneur d'un sujet -->
-<div class="topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS}">
+<div class="DITM_topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS} bg-white p-2 flex shadow mb-3 rounded">
 
 
     <!-- Image d'un sujet -->
-    <div class="topicslist-img">
+    <div class="">
         <img src="{topics_list_box.row.TOPIC_FOLDER_IMG}" />
+    </div>
+
+    <div class="sender_img w-14 h-14 bg-cover rounded shadow p-1 bg-gradient mx-3" style="background-image: url('{topics_list_box.row.topic.avatar.LAST_POST_AVATAR}');">
+        <div class="w-full h-full border rounded"></div>
+        <!-- BEGIN avatar -->
+            {topics_list_box.row.topic.avatar.LAST_POST_AVATAR}
+        <!-- END avatar -->
     </div>
 
 
@@ -37,10 +44,12 @@
         <span class="topic-type">{topics_list_box.row.TOPIC_TYPE}</span>
 
         <!-- Titre du sujet -->
-        <a class="topictitle" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a>&nbsp;
+        <div class="flex">
+            <a class="topictitle font-yeseva font-normal" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a>&nbsp;
       
-        <!-- Icon vous avez posté dans ce sujet -->
-        {topics_list_box.row.PARTICIPATE_POST_IMG}
+            <!-- Icon vous avez posté dans ce sujet -->
+            {topics_list_box.row.PARTICIPATE_POST_IMG}
+        </div>
       
         <br />
       
