@@ -1,59 +1,61 @@
-<br />
-<div class="container">
-    <h1 class="page-title">{L_SEARCH_MATCHES}</h1>
+<h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_SEARCH_MATCHES}</h1>
 
-    <form action="{S_ACTION}" method="post" name="post" onsubmit="return verify_select();">
+<form action="{S_ACTION}" method="post" name="post" onsubmit="return verify_select();" class="bg-zinc-200 p-2 rounded-b">
 
-	<!-- BEGIN searchresults -->	
-        <div class="topicslist_row">
-            
-            <!-- Image d'un sujet -->
-            <div class="topicslist-img">
-                <img src="{searchresults.TOPIC_FOLDER_IMG}" />
-            </div>
+    <!-- BEGIN searchresults -->	
+    <div class="DITM_topicslist_row flex bg-white p-2 rounded shadow mb-2 items-center">
+        
+        <!-- Image d'un sujet -->
+        <div class="topicslist-img mr-3">
+            <img src="{searchresults.TOPIC_FOLDER_IMG}" class="h-14" />
+        </div>
 
+        <div class="topicslist_infos flex-1" {searchresults.TOPIC_ICON}>
 
-            <div class="topicslist_infos" {searchresults.TOPIC_ICON}>
+            <!-- Icone de message -->
+            <span class="topic_msgicon"></span>
 
-                <!-- Icone de message -->
-                <span class="topic_msgicon"></span>
+            <!-- Label type de sujet : annonce, note, ... -->
+            <span class="topic-type">{searchresults.TOPIC_TYPE}</span>
 
-                <!-- Label type de sujet : annonce, note, ... -->
-                <span class="topic-type">{searchresults.TOPIC_TYPE}</span>
+            <!-- Titre du sujet -->
+            <a class="topictitle" href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a>&nbsp;
 
-                <!-- Titre du sujet -->
-                <a class="topictitle" href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a>&nbsp;
+            <!-- Icon vous avez posté dans ce sujet -->
+            {searchresults.PARTICIPATE_POST_IMG}
 
-                <!-- Icon vous avez posté dans ce sujet -->
-                {searchresults.PARTICIPATE_POST_IMG}
+            <br />
 
-                <br />
+            <span class="topic-author">
+                {searchresults.L_BY} {searchresults.TOPIC_AUTHOR} {searchresults.L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a>
+            </span>&nbsp;
 
-                <span class="topic-author">
-                    {searchresults.L_BY} {searchresults.TOPIC_AUTHOR} {searchresults.L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a>
-                </span>&nbsp;
+            <!-- Pagination du sujet -->
+            <span class="topicslist-pagination">
+                {searchresults.GOTO_PAGE_NEW}
+                <!-- BEGIN nav_tree -->
+                {searchresults.TOPIC_NAV_TREE_NEW}
+                <!-- END nav_tree -->
+            </span>
 
-                <!-- Pagination du sujet -->
-                <span class="topicslist-pagination">
-                    {searchresults.GOTO_PAGE_NEW}
-                    <!-- BEGIN nav_tree -->
-                    {searchresults.TOPIC_NAV_TREE_NEW}
-                    <!-- END nav_tree -->
-                </span>
-
-            </div>
+        </div>
 
 
+        <div>
             <!-- Statistiques -->
-            <div class="topicslist-stats">
-                {searchresults.REPLIES} {L_REPLIES}
+            <div class="DITM_topicslist-stats flex gap-3 justify-around items-center">
                 <!-- Nombres // Indication "messages" -->
-                <br />
-                {searchresults.VIEWS} {L_VIEWS}
+                <div>
+                    <span class="text-one font-yeseva text-2xl mr-1">{searchresults.REPLIES}</span>
+                    <span class="uppercase text-xs">{L_REPLIES}</span>
+                </div>
+                
                 <!-- Nombres // Indication "vues" -->
+                <div>
+                    <span class="text-two font-yeseva text-2xl mr-1">{searchresults.VIEWS}</span>
+                    <span class="uppercase text-xs">{L_VIEWS}
+                </div>
             </div>
-
-
 
             <!-- Dernier message -->
             <div class="topicslist-lastpost">
@@ -64,11 +66,14 @@
             </div>
 
         </div>
-	 <!-- END searchresults -->
-      
-        <p class="pagination">{PAGINATION}</p>
-    </form>
 
-</div>
+
+
+        
+    </div>
+    <!-- END searchresults -->
+    
+    <p class="pagination">{PAGINATION}</p>
+</form>
 
 {JUMPBOX}

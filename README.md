@@ -54,3 +54,4 @@ buttons =>
     * Vérifier le poste d'un nouveau sujet
     * Titre du message + description pour les messages à supprimer
     * Smiley fond gris ?
+* Pop-up recherche

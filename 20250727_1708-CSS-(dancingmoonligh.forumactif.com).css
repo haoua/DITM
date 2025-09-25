@@ -1566,8 +1566,12 @@ a.groups:last-child {
 	align-items: center;
 }
 
-.topicslist_row:last-child {
+.topicslist_row:last-child, .DITM_topicslist_row:last-of-type {
 	margin-bottom: 0;
+}
+
+.DITM_topicslist_row img{
+	display: initial;
 }
 
 .topicslist-row__lastpost-user-img img{
