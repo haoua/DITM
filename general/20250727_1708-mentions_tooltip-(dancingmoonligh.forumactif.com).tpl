@@ -4,7 +4,7 @@
     <div class="preview_content">
 
         <!-- Avatar -->
-        <div class="preview_avatar"><img src="{USER_AVATAR}" alt="{USER_NAME}" /></div>
+        <div class="preview_avatar mr-2"><img src="{USER_AVATAR}" alt="{USER_NAME}" class="rounded" /></div>
 
        <!-- Informations -->
         <div class="preview_infos">

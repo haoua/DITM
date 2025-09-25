@@ -1,15 +1,14 @@
-<div class="mt-3">
-	   
-	<div style="background: var(--color1);" class="rounded justify-between flex p-2 gap-1 shadow">
+<div class="mt-3">   
+	<div class="rounded justify-between flex p-2 gap-1 shadow bg-zinc">
 		   
 		<div style="width: 343px;" class="bg-white rounded-b text-justify">
 			     
 			<div style="font-size: 17px;" class="uppercase rounded-t p-2 font-bold text-white text-center bg-color5">
-				  à propos du forum   
+				à propos du forum   
 			</div>
 			   
 			<div class="p-1">
-				  DITM est un forum city réel sans prise de tête basé à la Nouvelle-Orléans aux Etats-Unis <strong>/</strong> réservation du faceclaim durant 7 jours <strong>/</strong> écart de 5 ans maximum entre l'avatar et le personnage <strong>/</strong> 1 rp par mois <strong>/</strong> aucun minimum de mots <strong>/</strong> les initiales ne sont pas acceptées pour le pseudo   
+				DITM est un forum city réel sans prise de tête basé à la Nouvelle-Orléans aux Etats-Unis <strong>/</strong> réservation du faceclaim durant 7 jours <strong>/</strong> écart de 5 ans maximum entre l'avatar et le personnage <strong>/</strong> 1 rp par mois <strong>/</strong> aucun minimum de mots <strong>/</strong> les initiales ne sont pas acceptées pour le pseudo   
 			</div>
 			   
 		</div>
@@ -17,7 +16,7 @@
 		<div class="pa-pl">
 			   
 			<div class="rounded bg-color5 py-2 text-center font-bold uppercase text-white w-full">
-				  Recherchés  
+				Recherchés  
 			</div>
 			   
 			<div class="pl-icon">
@@ -347,8 +346,8 @@
 			<!--  --- meteo ---  -->  
 			<div class="pa-meteo">
 				   
-				<div class="uppercase rounded-t p-2 font-bold text-white text-center bg-color5" style="font-size: 17px;">
-					  météo   
+				<div class="uppercase rounded-t p-2 font-bold text-white text-center bg-gradient" style="font-size: 17px;">
+					météo   
 				</div>
 				   
 				<div class="meteo-text">
@@ -380,4 +379,33 @@
  
  // Optionnel : activer le premier onglet au chargement
  if (tabs.length) tabs[0].classList.add('active');
+
+
+
+	async function getData() {
+		const url = "https://api.open-meteo.com/v1/forecast?latitude=29.9547&longitude=-90.0751&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=America%2FNew_York&forecast_days=3";
+		try {
+			const response = await fetch(url);
+
+			if (!response.ok) {
+				throw new Error(`Response status: ${response.status}`);
+			}
+
+			data = await response.json();
+
+			let jour = ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'];
+            const date = new Date();
+            const dayOfWeek = days[date.getDay()];
+            console.log("Today is " + dayOfWeek);
+
+			for(var i = 0; i < 1; i++){
+				data.daily.temperature_2m_max[0]; 
+				data.daily.temperature_2m_min[0] 
+
+				data.daily.weather_code[0] 	
+			}
+		} catch (error) {
+			console.error(error.message);
+		}
+	}
 </script>

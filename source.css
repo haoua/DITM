@@ -34,4 +34,10 @@
     .sceditor-container textarea{
         @apply bg-zinc-100;
     }
+
+    .codebox dt{
+        @apply font-bold text-white rounded-t text-center p-2;
+    }
+
+
 }

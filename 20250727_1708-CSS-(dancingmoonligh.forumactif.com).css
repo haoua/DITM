@@ -1857,6 +1857,11 @@ a.fa-mention {
 	cursor: pointer;
 }
 
+/* Retirer le fond des mentions de groupe */
+.group-mentiontag{
+	background: none!important;
+}
+
 /* Mention "en ligne" */
 .presence {
 	display: none
@@ -2062,29 +2067,42 @@ a.fa-mention {
 	display: block;
 	width: 90%;
 	margin: 0 auto;
-	position: relative;
-	overflow-wrap: anywhere;
+	text-align: justify;
 }
 
 /* Contenu code, spoiler et hide*/
 .codebox dd {
-	background: var(--neutralDark);
-	border-radius: 5px;
-	padding: 5px;
+	--tw-bg-opacity: 1;
+	background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	max-height: 200px;
+	overflow: auto;
 }
 
 /* Nom de balise "code, spoiler" */
 .codebox dt {
 	font-weight: 700;
-	font-size: var(--little-size);
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+	background: var(--gra);
+	color: white;
+	padding: 0.5rem;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+}
+
+code{
+	
 }
 
 /*retire la mention "code" du bloc*/
+/*
 #codeBox dt {
 	height: 0;
 	font-size: 0;
 }
-
+*/
 /* bouton "copier" */
 .copyCode {
 	font-size: 12px;
@@ -2330,8 +2348,6 @@ margin-right: 5px;
 	object-position: center;
 	width: 70px;
 	height: 70px;
-	border-radius: 5px;
-	margin-right: 10px;
 }
 
 .preview_infos {
