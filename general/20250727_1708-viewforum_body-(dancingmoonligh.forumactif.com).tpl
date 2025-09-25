@@ -23,20 +23,18 @@
 <!----------------------------------------------->
 <!-- BARRE DE GESTION --------------------------->
 
-<div class="my-5">
+<div class="my-5 flex items-center justify-between">
+    <!-- Lien Surveiller ce forum -->
+    <!-- BEGIN switch_user_logged_in -->
+    <div>
+        {S_WATCH_FORUM}
+    </div>
+    <!-- END switch_user_logged_in -->
 
     <!-- Boutons : nouveau, répondre, verrouillé -->
     <!-- BEGIN switch_user_authpost -->
-    <a class="buttons" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">Nouveau sujet</a>
+    <a class="bg-gradient rounded py-1 px-3 text-white font-roboto uppercase shadow" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">Poster un nouveau sujet</a>
     <!-- END switch_user_authpost -->
-
-    <!-- Lien Surveiller ce forum -->
-    <!-- BEGIN switch_user_logged_in -->
-    <span class="right">
-        {S_WATCH_FORUM}
-    </span>
-    <!-- END switch_user_logged_in -->
-
 </div>
 
 
@@ -62,7 +60,7 @@
 
 <!-- Bouton pour trier les sujets -->
 <!-- BEGIN switch_sort_options -->
-<div id="sort-topics" class="button right">
+<div id="sort-topics" class="button">
 
     <span id="sort-btn"><i class="bi bi-filter"></i> Trier les sujets</span>
 
@@ -89,19 +87,17 @@
 <!----------------------------------------------->
 <!-- BARRE DE GESTION --------------------------->
 
-<div class="my-5">
-
-    <!-- Bouton : nouveau -->
-    <!-- BEGIN switch_user_authpost -->
-    <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" title="{T_POST_NEW_TOPIC}" class="buttons">{L_POST_NEW_TOPIC}</a>
-    <!-- END switch_user_authpost -->
-
-
+<div class="my-5 flex items-center justify-between">
     <!-- BEGIN switch_user_logged_in -->
-    <span class="right">
+    <div>
         <a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>
-    </span>
+    </div>
     <!-- END switch_user_logged_in -->
+
+    <!-- Boutons : nouveau, répondre, verrouillé -->
+    <!-- BEGIN switch_user_authpost -->
+    <a class="bg-gradient rounded py-1 px-3 text-white font-roboto uppercase shadow" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">Poster un nouveau sujet</a>
+    <!-- END switch_user_authpost -->
 
 </div>
 
@@ -111,14 +107,16 @@
 <div class="bg-gradient text-white rounded p-2">
 
     <!-- Utilisateurs parcourant ce forum -->
-    <span id="users_here hidden">
+    <span id="users_here" class="hidden">
         {LOGGED_IN_USER_LIST}
     </span>
     <!-- Modification de la phrase "utilisateur parcourant ce forum" -->
-    <script type="text/javascript">
-        $("#users_here").html($("#users_here").html().replace("Utilisateurs parcourant actuellement ce forum",
-            "Actuellement sur ce forum"));
-    </script>
+    <!-- 
+        <script type="text/javascript">
+            $("#users_here").html($("#users_here").html().replace("Utilisateurs parcourant actuellement ce forum",
+                "Actuellement sur ce forum"));
+        </script>
+    -->
 
 
     <!-- Pagination -->
@@ -130,9 +128,7 @@
 <!----------------------------------------------->
 <!---------------->
 
-<br />
 <div class="separator"></div>
-<br />
 
 
 <!----------------------------------------------->
@@ -198,4 +194,80 @@
     });
     //]]>
 </script>
+<!-- END switch_sort_options --> un nouveau sujet</a>
+    <!-- END switch_user_authpost -->
+
+</div>
+
+
+
+<!----------------------------------------------->
+<!---------------->
+
+<br />
+<div class="separator"></div>
+<br />
+
+
+<!----------------------------------------------->
+<!-- SAUTER VERS UN FORUM ----------------------->
+
+<div class="right">
+    <form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox"
+        onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+        <fieldset class="vf_jumpbox">
+            <label>{L_JUMP_TO}:</label><br />
+            {S_JUMPBOX_SELECT} &nbsp;
+            <input class="button2" type="submit" value="{L_GO}" />
+        </fieldset>
+    </form>
+</div>
+
+
+<!----------------------------------------------->
+<!-- LIENS UTILES ------------------------------->
+
+<a href="{U_EGOSEARCH_JS_PLUS_MENU}">Voir ses messages</a><br />
+<a href="{U_NEWPOSTS_JS_PLUS_MENU}">Nouveaux messages depuis la dernière visite</a><br />
+<a href="{U_UNANSWERED_JS_PLUS_MENU}">Messages sans réponses</a>
+
+<br /><br />
+
+<!----------------------------------------------->
+<!-- OUTILS DE MODERATION ----------------------->
+<div id="moderation_forum_tools">
+    {S_AUTH_LIST}
+</div>
+
+<!-- Changement de texte du lien "modérer ce forum" -->
+<script type="text/javascript">
+    document.getElementById('moderation_forum_tools').innerHTML = document.getElementById('moderation_forum_tools')
+        .innerHTML.replace(/modérer ce forum/, "Modérer les sujets du forum");
+</script>
+
+
+<br />
+<div class="clear"></div>
+
+
+<!-- BEGIN switch_sort_options -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        var sort_btn = $('#sort-btn');
+        sort_btn.on('click', function () {
+            sort_btn.toggleClass('expanded');
+        });
+
+        document.onclick = function (e) {
+            if ($(e.target).parents('#sort-topics').length == 0) {
+                document.getElementById('sort-btn').classList.remove('expanded');
+            }
+        };
+    });
+    //]]>
+</script>
 <!-- END switch_sort_options -->
+
+
+Ce code en haut me donne cette erreur : La balise a été fermée avant d'avoir été ouverte ou la balise n'a pas été ouverte.

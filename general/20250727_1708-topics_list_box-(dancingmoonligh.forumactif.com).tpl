@@ -1,9 +1,9 @@
 <!----------------------------------------------->
-<!-- LISTE DES SUJETS -------------->
+<!-- LISTE DES SUJETS --------------------------->
 <!-- BEGIN topics_list_box -->
 
 <!----------------------------------------------->
-<!-- AFFICHAGE D'UN SUJET -------------->
+<!-- AFFICHAGE D'UN SUJET ----------------------->
 <!-- BEGIN row -->
 <!-- BEGIN topic -->
 
@@ -13,23 +13,26 @@
 
 
 <!-- Conteneur d'un sujet -->
-<div class="DITM_topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS} bg-white p-2 flex shadow mb-3 rounded">
+<div class="DITM_topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS} bg-white p-2 flex shadow mb-3 rounded items-center">
 
 
-    <!-- Image d'un sujet -->
+    <!-- Image statut d'un sujet -->
     <div class="">
-        <img src="{topics_list_box.row.TOPIC_FOLDER_IMG}" />
+        <img class="h-14" src="{topics_list_box.row.TOPIC_FOLDER_IMG}" />
     </div>
-
-    <div class="sender_img w-14 h-14 bg-cover rounded shadow p-1 bg-gradient mx-3" style="background-image: url('{topics_list_box.row.topic.avatar.LAST_POST_AVATAR}');">
+    
+    <!-- Avatar du dernier posteur-->
+    <div class="topicslist-row__lastpost-user-img w-14 h-14 bg-cover rounded shadow p-1 bg-zinc-200 mx-3">
         <div class="w-full h-full border rounded"></div>
-        <!-- BEGIN avatar -->
+        <div class="hidden">
+            <!-- BEGIN avatar -->
             {topics_list_box.row.topic.avatar.LAST_POST_AVATAR}
-        <!-- END avatar -->
+            <!-- END avatar -->
+        </div>
     </div>
 
 
-    <div class="topicslist_infos" {topics_list_box.row.ICON}>
+    <div class="flex-1" {topics_list_box.row.ICON}>
 
         <!-- Sélection d'un sujet 
                 (utile uniquement durant la modération des sujets, permet de les sélectionner)-->
@@ -44,21 +47,19 @@
         <span class="topic-type">{topics_list_box.row.TOPIC_TYPE}</span>
 
         <!-- Titre du sujet -->
-        <div class="flex">
+        <div class="flex items-center ">
             <a class="topictitle font-yeseva font-normal" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a>&nbsp;
       
             <!-- Icon vous avez posté dans ce sujet -->
             {topics_list_box.row.PARTICIPATE_POST_IMG}
         </div>
       
-        <br />
-      
         <span class="topic-author">
             {topics_list_box.row.L_BY}&nbsp;
             <!-- Indication "par" -->
             {topics_list_box.row.TOPIC_AUTHOR}
             <!-- Auteur -->
-        </span>&nbsp;
+        </span>
       
       <!-- Pagination du sujet -->
         <span class="topicslist-pagination">
@@ -71,35 +72,33 @@
     </div>
 
 
-    <!-- Statistiques -->
-    <div class="topicslist-stats">
-        {topics_list_box.row.REPLIES} rep.
-        <!-- Nombres // Indication "messages" -->
-        <br />
-        {topics_list_box.row.VIEWS} {L_VIEWS}
-        <!-- Nombres // Indication "vues" -->
-    </div>
+    <div class="flex flex-col">
+        <!-- Statistiques -->
+        <div class="DITM_topicslist-stats flex gap-3 justify-around">
+            <!-- Nombres // Indication "messages" -->
+            <div>
+                <span class="text-one font-yeseva text-2xl mr-1">{topics_list_box.row.REPLIES}</span>
+                <span class="uppercase text-xs">rep.</span>
+            </div>
+            
+            <!-- Nombres // Indication "vues" -->
+            <div>
+                <span class="text-two font-yeseva text-2xl mr-1">{topics_list_box.row.VIEWS}</span>
+                <span class="uppercase text-xs">{L_VIEWS}
+            </div>
+        </div>
 
 
-    <!-- Avatar du dernier posteur-->
-    <div class="topicslist-avatar-lastpost lastpostavatar">
-        <!-- BEGIN avatar -->
-        {topics_list_box.row.topic.avatar.LAST_POST_AVATAR}
-        <!-- END avatar -->
-    </div>
-
-
-    <!-- Dernier message -->
-    <div class="topicslist-lastpost lastpost">
-      <span>
-        <!-- Date du dernier message -->
-        {topics_list_box.row.LAST_POST_TIME} &nbsp;
-        <br />
-        <!-- Auteur du dernier message -->
-        {topics_list_box.row.LAST_POST_AUTHOR} &nbsp;
-        <!-- Image-lien pour aller au dernier message -->
-        {topics_list_box.row.LAST_POST_IMG}
-      </span>
+        <!-- Dernier message -->
+        <div class="DITM_topicslist-lastpost topicslist-row__lastpost-infos  lastpost">
+            <!-- Date du dernier message -->
+            {topics_list_box.row.LAST_POST_TIME} &nbsp;
+            <br />
+            <!-- Auteur du dernier message -->
+            {topics_list_box.row.LAST_POST_AUTHOR} &nbsp;
+            <!-- Image-lien pour aller au dernier message -->
+            {topics_list_box.row.LAST_POST_IMG}
+        </div>
     </div>
 
 
@@ -126,7 +125,12 @@
 <!-- END topics_list_box -->
 <!-- Fin de la liste des sujets -->
 
-
+<script type="text/javascript">
+    $(".topicslist-row__lastpost-user-img").each(function(){
+        let img = $(this).find('img').attr('src');
+        $(this).css('background-image', 'url("'+img+'")');
+    })
+</script>
 
 
 

@@ -44,7 +44,7 @@ buttons =>
 * ~~Notification~~
 * Mentions
 * Mentions automatique recherche
-* Sous forums ?!
+* ~~Sous forums ?!~~
 * Barre de navigation
 * Message Admin
 * Pré lien

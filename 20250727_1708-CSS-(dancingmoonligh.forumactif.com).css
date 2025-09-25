@@ -1570,6 +1570,11 @@ a.groups:last-child {
 	margin-bottom: 0;
 }
 
+.topicslist-row__lastpost-user-img img{
+	min-height: 100%!important;
+	min-width: 100%!important;
+}
+
 .forum-row__sublinks{
 	font-size: 0;
 	width: 160px;
@@ -1580,23 +1585,6 @@ a.groups:last-child {
 	display: block;
 	font-size: 0.75rem;
 	line-height: 1rem;
-}
-
-/* Image du sujet */
-.topicslist-img {
-	width: 65px;
-	height: 65px;
-	background: var(--color6);
-	border-radius: 3px;
-}
-
-.topicslist-img img{ }
-
-.topicslist_infos {
-	width: 458px;
-	background: var(--color6);
-	padding: 10px;
-	border-radius: 3px;
 }
 
 .last-post-icon img{
@@ -1625,20 +1613,9 @@ a.groups:last-child {
 	display: none;
 }
 
-.topiclist-infos img {
-	margin-right: 3px;
-}
 
-.topicslist-stats {
-	text-align: right;
-	background: var(--color6);
-	padding: 10px;
-	border-radius: 3px;
-	flex: 1;
-}
-
-.topicslist-avatar-lastpost {
-
+.topicslist-row__lastpost-infos img{
+	display: inline;
 }
 
 .topicslist-avatar-lastpost img {
@@ -1650,14 +1627,7 @@ a.groups:last-child {
 	padding: 2px;
 }
 
-.topicslist-lastpost {
-	background: var(--color6);
-	padding: 10px;
-	border-radius: 3px;
-	width: 187px;
-	height: 65px;
-	font-size: 13px;
-}
+
 
 .topicslist-description {
 	padding: 5px;
@@ -2016,7 +1986,7 @@ a.fa-mention {
 }
 
 #quick_reply > div:nth-child(2) .button2:last-of-type {
- 	background: var(--gra);
+	background: var(--gra);
 	color: white;
 }
 
@@ -2993,5 +2963,5 @@ tw:hover, .tw:hover{filter: blur(0px); }
 }
 
 .pa-explication, .pa-context, .pa-event, .pa-timeline, .pa-tabs, .pa-timeline, .pa-staff-icon img, .tabs-icon, .tabs-icon img {
-border-radius: 3px!important;
+	border-radius: 3px!important;
 }
