@@ -122,26 +122,30 @@
 			{L_CONNECTED_MEMBERS}
 		</div>
 	</div>
-	<div class="w-full">
-		<span id="newest_user">{NEWEST_USER}</span>, bienvenue à la Nouvelle-Orléans !
-		<span id="lastuser_avatar" style="width:70px;height:70px;margin-right:15px;"></span>
+	<div class="flex gap-2">
+		<div class="w-1/2 bg-white p-2 shadow flex rounded items-center">
+			<span id="lastuser_avatar" class="mr-2" style="width:50px;height:50px;"></span>
+			<div>
+				<span id="newest_user">{NEWEST_USER}</span>,<br> bienvenue à la Nouvelle-Orléans !
+			</div>
+		</div>
+
+		<div class="w-1/2 flex flex-col gap-2">
+			<div class="flex gap-2 h-1/2">
+				<div class="flex-1 rounded shadow hover:text-white text-center bg-white hover:bg-orange-500 text-orange-500 duration-700 ease-in-out flex items-center justify-center">Born of the Sun</div>
+				<div class="flex-1 rounded shadow hover:text-white text-center bg-white hover:bg-blue-500 text-blue-500 duration-700 ease-in-out flex items-center justify-center">Cracked from the Swamp</div>
+			</div>
+			<div class="flex gap-2 h-1/2">
+				<div class="flex-1 rounded shadow hover:text-white text-center bg-white hover:bg-pink-500 text-pink-500 duration-700 flex items-center justify-center">Charmed Strangers</div>
+				<div class="flex-1 rounded shadow text-center bg-white hover:bg-teal-500 text-teal-500 hover:text-white duration-700 flex items-center justify-center">Passing Souls</div>
+			</div>
+		</div>
 	</div>
-</div>
-<div>
-	<span id="DITM_last_user">{NEWEST_USER}</span>, bienvenue à la Nouvelle-Orléans !
 </div>
 
 <!-- Changement de texte des informations du QEEL -->
 <script type="text/javascript">
 	/* $("#last_user").html($("#last_user").html().replace("L'utilisateur enregistré le plus récent est", "")); */
-	console.log("HAOUA");
-	console.log("HAOUA");
-	console.log("HAOUA");
-	console.log("HAOUA");
-	console.log("HAOUA");
-	console.log("HAOUA");
-	console.log("HAOUA");
-	console.log("HAOUA");
 	$("#newest_user").html($("#newest_user").html().replace("L'utilisateur enregistré le plus récent est", ""));
 
 	/*

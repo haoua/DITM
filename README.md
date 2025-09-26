@@ -29,6 +29,8 @@ buttons =>
 * CSS avec compilation tailwind 
 ### Nouveau message
 * Points / Nombre de mots
+### Page Accueil
+* Module météo icon
 
 ## TO DO TOUT DE SUITE
 * MP
