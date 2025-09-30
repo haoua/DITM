@@ -39,5 +39,7 @@
         @apply font-bold text-white rounded-t text-center p-2;
     }
 
-
+    ul#fa_menulist{
+        @apply bg-zinc-200 rounded;
+    }
 }

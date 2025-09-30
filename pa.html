@@ -400,15 +400,14 @@
 			const date = new Date();
 			let dayOfWeek;
 			let mb = "mb-2";
+			let dateNb = date.getDay();
 
-			console.log('on devrait tourner non ?');
-			console.log(data.daily.temperature_2m_max[0]);
 			for(var i = 0; i < 3; i++){
-				let dateNb = (date.getDay()+i);
 				if(jours[dateNb] == undefined){
 					dateNb = 0;
 				}
-				const dayOfWeek = jours[dateNb];
+				dayOfWeek = jours[dateNb];
+				dateNb++;
 
 				if(i==2){
 					mb = '';

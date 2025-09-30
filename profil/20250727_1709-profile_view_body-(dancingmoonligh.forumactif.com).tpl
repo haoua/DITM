@@ -187,7 +187,10 @@
 	
 		<!-- Bouton d'administration du membre --> 
 		<!-- BEGIN switch_auth_user -->
-		{ADMINISTRATE_USER}{BAN_USER}
+		{ADMINISTRATE_USER}
+		<div class="rounded bg-red-500 py-2 px-5 text-white">
+			{BAN_USER}
+		</div>
 		<!-- END switch_auth_user -->
 	
 	</div>

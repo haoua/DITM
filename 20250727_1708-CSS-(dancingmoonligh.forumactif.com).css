@@ -1467,17 +1467,6 @@ a.groups:last-child {
 /*X connectés :: 1 membre, 0 invisible, 0 invité*/
 #total_users {}
 
-/*Connectés en ce moment*/
-#online_users {
-	height: 95px;
-	overflow: auto;
-}
-
-/*ne pas supprimer*/
-#online_users br {
-	display: none;
-}
-
 .credits {
 	font-size: var(--little-size);
 	border: var(--border);
@@ -1976,7 +1965,7 @@ a.fa-mention {
 
 /* REPONSE RAPIDE --- */
 /*supression de la mention "réponse rapide" + saut de ligne */
-.quickreply div.h3, .quickreply br {
+.quickreply div.h3 {
 	display: none;
 }
 
@@ -2586,10 +2575,6 @@ margin-right: 5px;
 	/* margin-right: XXXpx -- pour smileys à droite */
 }
 
-#parent_editor_simple #message-box>br {
-	display: none;
-}
-
 #parent_editor_simple #message-box>#textarea_content {
 	width: 100% !important;
 }
@@ -3002,4 +2987,9 @@ tw:hover, .tw:hover{filter: blur(0px); }
 
 .pa-explication, .pa-context, .pa-event, .pa-timeline, .pa-tabs, .pa-timeline, .pa-staff-icon img, .tabs-icon, .tabs-icon img {
 	border-radius: 3px!important;
+}
+
+/* Saut de ligne qu'on veut pas afficher */
+#qeel__online_users_list br, .quickreply br,  #parent_editor_simple #message-box>br {
+	display: none;
 }
