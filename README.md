@@ -22,6 +22,8 @@ buttons =>
 * padding : py-4
 
 ## TO DO
+### General
+* Ajout du grayscale si pas de nouveau message ?
 ### Memberlist
 * Ajouter des liens (présentation etc)
 * Afficher utilisateur en ligne
@@ -31,14 +33,16 @@ buttons =>
 * Points / Nombre de mots
 ### Page Accueil
 * Module météo icon
+* QEEL
+    * Liens PL ou autres 
 
 ## TO DO TOUT DE SUITE
 * MP
 * Recherche
 * ~~Affichage des catégories~~
-* QEEL
+* ~~QEEL~~
 * ~~Member List~~
-* Affichage d'un forum
+* ~~Affichage d'un forum~~
 * Affichage d'un message
 * Modif profil ?
 * PA
