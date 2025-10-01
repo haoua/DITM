@@ -16,37 +16,29 @@
 			</span>
 		</div>
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}" class="rounded shadow bg-white flex items-center">
+			<a href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
 				<i class="bi bi-envelope text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Contacter</span>
 		</div>
 
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}" class="rounded shadow text-center block profile_btn text-center" style="padding: 18px 21px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
-					<path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5"/>
-					<path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
-				</svg>
+			<a href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
+				<i class="bi bi-file-earmark-plus text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Sujets ouverts</span>
 		</div>
 
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}" class="rounded shadow text-center block profile_btn text-center" style="padding: 18px 21px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-				  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
-				  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
-				</svg>
+			<a href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
+				<i class="bi bi-file-earmark-text text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Sujets participés</span>
 		</div>
 
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}" class="rounded shadow text-center block profile_btn text-center" style="padding: 18px 21px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-				  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
-				</svg>
+			<a href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
+				<i class="bi bi-pencil text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Messages</span>
 		</div>
@@ -54,7 +46,6 @@
 
     <!-- Profile contents -->
     <div class="flex py-4 gap-4">
-
         <div>
         	<!-- Avatar -->
 	        <div class="relative profile_avatar p-2 shadow rounded bg-white" id="user_avatar">
@@ -144,11 +135,8 @@
     </div>
 
     <div id="profile_liens" class="flex gap-4">
-    	<a href="#" id="profile_pres" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center">
-    		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mr-1 bi bi-person-vcard" viewBox="0 0 16 16">
-    		  <path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5M9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8m1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5"/>
-    		  <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96q.04-.245.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 1 1 12z"/>
-    		</svg> 
+    	<a href="#" id="profile_pres" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center bg-white">
+    		<i class="mr-1 bi bi-person-vcard"></i> 
     		Présentation
     	</a>
     	<a href="#" id="profile_fdl" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center">

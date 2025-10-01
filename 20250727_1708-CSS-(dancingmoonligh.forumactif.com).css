@@ -2203,14 +2203,13 @@ text-align: center;
 margin: 10px 0 0;
 }
 
-.profile_btn{
-background-color:var(--transparent);
-color:var(--color7);
+.profile_btn i{
+	font-size: 22px;
 }
 
 .profile_link_tooltip_trigger:hover .profile_btn, .profile_btn:hover{
-background-color: var(--color7);
-color:var(--transparent);
+	background: var(--gra);
+	color: white;
 }
 
 .profile_link_tooltip{

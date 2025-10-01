@@ -24,6 +24,7 @@ buttons =>
 ## TO DO
 ### General
 * Ajout du grayscale si pas de nouveau message ?
+* MAJ de bootstrap pour les icons manquants : Profil présentation, QEEL bouton
 ### Memberlist
 * Ajouter des liens (présentation etc)
 * Afficher utilisateur en ligne
