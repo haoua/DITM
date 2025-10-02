@@ -131,13 +131,14 @@
                 {postrow.displayed.POSTER_AVATAR}
                 <!-- En ligne -->
                 <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white" style="bottom: 0px;right: 0px;"></div>
+                <div></div>
             </div>
 
             <br />
             
             <div class="DITM_post_userinfo rounded p-3 overflow-auto w-full">
                
-               <!-- Champs de profil -->
+                <!-- Champs de profil -->
                 <!-- BEGIN profile_field -->
                     <div class="user_field">
                         <!-- Label d'un champs de profil -->
@@ -160,7 +161,6 @@
 
                 <!-- Champs de profil de la feuille de personnage -->
                 {postrow.displayed.POSTER_RPG}
-
             </div>
 
             <br />

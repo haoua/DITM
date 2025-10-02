@@ -1291,9 +1291,6 @@ li.fa_separator {
 /*** BARRE DE NAVIGATION ----------- ***/
 
 /* Conteneur de la barre de nav */
-.navbar {
-	background: var(--gradient);
-}
 
 /* Suppression des liens peu utilisés*/
 .navbar a[href^="/faq"],
@@ -2208,8 +2205,15 @@ margin: 10px 0 0;
 }
 
 .profile_link_tooltip_trigger:hover .profile_btn, .profile_btn:hover{
-	background: var(--gra);
+	background: rgb(var(--three));	
+}
+
+a.profile_btn:hover{
 	color: white;
+}
+
+.profile_link_tooltip_trigger:hover .profile_btn i, .profile_btn:hover i{
+	-webkit-text-fill-color: white;
 }
 
 .profile_link_tooltip{

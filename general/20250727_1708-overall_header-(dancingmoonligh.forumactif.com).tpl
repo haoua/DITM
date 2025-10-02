@@ -302,7 +302,7 @@
 			<a href="{U_INDEX}" id="header"><img loading="lazy" src="{LOGO}" alt="{L_INDEX}" /></a>
 
 		   <!-- Barre de navigation -->
-			<ul class="navbar flex p-2 rounded shw shadow items-center justify-center mt-4 mb-5"">
+			<ul class="navbar flex p-2 rounded shadow items-center justify-center mb-5 bg-white">
 				<li>{GENERATED_NAV_BAR}</li>
 			</ul>
 			<!-- Fin de la barre de nav -->

@@ -25,6 +25,7 @@ buttons =>
 ### General
 * Ajout du grayscale si pas de nouveau message ?
 * MAJ de bootstrap pour les icons manquants : Profil présentation, QEEL bouton
+* Affichage mobile : réponse
 ### Memberlist
 * Ajouter des liens (présentation etc)
 * Afficher utilisateur en ligne
@@ -32,6 +33,9 @@ buttons =>
 * CSS avec compilation tailwind 
 ### Nouveau message
 * Points / Nombre de mots
+### Profil
+* Hover des boutons divers
+* Modale Wombat
 ### Page Accueil
 * Module météo icon
 * QEEL
@@ -45,7 +49,7 @@ buttons =>
 * ~~Member List~~
 * ~~Affichage d'un forum~~
 * Affichage d'un message
-* Modif profil ?
+* ~~Modif profil ?~~
 * PA
 * Infos importante en haut ?
 * ~~Notification~~
