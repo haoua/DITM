@@ -130,8 +130,8 @@
             <div class="post_avatar relative">
                 {postrow.displayed.POSTER_AVATAR}
                 <!-- En ligne -->
-                <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white" style="bottom: 0px;right: 0px;"></div>
-                <div></div>
+                <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white" style="bottom: -2px;right: -2px;"></div>
+                <div class="absolute">Nom et des trucs</div>
             </div>
 
             <br />
