@@ -131,7 +131,45 @@
                 {postrow.displayed.POSTER_AVATAR}
                 <!-- En ligne -->
                 <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white" style="bottom: -2px;right: -2px;"></div>
-                <div class="absolute">Nom et des trucs</div>
+                <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 rounded">
+                    <div class="post_rank bg-gradient uppercase text-white p-2 rounded-t">
+                        <div class="border p-2 rounded-t">
+                            {postrow.displayed.POSTER_RANK_NEW}
+                        </div>
+                    </div>
+                    <div class="p-2 flex flex-col gap-2">
+                        <div class="flex gap-2">
+                            <div class="w-1/2" style="height: 92px;">
+                                <img src="https://i.pinimg.com/1200x/ae/bb/e7/aebbe7d260b1ec52f5d6e091e6254529.jpg" alt="" class="w-full h-full object-center object-cover">
+                            </div>
+                            <div class="flex-1 flex flex-col gap-1">
+                                <div class="flex gap-1 h-1/2">
+                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-backpack"></i>
+                                    </a>
+                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-bookmark-heart-fill"></i>
+                                    </a>
+                                </div>
+                                <div class="flex gap-1 h-1/2">
+                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-bookmark-heart-fill"></i>
+                                    </a>
+                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-backpack"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-1/3 text-justify bg-white shadow p-1 rounded pt-0 overflow-auto">
+                            <span class="text-gradient font-roboto font-bold font-medium">triggers warning :</span> violences faites aux enfants et aux animaux, auto mutilation
+                        </div>
+
+                         <div class="h-1/3 text-justify bg-white shadow p-1 rounded pt-0 overflow-auto">
+                            <span class="text-gradient font-roboto font-bold font-medium">content warning :</span> blessure, alcoolisme, dépendances, pression familiale
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <br />

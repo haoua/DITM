@@ -24,7 +24,7 @@ buttons =>
 ## TO DO
 ### General
 * Ajout du grayscale si pas de nouveau message ?
-* MAJ de bootstrap pour les icons manquants : Profil présentation, QEEL bouton
+* ~~MAJ de bootstrap pour les icons manquants : Profil présentation, QEEL bouton~~ 1.4.0 -> 1.13.0
 * Affichage mobile : réponse
 ### Memberlist
 * Ajouter des liens (présentation etc)
@@ -37,7 +37,7 @@ buttons =>
 * Hover des boutons divers
 * Modale Wombat
 ### Page Accueil
-* Module météo icon
+* ~~Module météo icon~~
 * QEEL
     * Liens PL ou autres 
 
