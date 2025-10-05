@@ -2,6 +2,7 @@
 
 ## Modification
 page-title => DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2
+ou (DITM_page_title text-white text-center font-yeseva bg-gradient rounded-t py-2) ?
 
 links-bar => my-5
 
@@ -26,6 +27,7 @@ buttons =>
 * Ajout du grayscale si pas de nouveau message ?
 * ~~MAJ de bootstrap pour les icons manquants : Profil présentation, QEEL bouton~~ 1.4.0 -> 1.13.0
 * Affichage mobile : réponse
+* Titre comme sur la recherche ?
 ### Memberlist
 * Ajouter des liens (présentation etc)
 * Afficher utilisateur en ligne
@@ -43,7 +45,7 @@ buttons =>
 
 ## TO DO TOUT DE SUITE
 * MP
-* Recherche
+* ~~Recherche par messages~~
 * ~~Affichage des catégories~~
 * ~~QEEL~~
 * ~~Member List~~

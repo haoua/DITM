@@ -613,8 +613,40 @@ body#sce_smilies_body {
 
 
 /*** ------------------------------- ***/
-/*** PAGINATIONS -------------------- ***/
+/*** PAGINATIONS ------------------- ***/
+/* Pagination recherche */
+#search__pagination > span{
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	align-items: center;
+}
 
+#search__pagination strong, #search__pagination a{
+	padding: 0.25rem; /* .p-1 */
+	padding-left: 0.5rem; /* .px-2 */
+	padding-right: 0.5rem; /* .px-2 */
+	border-radius: 0.25rem; /* .rounded */
+	--tw-bg-opacity: 1;
+  	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1)); /* .bg-zinc-200 */
+
+	display: inline-flex; 
+	align-items: center; 
+
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color); /* .shadow */
+}
+
+#search__pagination strong, #search__pagination a:hover{
+	color: white;
+	background: var(--gra);
+}
+
+#search__pagination  .page-sep{
+	display: none;
+}
+
+/* old */
 .pagination {}
 
 /*lien unique vers les pages numérotées*/
@@ -636,7 +668,7 @@ body#sce_smilies_body {
 
 /*suppression de l'image-lien "aller à la page suivante" */
 .page-topic span a:last-child,
-.pag-img {
+ #search__pagination a.pag-img {
 	display: none;
 }
 
