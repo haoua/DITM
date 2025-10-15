@@ -294,11 +294,10 @@ titre6 {
 }
 
 /*** ------------------------------- ***/
-/*** TOUTES LES PAGES --------------- ***/
+/*** TOUTES LES PAGES -------------- ***/
 
 /* FOND DU FORUM ---*/
 body {
-	background-image: var(--background);
 	font-family: var(--font);
 	font-size: var(--normal-size);
 	color: var(--textColor);
@@ -2647,7 +2646,7 @@ margin-right: 5px;
 /*** ------------------------------- ***/
 /*** PAGES DE RECHERCHES ----------- ***/
 
-/* RECHERCHE DE MESSAGE -----*/
+/* RECHERCHE DE MESSAGE ----------*/
 
 /* Conteneur d'un message*/
 .post_search {
@@ -2668,7 +2667,7 @@ margin-right: 5px;
 	font-size: var(--little-size);
 }
 
-/* RECHERCHE DE SUJET -----*/
+/* RECHERCHE DE SUJET ------------*/
 /* Même CSS que la liste des sujets dans un forum */
 
 /*** ------------------------------- ***/

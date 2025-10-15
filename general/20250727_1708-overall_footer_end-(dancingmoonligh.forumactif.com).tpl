@@ -54,6 +54,57 @@ $(document).ready(function() {
 //]]>
 </script>
 
+<script>
+    location.pathname == "/search" && location.search == "?search_id=draftsearch" && $(function () {
+        $('body').addClass('drafts__main');
+        $('h1.page-title').addClass('DITM_page_title font-bold text-white text-center font-yeseva lowercase bg-gradient rounded-t py-2');
+        $('h1.DITM_page_title').removeClass('page-title');
+        $('.row3').removeClass('panel');
+        $('.panel').addClass('bg-zinc-200 p-2 rounded-b mb-4');
+        $('.panel').removeClass('panel');
+        if($(".table1 tbody tr td").length == 1){
+            $('thead').addClass('hidden');
+            $('td').addClass('bg-white rounded shadow p-2');
+        }else{
+            $('.mobile-visible').each(function(){
+                $(this).addClass("hidden");
+            });
+
+            $('table').addClass("rounded bg-zinc-100 shadow mb-2");
+
+            $('.row3 p.right-box').html($('.row3 p.right-box').html().replace('::', ''));
+            $('.row3 p.right-box a').wrap('<div class="bg-white w-fit rounded shadow">');
+            $('.row3 p.right-box a').addClass('p-1 px-2 text-gradient flex');
+            $('p.right-box:first').addClass('flex gap-4 justify-end');
+            $('p.right-box:first').append($('.submit-buttons').html());
+            $('.submit-buttons').addClass('hidden');
+            $('p.right-box:last').addClass('hidden');
+            $('.button1').addClass('bg-red-500 text-white p-1 px-2 rounded shadow');
+
+            $('tbody td').each(function(){
+                $(this).addClass("border-b border-blue-gray-50 p-2 bg-white text-left");
+            });
+
+            $('thead th').each(function(){
+                $(this).addClass("p-2 text-left border-b border-blue-gray-100");
+            });
+
+            $('thead th:last').removeClass('text-left');
+            $("thead th").eq(-2).removeClass('text-left');
+
+            $('thead th:last').addClass('w-1');
+            $("thead th").eq(-2).addClass('w-1');
+            
+            $('table').find('tr:last').find('td:first').addClass('rounded-bl'); 
+            $('table').find('tr:last').find('td:last').addClass('rounded-br');
+
+            $('.topictitle').each(function(){
+                $(this).removeClass('topictitle');
+            });
+        }
+    });
+</script>
+
 <!--------------------------------------->
 <!-- BARRE LATERALE GAUCHE POUR PLUGIN -->  
 <div class="sidebar_top">
