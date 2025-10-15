@@ -1874,6 +1874,23 @@ button.rep-button .rep-nb {
 	border-radius: 0.25rem; /* .rounded */
 }
 
+.post_avatar .absolute {
+    /* Ajout de la propriété clé */
+    pointer-events: none; 
+    
+    /* ... vos autres styles (opacity: 0, transform: translateY(100%), transition-all, etc.) ... */
+}
+
+.post_avatar:hover .absolute {
+    /* 1. Rends l'élément visible */
+    opacity: 1 !important; 
+    
+    /* 2. Ramène l'élément à sa position d'origine (top: 0) */
+    transform: translateY(0) !important; 
+	pointer-events: auto !important;
+}
+
+
 .profile_title {
 	background-color: var(--color6);
 }

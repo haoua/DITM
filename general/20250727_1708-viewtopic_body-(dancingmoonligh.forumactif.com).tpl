@@ -131,7 +131,7 @@
                 {postrow.displayed.POSTER_AVATAR}
                 <!-- En ligne -->
                 <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white" style="bottom: -2px;right: -2px;"></div>
-                <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 rounded">
+                <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 rounded opacity-0 transition-all duration-300 ease-in-out translate-y-full">
                     <div class="post_rank bg-gradient uppercase text-white p-2 rounded-t">
                         <div class="border p-2 rounded-t">
                             {postrow.displayed.POSTER_RANK_NEW}
@@ -140,23 +140,23 @@
                     <div class="p-2 flex flex-col gap-2">
                         <div class="flex gap-2">
                             <div class="w-1/2" style="height: 92px;">
-                                <img src="https://i.pinimg.com/1200x/ae/bb/e7/aebbe7d260b1ec52f5d6e091e6254529.jpg" alt="" class="w-full h-full object-center object-cover">
+                                <img src="https://i.pinimg.com/1200x/ae/bb/e7/aebbe7d260b1ec52f5d6e091e6254529.jpg" alt="" class="profile_picture w-full h-full object-center object-cover">
                             </div>
                             <div class="flex-1 flex flex-col gap-1">
                                 <div class="flex gap-1 h-1/2">
-                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
-                                        <i class="bi bi-backpack"></i>
+                                    <a class="message__profile-links-pres opacity-0 bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-person-vcard"></i>
                                     </a>
-                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
-                                        <i class="bi bi-bookmark-heart-fill"></i>
+                                    <a class="message__profile-links-lien opacity-0 bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-link-45deg"></i>
                                     </a>
                                 </div>
                                 <div class="flex gap-1 h-1/2">
-                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
-                                        <i class="bi bi-bookmark-heart-fill"></i>
+                                    <a class="message__profile-links-insta opacity-0 bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-instagram"></i>
                                     </a>
-                                    <a class="bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
-                                        <i class="bi bi-backpack"></i>
+                                    <a class="message__profile-links-tinder opacity-0 bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
+                                        <i class="bi bi-fire"></i>
                                     </a>
                                 </div>
                             </div>
@@ -207,9 +207,11 @@
             <div class="post_contact">
                 {postrow.displayed.PM_IMG} &nbsp; <!-- MP -->
                 <!-- Autre contact-->
-                <!-- BEGIN contact_field -->
-                {postrow.displayed.contact_field.CONTENT} <!-- Autre champs de contact -->
-                <!-- END contact_field -->
+                <div class="viewtopic_body__contact_links hidden">
+                    <!-- BEGIN contact_field -->
+                    {postrow.displayed.contact_field.CONTENT} <!-- Autre champs de contact -->
+                    <!-- END contact_field -->
+                </div>
             </div>
         </div> <!-- Fin colonne profil -->
         
@@ -419,12 +421,39 @@
 //<![CDATA[
     $( window ).on( "load", function() {
         $(".post").each(function(){
+            let $postContainer = $(this); 
+            
             let img = $(this).find(".field-ta-bouille img").attr("src");
             if(img !== undefined){
-                $(this).find(".user_secondary_image").attr("src", img);
-                $(this).find(".user_secondary_image").removeClass("hidden");
+                $(this).find(".profile_picture").attr('src', img);
                 $(this).find(".field-ta-bouille").addClass("hidden");
             }
+
+            $('.field-date-dinscription .field_label').text("Inscription");
+
+            $(this).find('.viewtopic_body__contact_links a').each(function (index, element){
+                let link_img_url = element.firstChild.src;
+                if(link_img_url.indexOf('www') != -1){
+                    $postContainer.find('.message__profile-links-pres').removeClass('opacity-0');
+                    $postContainer.find('.message__profile-links-pres').attr('href', $(this).attr('href'));
+                }
+
+                if(link_img_url.indexOf('fb') != -1){
+                    $postContainer.find('.message__profile-links-lien').removeClass('opacity-0');
+                    $postContainer.find('.message__profile-links-lien').attr('href', $(this).attr('href'));
+                }
+
+                if(link_img_url.indexOf('twitter') != -1){
+                    $postContainer.find('.message__profile-links-insta').removeClass('opacity-0');
+                    $postContainer.find('.message__profile-links-insta').attr('href', $(this).attr('href'));
+                }
+
+                if(link_img_url.indexOf('pinterest') != -1){
+                    $postContainer.find('.message__profile-links-tinder').removeClass('opacity-0');
+                    $postContainer.find('.message__profile-links-tinder').attr('href', $(this).attr('href'));
+                }
+
+            }); 
         });
     });
 //]]>
