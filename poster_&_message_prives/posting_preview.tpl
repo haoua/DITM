@@ -1,11 +1,11 @@
-<div id="preview" class="post row2">
-	<div class="inner"><span class="corners-top"><span></span></span>
-	<div class="postbody">
-		<div class="h3">{L_PREVIEW}</div>
-		<div class="content">
-		{MESSAGE_NEW}
+<div id="preview" class="post row2 bg-white rounded shadow">
+	<div class="inner">
+		<div class="postbody">
+			<div class="p-3 px-2 font-bold text-base text-white bg-gradient-800 rounded-t font-roboto uppercase">{L_PREVIEW}</div>
+			<div class="content p-2 py-4">
+			{MESSAGE_NEW}
+			</div>
 		</div>
 	</div>
-	<span class="corners-bottom"><span></span></span></div>
 </div>
 <hr />

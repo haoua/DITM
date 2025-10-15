@@ -52,11 +52,11 @@
         <!--------------------------------------------------------->
         <!-- CONTENU DE LA SECTION POSTER UN MESSAGE -------------->
 
-        <div class="bg-white rounded p-2 my-3" id="postingbox">
+        <div class="bg-white rounded my-3" id="postingbox">
             <!-- BEGIN switch_post_a -->
-            <h3>{L_POST_A}</h3>
+            <h3 class="p-3 px-2 font-bold text-base text-white bg-gradient-800 rounded-t font-roboto uppercase">{L_POST_A}</h3>
             <!-- END switch_post_a -->
-            <fieldset class="fields1" style="min-width: inherit;">
+            <fieldset class="fields1 p-2" style="min-width: inherit;">
                 <!-- BEGIN switch_username_select -->
                 <dl>
                     <dt><label>{L_USERNAME}</label></dt>
@@ -105,10 +105,12 @@
                 <!-- END switch_icon_checkbox -->
 
                 <!-- BEGIN switch_subject -->
-                <dl>
-                    <dt><label>{L_SUBJECT}</label></dt>
+                <dl class="items-center mb-2">
+                    <dt>
+                        <label class="font-roboto uppercase text-one">{L_SUBJECT}</label>
+                    </dt>
                     <dd>
-                        <input class="inputbox medium" type="text" name="subject" value="{SUBJECT}" maxlength="{TOPIC_TITLE_MAXLENGTH}" title="{TOPIC_TITLE_LENGTH_EXPLAIN}" onkeypress="if (event.keyCode==13){return false}" />
+                        <input class="inputbox medium bg-zinc-100 rounded w-full" type="text" name="subject" value="{SUBJECT}" maxlength="{TOPIC_TITLE_MAXLENGTH}" title="{TOPIC_TITLE_LENGTH_EXPLAIN}" onkeypress="if (event.keyCode==13){return false}" />
 
                         <!-- BEGIN switch_subject_color -->
 
@@ -118,7 +120,7 @@
                             //]]>
 
                         </script>
-                        <select name="topic_color" onchange="input[0].style.color = topic_color.value" style="margin-left:10px">
+                        <select class="hidden" name="topic_color" onchange="input[0].style.color = topic_color.value" style="margin-left:10px">
                             {switch_subject.switch_subject_color.TOPIC_TITLE_COLOR_OPTIONS}
                         </select>
                         <script type="text/javascript">
@@ -134,16 +136,18 @@
                 <!-- END switch_subject -->
 
                 <!-- BEGIN switch_description -->
-                <dl>
-                    <dt><label>{L_DESCRIPTION}</label></dt>
+                <dl class="items-center mb-2">
+                    <dt>
+                        <label class="font-roboto uppercase text-one">{L_DESCRIPTION}</label>
+                    </dt>
                     <dd>
-                        <input class="inputbox medium" type="text" name="description" value="{DESCRIPTION}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
+                        <input class="inputbox medium bg-zinc-100 rounded w-full" type="text" name="description" value="{DESCRIPTION}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
                     </dd>
                 </dl>
                 <!-- END switch_description -->
 
                 <div class="message-edition">
-                    <div id="smiley-box">
+                    <div id="smiley-box" class="bg-zinc-100 rounded pt-2">
                         <div id="smileyContainer">{L_SMILIES_PREVIEW_NEW}</div>
                     </div>
     
@@ -190,8 +194,8 @@
     <!-- SECTION : DÉS -------------->
 
     <!-- BEGIN switch_roll_dice -->
-    <div class="panel">
-    <h3>{ROLL_DICE_TITLE}</h3>
+    <h3 class="font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{ROLL_DICE_TITLE}</h3>
+    <div class="p-2 bg-zinc-200 rounded-b mb-3">
         <script type="text/javascript">
             function add_dice(dice_number, dice, number) {
                 var content = document.getElementById('post_dice').innerHTML;
@@ -200,7 +204,7 @@
 
                 var new_tr = document.createElement('tr');
                 new_tr.appendChild(document.createElement('td'));
-                new_tr.firstChild.innerHTML = '{ROLL_DICE_TITLE_LOW} #' + (dice_number + 1) + ' :&nbsp;<select name="post_dice_' + dice_number + '" id="post_dice_' + dice_number + '" value="' + dice + '">' + content + '</select>&nbsp;<label for="nb_rolls">{switch_roll_dice.L_DICE_ROLLS} : </label><input type="text" size="2" maxlength="3" name="nb_rolls_' + dice_number + '" id="nb_rolls" value="' + number + '" />&nbsp;<span id="dice_to_del"><a href="javascript:add_dice(' + (dice_number + 1) + ',\'\',1)">+</a></span>';
+                new_tr.firstChild.innerHTML = '<span class="uppercase font-roboto text-two font-medium w-36 inline-block">{ROLL_DICE_TITLE_LOW} #' + (dice_number + 1) + ' :&nbsp;</span><select name="post_dice_' + dice_number + '" id="post_dice_' + dice_number + '" value="' + dice + '" class="bg-zinc-100 rounded p-2 px-4">' + content + '</select>&nbsp;<label for="nb_rolls" class="uppercase font-roboto text-two font-medium ml-2">{switch_roll_dice.L_DICE_ROLLS} : </label><input type="text" class="bg-zinc-100 rounded w-16 mr-2" size="2" maxlength="3" name="nb_rolls_' + dice_number + '" id="nb_rolls" value="' + number + '" />&nbsp;<span id="dice_to_del"><a class="bg-zinc-200 rounded p-2" href="javascript:add_dice(' + (dice_number + 1) + ',\'\',1)">Ajouter un dé</a></span>';
                 document.getElementById('list_dice').lastChild.appendChild(new_tr);
 
                 var select_dice = document.getElementById('post_dice_' + dice_number);
@@ -210,21 +214,24 @@
                 for (var i = 1; select_dice.options[i]; i++) {
                     select_dice.options[i].selected = (select_dice.options[i].value == dice);
                 }
+
+                $('#list_dice tr:last').addClass('rounded bg-white shadow mt-1 inline-block w-full');
+                $('#list_dice tr:last td').addClass('px-2 py-1');
             }
 
         </script>
         <table style="width:100%" id="list_dice">
-            <tr>
-                <td>
-                    {ROLL_DICE_TITLE_LOW} #1 :&nbsp;
-                    <select name="post_dice_0" id="post_dice">
+            <tr class="rounded bg-white shadow inline-block w-full">
+                <td class="px-2 py-1">
+                    <span class="uppercase font-roboto text-two font-medium w-36 inline-block">{ROLL_DICE_TITLE_LOW} #1 :&nbsp;</span>
+                    <select name="post_dice_0" id="post_dice" class="bg-zinc-100 rounded p-2 px-4">
                         <option value="">-</option>
                         <!-- BEGIN row_replace -->
                         <option value="{switch_roll_dice.row_replace.DICE_ID}" {switch_roll_dice.row_replace.DICE_SELECTED}>{switch_roll_dice.row_replace.DICE_NAME}</option>
                         <!-- END row_replace -->
                     </select>
-                    &nbsp;<label for="nb_rolls">{switch_roll_dice.L_DICE_ROLLS} : </label><input type="text" size="2" maxlength="3" name="nb_rolls_0" id="nb_rolls" value="{switch_roll_dice.S_DICE_ROLLS_VALUE}" />
-                    &nbsp;<span id="dice_to_del"><a href="javascript:add_dice(1,'',1)">+</a></span>
+                    &nbsp;<label for="nb_rolls" class="uppercase font-roboto text-two font-medium ml-2">{switch_roll_dice.L_DICE_ROLLS} : </label><input class="bg-zinc-100 rounded w-16 mr-2" type="text" size="2" maxlength="3" name="nb_rolls_0" id="nb_rolls" value="{switch_roll_dice.S_DICE_ROLLS_VALUE}" />
+                    &nbsp;<span id="dice_to_del"><a class="bg-zinc-200 rounded p-2" href="javascript:add_dice(1,'',1)">Ajouter un dé</a></span>
                 </td>
             </tr>
         </table>
@@ -236,7 +243,7 @@
     <!--------------------------------------------->
     <!-- SECTION : OPTION DU MESSAGE -------------->
     <h3 class="font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_OPTIONS}</h3>
-    <div class="bg-zinc-200 p-2 rounded-b">
+    <div class="bg-zinc-200 p-2 rounded-b mb-3">
         <div class="bg-white p-2 rounded shadow">
             <!-- BEGIN switch_topic_modif -->
             <fieldset class="fields1">
@@ -252,10 +259,10 @@
                     </dd>
                 </dl>
                 <!-- END switch_icon_checkbox -->
-                <dl>
-                    <dt><label for="modif_topic_title">{L_TOPIC_TITLE_MODIFY}</label></dt>
+                <dl class="items-center">
+                    <dt><label for="modif_topic_title" class="font-medium font-roboto uppercase text-three">{L_TOPIC_TITLE_MODIFY}</label></dt>
                     <dd>
-                        <input type="text" class="inputbox medium" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
+                        <input type="text" class="inputbox medium bg-zinc-100 w-full rounded" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
                         <!-- BEGIN switch_topic_button -->
                         &nbsp;<input type="button" class="button2" value="{L_SOLVED_WITHOUT_BRAKETS}" onclick="set_solved(this.form.elements['modif_topic_title'],'{L_SOLVED}')" style="display:none" id="button_solved" />
                         <script type="text/javascript">
@@ -268,7 +275,7 @@
                     </dd>
                 </dl>
             </fieldset>
-            <hr class="dashed" />
+            <hr class="border-blue-100 my-2" />
             <!-- END switch_topic_modif -->
             <fieldset class="fields1">
                 <!-- BEGIN switch_html_checkbox -->
@@ -344,6 +351,16 @@
     <!-- END switch_image_resize -->
     });
     //]]>
+</script>
+
+<script>
+    if($('#postingbox h3').text().indexOf('Poster une réponse') != -1){
+        $('#postingbox h3').text("Votre réponse");
+    }
+
+    if($('#postingbox h3').text().indexOf('Poster un nouveau sujet') != -1){
+        $('#postingbox h3').text("Votre nouveau sujet");
+    }
 </script>
 
 {SCEDITOR}

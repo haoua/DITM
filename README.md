@@ -59,12 +59,15 @@ buttons =>
 * Mentions automatique recherche
 * ~~Sous forums ?!~~
 * Barre de navigation
-* Message Admin
+* ~~Message Admin~~ // A tester avec d'autre modèle que les membres en danger 
 * Pré lien
 * Présentation
 * Poster un nouveau message : 
-    * Prévisualisation
-    * Vérifier le poste d'un nouveau sujet
-    * Titre du message + description pour les messages à supprimer
-    * Smiley fond gris ?
+    * ~~Prévisualisation~~
+    * ~~Vérifier le poste d'un nouveau sujet~~
+    * ~~Titre du message + description pour les messages à supprimer~~
+    * ~~Smiley fond gris ?~~
+    * Revue du message
+    * Ajouter un sondage
+    * ~~Les dés ?~~
 * Pop-up recherche

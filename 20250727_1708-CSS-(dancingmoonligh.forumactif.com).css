@@ -588,7 +588,7 @@ a.sceditor-button {
 	/*ne pas supprimer*/
 	width: 100% !important;
 	margin: 0 !important;
-	padding: 5px !important;
+	padding: 0.5rem!important;
 	/*ne pas supprimer*/
 	min-height: 250px !important;
 }
@@ -601,6 +601,9 @@ a.sceditor-button {
 	--tw-bg-opacity: 1;
 	background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1))!important;
 	font-weight: initial;
+	border: 0!important;
+	border-bottom-right-radius: 0.25rem; /* .rounded-b */
+	border-bottom-left-radius: 0.25rem; /* .rounded-b */
 }
 
 /*Boîte Smiley*/
@@ -2550,12 +2553,6 @@ margin-right: 5px;
 }
 
 /* Prévisualisation d'un message */
-#preview {
-	background: var(--color6);
-	padding: 10px;
-	border: var(--border);
-	border-radius: 5px;
-}
 
 /*** ------------------------------- ***/
 /*** EDITION DE PROFIL ------------- ***/
