@@ -103,6 +103,46 @@ $(document).ready(function() {
             });
         }
     });
+
+    location.pathname == "/login" && $(function () {
+        $('body').addClass('login__body');
+
+        $('form').addClass('flex-1');
+        $('.panel:first').addClass('login__form');
+        $('.panel:last').addClass('login__register-infos w-96');
+        $('.panel').removeClass('panel');
+
+        $('.login__register-infos .content').addClass('pb-2')
+
+        $('#main-content').addClass('flex gap-5')
+        $('.inner').addClass('rounded shadow bg-zinc-200 pb-2');
+        $('.inner .content').removeClass('content');
+
+        $('.login__form .h3').addClass('bg-gradient p-2 text-white rounded-t text-center flex items-center font-roboto uppercase text-lg');
+        $('.login__form .h3').html('<i class="ri-sparkling-line"></i> Informations de connexion');
+        
+        $('.login__register-infos .h3').addClass('bg-gradient p-2 text-white rounded-t text-center flex items-center font-roboto uppercase text-lg');
+        $('.login__register-infos .h3').html('<i class="ri-sparkling-line"></i> Nous rejoindre');
+        $('.login__register-infos p').addClass('m-2 p-2 rounded shadow');
+        $('.login__register-infos p:first').addClass('bg-white text-center');
+        $('.login__register-infos p:first').html('Sous les néons et les secrets de la Nouvelle-Orléans, un nouveau chapitre vous attend.<br>Créez votre compte et entrez dans la danse.')
+
+        $('.login__register-infos p:last').addClass('my-0 bg-gradient text-center');
+        $('.login__register-infos p:last a').addClass('uppercase font-roboto text-white');
+        $('.login__register-infos .corners-bottom').each(function(){ $('this').remove();});
+
+        $('.button1').addClass('my-0 bg-gradient text-center uppercase font-roboto text-white w-full p-2 shadow');
+
+        $('.login__register-infos hr').addClass('hidden');
+
+        $('.fields1').removeClass('left');
+        $('.fields1').addClass('p-2 rounded bg-white m-2 mb-0');
+
+        $('#username').addClass('bg-zinc-100 rounded');
+        $('#password').addClass('bg-zinc-100 rounded');
+
+        
+    });
 </script>
 
 <!--------------------------------------->

@@ -25,6 +25,7 @@
 	<!-- INSTALLATION DE FONT ICON -->
 	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	  
   	<!-- TEXTE DANS L'ONGLET DE NAVIGATEUR -->
