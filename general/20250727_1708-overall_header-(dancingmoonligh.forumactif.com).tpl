@@ -225,11 +225,6 @@
 		#fa_usermenu table {width: 100%;}
 		#fa_usermenu table tr {display: flex;justify-content: center;}
 
-		/* STRUCTURE DE LA PAGE DE CONNEXION */
-		.fld_connexion dl {display: grid;rid-row-gap: 15px; grid-template-columns: 150px auto;}
-		.fld_connexion dl:nth-of-type(2) dd:last-of-type {grid-column: 1 / span 2;}
-		.fld_connexion dl:nth-of-type(3) {margin: 0;}
-		.fld_connexion dl:nth-of-type(n+3) {display: block;}
 		.invisible {display: none;visibility: hidden;} .visible {display: block;visibility: visible;}
 
 		/* Indicateur complexité du mot de passe */

@@ -112,36 +112,51 @@ $(document).ready(function() {
         $('.panel:last').addClass('login__register-infos w-96');
         $('.panel').removeClass('panel');
 
-        $('.login__register-infos .content').addClass('pb-2')
+        $('.login__register-infos .content').addClass('pb-2');
 
-        $('#main-content').addClass('flex gap-5')
+        $('#main-content').addClass('flex gap-5');
         $('.inner').addClass('rounded shadow bg-zinc-200 pb-2');
         $('.inner .content').removeClass('content');
 
         $('.login__form .h3').addClass('bg-gradient p-2 text-white rounded-t text-center flex items-center font-roboto uppercase text-lg');
-        $('.login__form .h3').html('<i class="ri-sparkling-line"></i> Informations de connexion');
+        $('.login__form .h3').html('<i class="ri-sparkling-line font-normal mr-1"></i> Informations de connexion');
         
         $('.login__register-infos .h3').addClass('bg-gradient p-2 text-white rounded-t text-center flex items-center font-roboto uppercase text-lg');
-        $('.login__register-infos .h3').html('<i class="ri-sparkling-line"></i> Nous rejoindre');
+        $('.login__register-infos .h3').html('<i class="ri-sparkling-line font-normal mr-1"></i> Nous rejoindre');
         $('.login__register-infos p').addClass('m-2 p-2 rounded shadow');
         $('.login__register-infos p:first').addClass('bg-white text-center');
-        $('.login__register-infos p:first').html('Sous les néons et les secrets de la Nouvelle-Orléans, un nouveau chapitre vous attend.<br>Créez votre compte et entrez dans la danse.')
+        $('.login__register-infos p:first').html('Sous les néons et les secrets de la Nouvelle-Orléans, un nouveau chapitre vous attend.<br>Créez votre compte et entrez dans la danse.');
 
         $('.login__register-infos p:last').addClass('my-0 bg-gradient text-center');
         $('.login__register-infos p:last a').addClass('uppercase font-roboto text-white');
         $('.login__register-infos .corners-bottom').each(function(){ $('this').remove();});
 
-        $('.button1').addClass('my-0 bg-gradient text-center uppercase font-roboto text-white w-full p-2 shadow');
+        $('.button1').addClass('my-0 bg-gradient text-center uppercase font-roboto text-white w-full p-2 shadow rounded');
 
         $('.login__register-infos hr').addClass('hidden');
 
         $('.fields1').removeClass('left');
         $('.fields1').addClass('p-2 rounded bg-white m-2 mb-0');
+    
+        $('fieldset dl:first').addClass('flex items-center mb-2');
+        $('fieldset dl:first dt').addClass('w-32');
+        $('fieldset dl:first dd').addClass('flex-1');
 
-        $('#username').addClass('bg-zinc-100 rounded');
-        $('#password').addClass('bg-zinc-100 rounded');
+        $('fieldset dl:nth-child(2)').addClass('flex items-center mb-2 flex-wrap');
+        $('fieldset dl:nth-child(2) dt').addClass('w-32');
+        $('fieldset dl:nth-child(2) dd:first').addClass('flex-1');
+        $('fieldset dl:nth-child(2) dd:last').addClass('basis-full');
+        $('.password-container').addClass('relative');
+        $('.password-container img').addClass('cursor-pointer absolute');
+        $('.password-container img').css('right', '5px');
+        $('.password-container img').css('top', '50%');
+        $('.password-container img').css('transform', 'translate(-50%, -50%)');
 
-        
+        $('#username').addClass('bg-zinc-100 rounded w-full');
+        $('#password').addClass('bg-zinc-100 rounded w-full');
+
+        $('fieldset dl:last').addClass('block mt-1');
+        $('fieldset dl:last dt').addClass('hidden');
     });
 </script>
 

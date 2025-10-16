@@ -2688,18 +2688,6 @@ margin-right: 5px;
 /*** PAGE DE CONNEXION ------------- ***/
 
 /* Centrer les pages de connexion */
-form[name="form_login"],
-form[name="form_login"]~.panel {
-	text-align: center;
-}
-
-form[name="form_login"] .content {
-	display: grid;
-	justify-content: center;
-	justify-items: center;
-	background: var(--color6);
-	padding: 5px;
-}
 
 /*** ------------------------------- ***/
 /*** ELEMENTS FLOTTANTS ------------ ***/
