@@ -50,7 +50,7 @@ buttons =>
 * ~~QEEL~~
 * ~~Member List~~
 * ~~Affichage d'un forum~~
-* Affichage d'un message
+* ~~Affichage d'un message~~
 * ~~Modif profil ?~~
 * PA
 * Infos importante en haut ?
@@ -62,12 +62,12 @@ buttons =>
 * ~~Message Admin~~ // A tester avec d'autre modèle que les membres en danger 
 * Pré lien
 * Présentation
-* Poster un nouveau message : 
+* ~~Poster un nouveau message : ~~
     * ~~Prévisualisation~~
     * ~~Vérifier le poste d'un nouveau sujet~~
     * ~~Titre du message + description pour les messages à supprimer~~
     * ~~Smiley fond gris ?~~
-    * Revue du message
+    * ~~Revue du message~~
     * Ajouter un sondage
     * ~~Les dés ?~~
 * Pop-up recherche

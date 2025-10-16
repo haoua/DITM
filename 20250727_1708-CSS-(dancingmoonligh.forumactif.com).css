@@ -1524,7 +1524,7 @@ a.groups:last-child {
 /****** ------------------------------------------------------------------------------
 ****** LISTE DES SUJETS ------------------------------------------------------------- ******/
 
-/*** ------------------------------- ***/
+/*** --------------------------------------- ***/
 /*** ENTETE ET FOOTER DE LA LISTE DES SUJETS ***/
 
 /* Chaîne de navigation et pagination
@@ -1712,11 +1712,13 @@ a.groups:last-child {
 	display: block;
 }
 
-/****** ------------------------------------------------------------------------------
+/****** -------------------------------------------------------------------------------------
 ****** AFFICHAGE D'UN SUJET --------------------------------------------------------- ******/
 
-.title_container {
-	
+
+
+
+.title_container {	
 }
 
 /*---- forum ---*/
@@ -1804,13 +1806,6 @@ div.post_row:last-of-type {
 	color: rgb(var(--three));
 }
 
-.post_date {
-	display: flex;
-	flex-grow: 100;
-	margin-left: 10px;
-	align-items: center;
-}
-
 /* BOUTONS D'EDITION DU MESSAGE --- */
 /* Conteneur boutons d'édition */
 ul.profile-icons {
@@ -1835,35 +1830,15 @@ ul.profile-icons li:hover {
 }
 
 /* BOUTON LIKE --- */
-/* Conteneur du bouton like */
-.like_button {
-}
+/* icon coeur */
+.fa_liked .ri-poker-hearts-line{display: none;}
+.fa_like .ri-poker-hearts-fill{display: none;}
 
-/* Bouton like */
-.rep-button,
-.rep-button:active,
-.rep-button:focus {
-	background: var(--color5);
-	color: var(--color6);
-	border: none;
-	padding: 3px 5px!important;
-	font-weight: 600;
-}
-
-/*Bouton au survol*/
-.rep-button:hover {
-	background: var(--var(--contrastLighter));
-}
-
-/* Texte "j'aime" */
-button.rep-button .like_text {}
-
-/*compteur de like*/
+/* compteur de like */
 button.rep-button .rep-nb {
 	margin-left: 5px;
 	padding: 0 3px;
-	background: var(--neutral);
-	border-radius: 3px;
+	border-left: 1px solid #ffffff47;
 }
 
 .DITM_post_profile {
@@ -1940,15 +1915,10 @@ a.fa-mention {
 	font-size: 12px;
 }
 
-.post_contact {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.post_contact img {
-	width: 20px;
-	height: auto;
+/* PARTIE GAUCHE : info poster --------*/
+/* Nom d'utilisateur */
+.postrow__poster-name strong{
+	font-weight: normal;
 }
 
 /* RECOMPENSES --- */
