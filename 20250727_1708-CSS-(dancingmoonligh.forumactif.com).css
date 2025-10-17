@@ -74,6 +74,8 @@
 	--gra100: -webkit-linear-gradient(45deg, rgba(var(--one), .1) 0%, rgba(var(--two), .1) 50%, rgba(var(--three), .1) 100%);
 
 	--graReverse: -webkit-linear-gradient(45deg, rgba(var(--three), 1) 0%, rgba(var(--two), 1) 50%, rgba(var(--one), 1) 100%);
+
+	--tw-bg-opacity: 1;
 }
 
 /* VARIABLES DU MODE INVERSE (ici sombre) */
@@ -593,7 +595,6 @@ body#sce_smilies_body {
 	padding-left: 0.5rem; /* .px-2 */
 	padding-right: 0.5rem; /* .px-2 */
 	border-radius: 0.25rem; /* .rounded */
-	--tw-bg-opacity: 1;
   	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1)); /* .bg-zinc-200 */
 
 	display: inline-flex; 
@@ -799,7 +800,6 @@ ul#notif_list {
 	border-radius: 0.25rem; /* .rounded */
 
 	/* bg-zinc-200 */
-	--tw-bg-opacity: 1;
 	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1));
 }
 
@@ -824,7 +824,6 @@ ul#notif_list .delete {
 ul#fa_menulist {
 	width: 390px;
 	border-radius: 0.25rem; /* .rounded */
-	--tw-bg-opacity: 1; /* .bg-zinc-200 */
 	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1)); /* .bg-zinc-200 */
 	right: 10px;
 	left: initial !important;
@@ -869,7 +868,6 @@ ul#fa_menulist {
 }
 
 .dark #fa_menulist li{
-	--tw-bg-opacity: 1; /* dark:bg-zinc-800 */
 	background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1)); /* dark:bg-zinc-800 */
 }
 
@@ -936,7 +934,6 @@ li.fa_separator {
 
 #notif_list .unread {
 	border-radius: 0.25rem; /* .rounded */
-	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1938,7 +1935,6 @@ a.fa-mention {
 
 #quickreply_content #textarea_content {
 	border-radius: 0.25rem; /* .rounded */
-	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -2495,12 +2491,15 @@ margin-right: 5px;
 
 #tabs li a {
 	border-radius: 0.25rem; /* .rounded */
-	--tw-bg-opacity: 1;
-	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)); /* .bg-white */
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
+}
+
+.dark #tabs li a{
+	background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1)); /* .bg-zinc-800 */
 }
 
 /* Onglet actif + survol */
@@ -2567,6 +2566,10 @@ margin-right: 5px;
 
 #profile-edit__main input:not([type='checkbox']):not([type='submit']):not([type='reset']) {    
 	width: 100%;
+}
+
+.dark #profile-edit__main input:not([type='reset']) {
+
 }
 
 /*** ------------------------------- ***/

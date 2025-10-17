@@ -16,7 +16,7 @@
             <!-- Cadre enregistrement des informations d'utilisateur -->
             <!-- BEGIN switch_informations_menu -->
             <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_REGISTRATION_INFO}</h1>
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
 
                 <p>{L_ITEMS_REQUIRED}</p>
                 <fieldset>
@@ -68,7 +68,7 @@
             <!-- Cadre champs de profil du compte -->
             <!-- BEGIN switch_profile_fields -->
             <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{switch_informations_menu.switch_profile_fields.L_PROFILE_FIELDS}</h1>
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
                 <fieldset>
                     <!-- BEGIN field -->
                     <dl class="flex items-center">
@@ -87,7 +87,7 @@
             <!-- LISTES DES RECCOMPENSES -->
             <!-- BEGIN switch_awards -->
             <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{switch_informations_menu.switch_awards.L_AWARDS}</h1>
-            <div class="p-2 bg-white rounded-b mb-5" style="overflow: visible">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5" style="overflow: visible">
                 <div id="list_awards" style="width: 100%; text-align: center">{switch_informations_menu.switch_awards.AWARDS_LIST}</div>
 
                 <center>
@@ -100,7 +100,7 @@
             
 
             <!-- BEGIN switch_register_not_display -->
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
                 <p>{L_PROFILE_INFO_NOTICE}</p>
                 <fieldset>
                     <!-- BEGIN switch_unsubscribe_allowed -->
@@ -115,7 +115,7 @@
             <!-- END switch_register_not_display -->
 
             <!-- BEGIN switch_profile_fields_register -->
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
                 <fieldset>
                     <!-- BEGIN field -->
                     <dl class="flex items-center">
@@ -132,7 +132,7 @@
             <!-- Cadre exportation des données -->
             <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{switch_informations_menu.RGPD_ACTION_TITLE}</h1>
             <!-- BEGIN rgpd_generate_or_download -->
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
                 <fieldset>
                     <dl class="flex items-center">
                         <dt><label>{switch_informations_menu.rgpd_generate_or_download.RGPD_ACTION_LABEL} :</label></dt>
@@ -146,7 +146,7 @@
             </div>
             <!-- END rgpd_generate_or_download -->
             <!-- BEGIN rgpd_await_export -->
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
                 <fieldset>
                     <p>{switch_informations_menu.rgpd_await_export.RGPD_AWAIT_EXPORT}</p>
                 </fieldset>
@@ -160,7 +160,7 @@
 	    <!-- Page : Modification du mot de passe -->
             <!-- BEGIN switch_confirm_password -->
             <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_REGISTRATION_INFO}</h1>
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
                 <fieldset>
                     <dl class="flex items-center">
                         <dt><label>{L_CURRENT_PASSWORD}&nbsp;: *</label></dt>
@@ -170,7 +170,7 @@
             </div>
             <!-- END switch_confirm_password -->
             <!-- BEGIN switch_confirm_password_new -->
-            <div class="p-2 bg-white rounded-b mb-5">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5">
                 <fieldset>
                     <dl class="flex items-center">
                         <dt><label>{L_NEW_PASSWORD}&nbsp;: *</label></dt>
@@ -194,7 +194,7 @@
 	    <!-- Page de la gestion des préférences -->
             <!-- BEGIN switch_preferences_menu -->
             <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_PREFERENCES}</h1>
-            <div class="p-2 bg-white rounded-b mb-5 profil_preferences">
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5 profil_preferences">
 
                 <fieldset>
                     <dl class="flex items-center">
@@ -358,8 +358,8 @@
             <!----------------------------->
             <!-- Page : gestion d'avatar -->
             <!-- BEGIN switch_avatar_block -->
-            <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_AVATAR_p-2 bg-white rounded-b mb-5}</h1>
-            <div class="p-2 bg-white rounded-b mb-5 profil_editavatar">
+            <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_AVATAR_PANEL}</h1> // HAOUA
+            <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5 profil_editavatar">
 
                 <fieldset>
                     <dl class="flex items-center">
@@ -411,7 +411,7 @@
             <fieldset class="submit-buttons flex gap-2">
                 {S_HIDDEN_FIELDS}
                 <input class="flex-1 py-2 px-4 uppercase shadow rounded bg-gradient text-white" type="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
-                <input class="flex-1 py-2 px-4 uppercase shadow rounded bg-white text-one" type="reset" name="reset" value="{L_RESET}" />
+                <input class="flex-1 py-2 px-4 uppercase shadow rounded bg-white dark:bg-zinc-900 text-one" type="reset" name="reset" value="{L_RESET}" />
             </fieldset>
           
           
