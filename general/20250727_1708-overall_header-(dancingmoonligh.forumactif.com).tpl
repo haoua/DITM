@@ -207,7 +207,7 @@
 		dd {margin: 0;}
 		dt {margin: 0}
 		dt label {font-weight: bold}
-		button, input {border: none}
+		button{border: none}
 		button, select, input{font-family: var(--font);cursor: pointer;}
 		input:is([type="text"], [type="passeword"]){cursor: text;}
 		  
@@ -242,6 +242,19 @@
 		#cp-main#cp-main#cp-main, table, .quickreply div#textarea_content {width: 100% !important;}
 		.panel .panel { background: transparent;border: none; padding: 0;margin: 0; border-radius: 0;}
 		.social_btn {display: none;}
+
+		/* test */
+		:root{
+			--one: 241, 167, 91;
+			--two: 224, 134, 80;
+			--three: 230, 176, 120;
+		}
+		
+		[data-color-scheme="dark"] {
+			--three: 179, 108, 73;
+			--one: 145, 35, 30;
+			--two: 190, 70, 40;
+		}
 	</style>
 
 	{HOSTING_JS}

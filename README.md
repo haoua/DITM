@@ -71,3 +71,25 @@ buttons =>
     * Ajouter un sondage
     * ~~Les dés ?~~
 * Pop-up recherche
+
+### Dark theme
+* MP
+* Recherche par messages
+* Affichage des catégories
+* QEEL
+* ~~Member List~~
+* Affichage d'un forum
+* Affichage d'un message
+* Pop Up profil
+* PA
+* Infos importante en haut ?
+* Notification
+* Mentions
+* Mentions automatique recherche
+* Sous forums ?!
+* Barre de navigation
+* Message Admin
+* Pré lien
+* Présentation
+* Poster un nouveau message :
+* Pop-up recherche
