@@ -154,20 +154,20 @@
 		</div>
 	</div>
 	<div class="w-10 flex flex-col justify-between">
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-suit-heart mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/t1-reglement" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-git-repository-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-people-fill mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/t4-staff" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-vip-crown-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-chat-right-dots mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/f20-all-i-need-is" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-team-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-briefcase-fill mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/f6-guests-area" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-questionnaire-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-stars mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/t5-credits" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-copyright-line mx-auto" style="font-size:20px;"></i>
 		</a>
 	</div>
 </div>

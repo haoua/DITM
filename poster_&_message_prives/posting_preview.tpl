@@ -1,4 +1,4 @@
-<div id="preview" class="post row2 bg-white rounded shadow">
+<div id="preview" class="post row2 bg-white dark:bg-zinc-900 rounded shadow">
 	<div class="inner">
 		<div class="postbody">
 			<div class="p-3 px-2 font-bold text-base text-white bg-gradient-800 rounded-t font-roboto uppercase">{L_PREVIEW}</div>

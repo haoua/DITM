@@ -1,9 +1,9 @@
 <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_SEARCH_MATCHES}</h1>
 
-<form action="{S_ACTION}" method="post" name="post" onsubmit="return verify_select();" class="bg-zinc-200 p-2 rounded-b">
+<form action="{S_ACTION}" method="post" name="post" onsubmit="return verify_select();" class="bg-zinc-200 dark:bg-zinc-800 p-2 rounded-b">
 
     <!-- BEGIN searchresults -->	
-    <div class="DITM_topicslist_row flex bg-white p-2 rounded shadow mb-2 items-center">
+    <div class="DITM_topicslist_row flex bg-white dark:bg-zinc-900 p-2 rounded shadow mb-2 items-center">
         
         <!-- Image d'un sujet -->
         <div class="topicslist-img mr-3">

@@ -10,7 +10,7 @@
         <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_POST_A}</h1>
     </div>
 
-    <div class="bg-zinc-200 rounded-b p-2">
+    <div class="bg-zinc-200 dark:bg-zinc-800 rounded-b p-2">
         <!-- Affichage de la prévisualisation (template : posting_topic_review ) -->
         {POST_PREVIEW_BOX}
 
@@ -52,7 +52,7 @@
         <!--------------------------------------------------------->
         <!-- CONTENU DE LA SECTION POSTER UN MESSAGE -------------->
 
-        <div class="bg-white rounded my-3" id="postingbox">
+        <div class="bg-white dark:bg-zinc-900 rounded my-3" id="postingbox">
             <!-- BEGIN switch_post_a -->
             <h3 class="p-3 px-2 font-bold text-base text-white bg-gradient-800 rounded-t font-roboto uppercase">{L_POST_A}</h3>
             <!-- END switch_post_a -->
@@ -110,7 +110,7 @@
                         <label class="font-roboto uppercase text-one">{L_SUBJECT}</label>
                     </dt>
                     <dd>
-                        <input class="inputbox medium bg-zinc-100 rounded w-full" type="text" name="subject" value="{SUBJECT}" maxlength="{TOPIC_TITLE_MAXLENGTH}" title="{TOPIC_TITLE_LENGTH_EXPLAIN}" onkeypress="if (event.keyCode==13){return false}" />
+                        <input class="inputbox medium bg-zinc-100 dark:bg-zinc-700 rounded w-full" type="text" name="subject" value="{SUBJECT}" maxlength="{TOPIC_TITLE_MAXLENGTH}" title="{TOPIC_TITLE_LENGTH_EXPLAIN}" onkeypress="if (event.keyCode==13){return false}" />
 
                         <!-- BEGIN switch_subject_color -->
 
@@ -141,13 +141,13 @@
                         <label class="font-roboto uppercase text-one">{L_DESCRIPTION}</label>
                     </dt>
                     <dd>
-                        <input class="inputbox medium bg-zinc-100 rounded w-full" type="text" name="description" value="{DESCRIPTION}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
+                        <input class="inputbox medium bg-zinc-100 dark:bg-zinc-700 rounded w-full" type="text" name="description" value="{DESCRIPTION}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
                     </dd>
                 </dl>
                 <!-- END switch_description -->
 
                 <div class="message-edition">
-                    <div id="smiley-box" class="bg-zinc-100 rounded pt-2">
+                    <div id="smiley-box" class="bg-zinc-100 dark:bg-zinc-700 rounded pt-2">
                         <div id="smileyContainer">{L_SMILIES_PREVIEW_NEW}</div>
                     </div>
     
@@ -169,10 +169,10 @@
             {S_HIDDEN_FORM_FIELDS}
             <input type="hidden" name="lt" value="{LAST_TOPIC_ID}" />
             <!-- BEGIN switch_preview -->
-            <input class="button2 w-1/6 rounded shadow py-1 bg-white text-one" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" />&nbsp;
+            <input class="button2 w-1/6 rounded shadow py-1 bg-white dark:bg-zinc-900 text-one" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" />&nbsp;
             <!-- END switch_preview -->
             <!-- BEGIN switch_draft -->
-            <input class="button2 w-1/6 rounded shadow py-1 bg-white text-two {BTN_DRAFT_CLASS}" type="submit" name="draft" value="{L_DRAFT}" title="{L_DRAFT_TITLE}" tabindex="7" accesskey="d" {switch_draft.DISABLED_DRAFT} />&nbsp;
+            <input class="button2 w-1/6 rounded shadow py-1 bg-white dark:bg-zinc-900 text-two {BTN_DRAFT_CLASS}" type="submit" name="draft" value="{L_DRAFT}" title="{L_DRAFT_TITLE}" tabindex="7" accesskey="d" {switch_draft.DISABLED_DRAFT} />&nbsp;
             <!-- END switch_draft -->
             <!-- BEGIN switch_publish -->
             <input class="button2" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" />&nbsp;
@@ -195,7 +195,7 @@
 
     <!-- BEGIN switch_roll_dice -->
     <h3 class="font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{ROLL_DICE_TITLE}</h3>
-    <div class="p-2 bg-zinc-200 rounded-b mb-3">
+    <div class="p-2 bg-zinc-200 dark:bg-zinc-800 rounded-b mb-3">
         <script type="text/javascript">
             function add_dice(dice_number, dice, number) {
                 var content = document.getElementById('post_dice').innerHTML;
@@ -204,7 +204,7 @@
 
                 var new_tr = document.createElement('tr');
                 new_tr.appendChild(document.createElement('td'));
-                new_tr.firstChild.innerHTML = '<span class="uppercase font-roboto text-two font-medium w-36 inline-block">{ROLL_DICE_TITLE_LOW} #' + (dice_number + 1) + ' :&nbsp;</span><select name="post_dice_' + dice_number + '" id="post_dice_' + dice_number + '" value="' + dice + '" class="bg-zinc-100 rounded p-2 px-4">' + content + '</select>&nbsp;<label for="nb_rolls" class="uppercase font-roboto text-two font-medium ml-2">{switch_roll_dice.L_DICE_ROLLS} : </label><input type="text" class="bg-zinc-100 rounded w-16 mr-2" size="2" maxlength="3" name="nb_rolls_' + dice_number + '" id="nb_rolls" value="' + number + '" />&nbsp;<span id="dice_to_del"><a class="bg-zinc-200 rounded p-2" href="javascript:add_dice(' + (dice_number + 1) + ',\'\',1)">Ajouter un dé</a></span>';
+                new_tr.firstChild.innerHTML = '<span class="uppercase font-roboto text-two font-medium w-36 inline-block">{ROLL_DICE_TITLE_LOW} #' + (dice_number + 1) + ' :&nbsp;</span><select name="post_dice_' + dice_number + '" id="post_dice_' + dice_number + '" value="' + dice + '" class="bg-zinc-100 dark:bg-zinc-700 rounded p-2 px-4">' + content + '</select>&nbsp;<label for="nb_rolls" class="uppercase font-roboto text-two font-medium ml-2">{switch_roll_dice.L_DICE_ROLLS} : </label><input type="text" class="bg-zinc-100 dark:bg-zinc-700 rounded w-16 mr-2" size="2" maxlength="3" name="nb_rolls_' + dice_number + '" id="nb_rolls" value="' + number + '" />&nbsp;<span id="dice_to_del"><a class="bg-zinc-200 dark:bg-zinc-800 rounded p-2" href="javascript:add_dice(' + (dice_number + 1) + ',\'\',1)">Ajouter un dé</a></span>';
                 document.getElementById('list_dice').lastChild.appendChild(new_tr);
 
                 var select_dice = document.getElementById('post_dice_' + dice_number);
@@ -215,23 +215,23 @@
                     select_dice.options[i].selected = (select_dice.options[i].value == dice);
                 }
 
-                $('#list_dice tr:last').addClass('rounded bg-white shadow mt-1 inline-block w-full');
+                $('#list_dice tr:last').addClass('rounded bg-white dark:bg-zinc-900 shadow mt-1 inline-block w-full');
                 $('#list_dice tr:last td').addClass('px-2 py-1');
             }
 
         </script>
         <table style="width:100%" id="list_dice">
-            <tr class="rounded bg-white shadow inline-block w-full">
+            <tr class="rounded bg-white dark:bg-zinc-900 shadow inline-block w-full">
                 <td class="px-2 py-1">
                     <span class="uppercase font-roboto text-two font-medium w-36 inline-block">{ROLL_DICE_TITLE_LOW} #1 :&nbsp;</span>
-                    <select name="post_dice_0" id="post_dice" class="bg-zinc-100 rounded p-2 px-4">
+                    <select name="post_dice_0" id="post_dice" class="bg-zinc-100 dark:bg-zinc-700 dark:bg-zinc-700 rounded p-2 px-4">
                         <option value="">-</option>
                         <!-- BEGIN row_replace -->
                         <option value="{switch_roll_dice.row_replace.DICE_ID}" {switch_roll_dice.row_replace.DICE_SELECTED}>{switch_roll_dice.row_replace.DICE_NAME}</option>
                         <!-- END row_replace -->
                     </select>
-                    &nbsp;<label for="nb_rolls" class="uppercase font-roboto text-two font-medium ml-2">{switch_roll_dice.L_DICE_ROLLS} : </label><input class="bg-zinc-100 rounded w-16 mr-2" type="text" size="2" maxlength="3" name="nb_rolls_0" id="nb_rolls" value="{switch_roll_dice.S_DICE_ROLLS_VALUE}" />
-                    &nbsp;<span id="dice_to_del"><a class="bg-zinc-200 rounded p-2" href="javascript:add_dice(1,'',1)">Ajouter un dé</a></span>
+                    &nbsp;<label for="nb_rolls" class="uppercase font-roboto text-two font-medium ml-2">{switch_roll_dice.L_DICE_ROLLS} : </label><input class="bg-zinc-100 dark:bg-zinc-700 rounded w-16 mr-2" type="text" size="2" maxlength="3" name="nb_rolls_0" id="nb_rolls" value="{switch_roll_dice.S_DICE_ROLLS_VALUE}" />
+                    &nbsp;<span id="dice_to_del"><a class="bg-zinc-200 dark:bg-zinc-800 rounded p-2" href="javascript:add_dice(1,'',1)">Ajouter un dé</a></span>
                 </td>
             </tr>
         </table>
@@ -243,8 +243,8 @@
     <!--------------------------------------------->
     <!-- SECTION : OPTION DU MESSAGE -------------->
     <h3 class="font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_OPTIONS}</h3>
-    <div class="bg-zinc-200 p-2 rounded-b mb-3">
-        <div class="bg-white p-2 rounded shadow">
+    <div class="bg-zinc-200 dark:bg-zinc-800 p-2 rounded-b mb-3">
+        <div class="bg-white dark:bg-zinc-900 p-2 rounded shadow">
             <!-- BEGIN switch_topic_modif -->
             <fieldset class="fields1">
                 <!-- BEGIN switch_icon_checkbox -->
@@ -262,7 +262,7 @@
                 <dl class="items-center">
                     <dt><label for="modif_topic_title" class="font-medium font-roboto uppercase text-three">{L_TOPIC_TITLE_MODIFY}</label></dt>
                     <dd>
-                        <input type="text" class="inputbox medium bg-zinc-100 w-full rounded" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
+                        <input type="text" class="inputbox medium bg-zinc-100 dark:bg-zinc-700 w-full rounded" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
                         <!-- BEGIN switch_topic_button -->
                         &nbsp;<input type="button" class="button2" value="{L_SOLVED_WITHOUT_BRAKETS}" onclick="set_solved(this.form.elements['modif_topic_title'],'{L_SOLVED}')" style="display:none" id="button_solved" />
                         <script type="text/javascript">
@@ -360,6 +360,12 @@
 
     if($('#postingbox h3').text().indexOf('Poster un nouveau sujet') != -1){
         $('#postingbox h3').text("Votre nouveau sujet");
+    }
+
+    if($('html').hasClass('dark')){
+        $('#sce_smilies_body').css('background', '#3f3f46');
+    }else{
+        $('#sce_smilies_body').css('background', '#f4f4f5');
     }
 </script>
 

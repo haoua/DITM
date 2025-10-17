@@ -1,4 +1,4 @@
-<div class="mt-4 rounded bg-zinc-200">
+<div class="mt-4 rounded bg-zinc-200 dark:bg-zinc-800">
 
     <!-- Titre "revue du sujet" -->
     <!-- BEGIN switch_inline_mode -->
@@ -13,10 +13,10 @@
         <!-- Contenu -->
         <div class="postbody">
             <!-- Sujet par - Auteur - le - date -->
-            <div class="p-2 rounded bg-white text-justify shadow mb-1"> {postrow.displayed.L_TOPIC_BY} {postrow.displayed.POSTER_NAME} {postrow.displayed.L_TOPIC_ON} {postrow.displayed.POST_DATE}</div>
+            <div class="p-2 rounded bg-white dark:bg-zinc-900 text-justify shadow mb-1"> {postrow.displayed.L_TOPIC_BY} {postrow.displayed.POSTER_NAME} {postrow.displayed.L_TOPIC_ON} {postrow.displayed.POST_DATE}</div>
 
             <!-- Message -->
-            <div class="p-2 rounded bg-white text-justify shadow mb-5">{postrow.displayed.MESSAGE}</div>
+            <div class="p-2 rounded bg-white dark:bg-zinc-900 text-justify shadow mb-5">{postrow.displayed.MESSAGE}</div>
         </div>
 
     </div>

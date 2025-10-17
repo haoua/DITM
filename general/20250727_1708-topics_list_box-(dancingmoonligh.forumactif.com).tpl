@@ -13,7 +13,7 @@
 
 
 <!-- Conteneur d'un sujet -->
-<div class="DITM_topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS} bg-white p-2 flex shadow mb-3 rounded items-center">
+<div class="DITM_topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS} bg-white dark:bg-zinc-900 p-2 flex shadow mb-3 rounded items-center">
 
 
     <!-- Image statut d'un sujet -->
@@ -22,7 +22,7 @@
     </div>
     
     <!-- Avatar du dernier posteur-->
-    <div class="topicslist-row__lastpost-user-img w-14 h-14 bg-cover rounded shadow p-1 bg-zinc-200 mx-3">
+    <div class="topicslist-row__lastpost-user-img w-14 h-14 bg-cover rounded shadow p-1 bg-zinc-200 dark:bg-zinc-800 mx-3">
         <div class="w-full h-full border rounded"></div>
         <div class="hidden">
             <!-- BEGIN avatar -->

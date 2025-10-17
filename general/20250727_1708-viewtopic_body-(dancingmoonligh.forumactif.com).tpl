@@ -45,7 +45,7 @@
 <!-- BEGIN postrow -->
 <!-- BEGIN displayed -->
 <!-- Details -->
-<div class="shadow bg-zinc-200 dark:bg-zinc-700 rounded">
+<div class="shadow bg-zinc-200 dark:bg-zinc-800 rounded">
     <div class="DITM_post_details p-2 flex justify-between items-center rounded-t bg-gradient-500 text-white">
         <span class="post_date">
             <!-- Lien d'ancre vers le message -->
@@ -146,12 +146,12 @@
         <!-- Contenenur des messages -->
         <div class="containersujet flex">
             <!-- Colonne de profil -->
-            <div id="profile{postrow.displayed.U_POST_ID}" class="DITM_post_profile flex flex-col rounded bg-white dark:bg-zinc-800 p-2 m-2 mt-0 items-center">
+            <div id="profile{postrow.displayed.U_POST_ID}" class="DITM_post_profile flex flex-col rounded bg-white dark:bg-zinc-900 p-2 m-2 mt-0 items-center">
                 <!-- Avatar -->
                 <div class="post_avatar relative">
                     {postrow.displayed.POSTER_AVATAR}
                     <!-- En ligne -->
-                    <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white" style="bottom: -2px;right: -2px;"></div>
+                    <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white dark:border-zinc-900" style="bottom: -2px;right: -2px;"></div>
                     <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 dark:bg-zinc-700 rounded opacity-0 transition-all duration-300 ease-in-out translate-y-full">
                         <div class="post_rank bg-gradient uppercase text-white p-2 rounded-t">
                             <div class="border p-2 rounded-t">
@@ -241,7 +241,7 @@
             <div class="DITM_post_content_right flex-1 rounded">
 
                 <!-- Contenu du message -->
-                <div class="bg-white dark:bg-zinc-800 postbody content rounded p-6 mr-2">
+                <div class="bg-white dark:bg-zinc-900 postbody content rounded p-6 mr-2">
                     <div>{postrow.displayed.MESSAGE}</div>
 
                     <!-- Signature -->
@@ -316,7 +316,7 @@
 <!-------------------------------->
 <!-- REPONSE RAPIDE -------------->
 
-<div class="bg-zinc-200 rounded shadow quickreply p-2" id="quickreply_content">
+<div class="bg-zinc-200 dark:bg-zinc-800 rounded shadow quickreply p-2" id="quickreply_content">
     <!-- BEGIN switch_user_logged_in -->
         {QUICK_REPLY_FORM}
     <!-- END switch_user_logged_in -->

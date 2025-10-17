@@ -77,13 +77,11 @@
 
         <!-- Notion "pas de message" -->
         <!-- BEGIN switch_no_messages -->
-        <center>{L_NO_MESSAGES}</center>
+        <div class="text-center">{L_NO_MESSAGES}</div>
         <!-- END switch_no_messages -->
 
         
-        <div class="flex mt-3">
-
-        
+        <div class="flex mt-3">        
         <!-- Capacité de la boîte de réception -->
             <!-- BEGIN switch_box_size_notice -->
             <span>{BOX_SIZE_STATUS}</span>

@@ -1,12 +1,12 @@
 <br />
-<div class="shadow rounded bg-zinc-200">
+<div class="shadow rounded bg-zinc-200 dark:bg-zinc-800 mb-3">
     <h1 class="DITM_page_title text-white text-center font-yeseva bg-gradient rounded-t py-2">{L_SEARCH_MATCHES}</h1>
     <div class="p-2">
         <!-- BEGIN searchresults -->
         <div class="DITM_post_search mb-4">
         
             <!-- Information du sujet -->
-            <div class="postsearch_infos bg-white rounded p-2 mb-1 flex items-center justify-between">
+            <div class="postsearch_infos bg-white dark:bg-zinc-900 rounded p-2 mb-1 flex items-center justify-between">
                 <h3 class="pb-0 uppercase mr-1"><a class="postdetails" href="{searchresults.U_TOPIC}">{searchresults.TOPIC_TITLE}</a></h3>
                     
                 <div>
@@ -22,14 +22,14 @@
             </div>
 
             <!-- Contenu du message -->
-            <div class="postsearch_content bg-white shadow rounded p-2">
+            <div class="postsearch_content bg-white dark:bg-zinc-900 shadow rounded p-2">
                 <h3 class="hidden"><a href="{searchresults.U_POST}">{searchresults.TOPIC_TITLE}</a></h3>
                 {searchresults.MESSAGE}
             </div>
         </div>
         <!-- END searchresults -->
 
-        <p id="search__pagination" class="DITM_pagination bg-white p-2 rounded shadow text-center">{PAGINATION}</p>
+        <p id="search__pagination" class="DITM_pagination bg-white dark:bg-zinc-900 p-2 rounded shadow text-center">{PAGINATION}</p>
     </div>
 </div>
 
@@ -37,6 +37,12 @@
 
 
 <script type="text/javascript">
+    if($('#search__pagination').text() == ""){
+        $('#search__pagination').addClass('hidden');
+    }
+
+    $(".DITM_post_search:last").removeClass('mb-4');
+
     $("#search__pagination").html($("#search__pagination").html().replace('•<span> <strong>1</strong>', '<span><strong>1</strong>'));
 </script>
 

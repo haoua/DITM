@@ -1,8 +1,8 @@
-<h1 class="font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_SEARCH_TITLE}</h1>
+<h1 class="font-bold text-white text-center uppercase bg-gradient rounded-t py-2" id="searchbody__title">{L_SEARCH_TITLE}</h1>
 
 <form action="{S_SEARCH_ACTION}" method="get" name="searchform">
-<div class="bg-zinc-200 p-3 rounded-b">
-	<div class="bg-white p-3 rounded shadow mb-5">
+<div class="bg-zinc-200 dark:bg-zinc-800 p-3 rounded-b">
+	<div class="bg-white dark:bg-zinc-900 p-3 rounded shadow mb-5">
         
         <h2 class="h3">{L_SEARCH_QUERY}</h2>
 
@@ -10,7 +10,7 @@
             <dl>
                 <dt><label>{L_SEARCH_KEYWORDS}:</label></dt>
                 <dd>
-                    <input class="inputbox" type="text" name="search_keywords" style="width: 270px;" />
+                    <input class="inputbox rounded dark:bg-zinc-700" type="text" name="search_keywords" style="width: 270px;" />
                     <input type="hidden" name="sid" value="{SID}" />
                     <input type="hidden" name="q" value="" />
                     <input type="hidden" name="domains" value="{SEARCH_FORUM_URL}" />
@@ -42,27 +42,27 @@
             </dl>
             <dl>
                 <dt><label>{L_SEARCH_AUTHOR}:</label></dt>
-                <dd><input class="inputbox" type="text" name="search_author" /></dd>
+                <dd><input class="inputbox rounded dark:bg-zinc-700" type="text" name="search_author" /></dd>
             </dl>
 		</fieldset>
 
 	</div>
 
-    <div class="row2 bg-white p-3 rounded shadow mb-5">
+    <div class="row2 bg-white dark:bg-zinc-900 p-3 rounded shadow mb-5">
         <div class="inner"><span class="corners-top"><span></span></span>
         <h2 class="h3">{L_SEARCH_OPTIONS}</h2>
 
         <fieldset>
             <dl>
                 <dt><label>{L_FORUM}:</label></dt>
-                <dd><select name="search_where">{S_FORUM_OPTIONS}</select></dd>
+                <dd><select name="search_where" class="p-1 rounded bg-zinc-100 dark:bg-zinc-700">{S_FORUM_OPTIONS}</select></dd>
             </dl>
 
-            <hr class="dashed" />
+            <hr class="dashed my-1" />
 
             <dl>
                 <dt><label>{L_SEARCH_PREVIOUS}:</label></dt>
-                <dd><select name="search_time">{S_TIME_OPTIONS}</select></dd>
+                <dd><select name="search_time" class="p-1 rounded bg-zinc-100 dark:bg-zinc-700">{S_TIME_OPTIONS}</select></dd>
             </dl>
             <dl>
                 <dt><label>{L_DISPLAY_RESULTS}:</label></dt>
@@ -70,7 +70,7 @@
             </dl>
             <dl>
                 <dt><label>{L_SORT_BY}:</label></dt>
-                <dd><select name="sort_by">{S_SORT_OPTIONS}</select></dd>
+                <dd><select name="sort_by" class="p-1 rounded bg-zinc-100 dark:bg-zinc-700">{S_SORT_OPTIONS}</select></dd>
                 <dd><label for="ASC"><input id="ASC" type="radio" name="sort_dir" value="ASC" />{L_SORT_ASCENDING}</label> <label for="DESC"><input id="DESC" type="radio" name="sort_dir" value="DESC" checked="checked" />{L_SORT_DESCENDING}</label></dd>
             </dl>
             </fieldset>
