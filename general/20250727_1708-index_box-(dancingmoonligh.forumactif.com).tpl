@@ -30,7 +30,7 @@
 <!-- BEGIN catrow -->
 
 <!-- BEGIN tablehead -->
-<div class="DITM_category" id="{catrow.tablehead.ID}">
+<div class="DITM_category bg-zinc-200 dark:bg-zinc-700 rounded shadow" id="{catrow.tablehead.ID}">
 
 	<!-- Titre catégorie -->
 	<div class="DITM_cate_title font-bold rounded-t p-3 bg-gradient shadow flex items-center justify-around">
@@ -49,16 +49,16 @@
 
 
     <!-- Conteneur liste des forums -->
-    <div class="forums rounded bg-zinc-200 p-3 mb-5 shadow flex flex-col gap-5">
+    <div class="forums p-3 mb-5 flex flex-col gap-5">
 
 	<!-- END tablehead -->
 
         <!-- BEGIN forumrow -->
         <!-- Affichage d'un forum -->
         <div>
-			<div class="forum row forum_row__row {catrow.forumrow.FOLDER_CLASSNAME} bg-white rounded">
+			<div class="forum row forum_row__row {catrow.forumrow.FOLDER_CLASSNAME} bg-white dark:bg-zinc-800 rounded">
 				<img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" class="hidden forum-row__img-status">
-				<div class="DITM_forum-container flex flex-col rounded shadow mb-1 p-3 gap-3 bg-no-repeat bg-right" style="background-image: url('{catrow.forumrow.FORUM_FOLDER_IMG}');background-color: rgba(255,255,255,0.8);background-blend-mode: lighten;background-position:730px center;">
+				<div class="DITM_forum-container flex flex-col rounded shadow mb-1 p-3 gap-3 bg-no-repeat bg-right">
 					<div class="flex">
 						<div class="forum_avatar lastpostavatar rounded bg-gradient">
 							<!-- Avatar du dernier posteur -->
@@ -84,11 +84,11 @@
 							<div class="flex gap-3 justify-around">
 								<!-- Compteur sujets et message -->
 								<div class="flex items-center">
-									<span class="text-one font-yeseva text-2xl mr-1">{catrow.forumrow.TOPICS}</span> <span class="uppercase text-xs">{L_TOPICS}</span>
+									<span class="text-two font-yeseva text-2xl mr-1">{catrow.forumrow.TOPICS}</span> <span class="uppercase text-xs">{L_TOPICS}</span>
 								</div>
 
 								<div class="flex items-center">
-									<span class="text-two font-yeseva text-2xl mr-1">{catrow.forumrow.POSTS}</span> <span class="uppercase text-xs">{L_POSTS}</span>
+									<span class="text-three font-yeseva text-2xl mr-1">{catrow.forumrow.POSTS}</span> <span class="uppercase text-xs">{L_POSTS}</span>
 								</div>
 							</div>
 							<div class="forum-row__last_post_infos">

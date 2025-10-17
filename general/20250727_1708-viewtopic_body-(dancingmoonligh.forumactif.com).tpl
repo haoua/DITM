@@ -45,7 +45,7 @@
 <!-- BEGIN postrow -->
 <!-- BEGIN displayed -->
 <!-- Details -->
-<div class="shadow bg-zinc-200 dark:bg-zinc-800">
+<div class="shadow bg-zinc-200 dark:bg-zinc-700 rounded">
     <div class="DITM_post_details p-2 flex justify-between items-center rounded-t bg-gradient-500 text-white">
         <span class="post_date">
             <!-- Lien d'ancre vers le message -->
@@ -146,13 +146,13 @@
         <!-- Contenenur des messages -->
         <div class="containersujet flex">
             <!-- Colonne de profil -->
-            <div id="profile{postrow.displayed.U_POST_ID}" class="DITM_post_profile flex flex-col rounded bg-white p-2 m-2 mt-0 items-center">
+            <div id="profile{postrow.displayed.U_POST_ID}" class="DITM_post_profile flex flex-col rounded bg-white dark:bg-zinc-800 p-2 m-2 mt-0 items-center">
                 <!-- Avatar -->
                 <div class="post_avatar relative">
                     {postrow.displayed.POSTER_AVATAR}
                     <!-- En ligne -->
                     <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white" style="bottom: -2px;right: -2px;"></div>
-                    <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 rounded opacity-0 transition-all duration-300 ease-in-out translate-y-full">
+                    <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 dark:bg-zinc-700 rounded opacity-0 transition-all duration-300 ease-in-out translate-y-full">
                         <div class="post_rank bg-gradient uppercase text-white p-2 rounded-t">
                             <div class="border p-2 rounded-t">
                                 {postrow.displayed.POSTER_RANK_NEW}
@@ -182,11 +182,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/3 text-justify bg-white shadow p-1 rounded pt-0 overflow-auto">
+                            <div class="h-1/3 text-justify bg-white dark:bg-zinc-800 shadow p-1 rounded pt-0 overflow-auto">
                                 <span class="text-gradient font-roboto font-bold font-medium">triggers warning :</span> violences faites aux enfants et aux animaux, auto mutilation
                             </div>
 
-                            <div class="h-1/3 text-justify bg-white shadow p-1 rounded pt-0 overflow-auto">
+                            <div class="h-1/3 text-justify bg-white dark:bg-zinc-800 shadow p-1 rounded pt-0 overflow-auto">
                                 <span class="text-gradient font-roboto font-bold font-medium">content warning :</span> blessure, alcoolisme, dépendances, pression familiale
                             </div>
                         </div>
@@ -201,7 +201,7 @@
                     <!-- BEGIN profile_field -->
                         <div class="user_field">
                             <!-- Label d'un champs de profil -->
-                            <span class="field_label uppercase font-roboto font-medium" style="color: rgba(var(--one), 1);">{postrow.displayed.profile_field.LABEL}</span>
+                            <span class="field_label uppercase font-roboto font-medium text-two">{postrow.displayed.profile_field.LABEL}</span>
                         
                             <!-- Contenu d'un champs de profil -->
                             <span class="field_content">{postrow.displayed.profile_field.CONTENT}</span>
@@ -241,7 +241,7 @@
             <div class="DITM_post_content_right flex-1 rounded">
 
                 <!-- Contenu du message -->
-                <div class="post_message postbody content rounded p-6">
+                <div class="bg-white dark:bg-zinc-800 postbody content rounded p-6 mr-2">
                     <div>{postrow.displayed.MESSAGE}</div>
 
                     <!-- Signature -->

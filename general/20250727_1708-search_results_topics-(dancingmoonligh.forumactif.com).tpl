@@ -46,13 +46,13 @@
             <div class="DITM_topicslist-stats flex gap-3 justify-around items-center">
                 <!-- Nombres // Indication "messages" -->
                 <div>
-                    <span class="text-one font-yeseva text-2xl mr-1">{searchresults.REPLIES}</span>
+                    <span class="text-two font-yeseva text-2xl mr-1">{searchresults.REPLIES}</span>
                     <span class="uppercase text-xs">{L_REPLIES}</span>
                 </div>
                 
                 <!-- Nombres // Indication "vues" -->
                 <div>
-                    <span class="text-two font-yeseva text-2xl mr-1">{searchresults.VIEWS}</span>
+                    <span class="text-three font-yeseva text-2xl mr-1">{searchresults.VIEWS}</span>
                     <span class="uppercase text-xs">{L_VIEWS}
                 </div>
             </div>

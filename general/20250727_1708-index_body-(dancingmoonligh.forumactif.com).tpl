@@ -87,7 +87,7 @@
 <!-- QUI EST EN LIGNE ---------------------->
 
 <!-- BEGIN disable_viewonline -->
-<div class="bg-zinc-200 shadow my-3 p-2 rounded flex gap-2">
+<div class="bg-zinc-200 dark:bg-zinc-700 shadow my-3 p-2 rounded flex gap-2">
 	<div class="flex-1">
 		<div class="flex gap-2">
 			<div class="w-3/4">
