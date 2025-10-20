@@ -161,7 +161,7 @@
                         <div class="p-2 flex flex-col gap-2">
                             <div class="flex gap-2">
                                 <div class="w-1/2" style="height: 92px;">
-                                    <img src="https://i.pinimg.com/1200x/ae/bb/e7/aebbe7d260b1ec52f5d6e091e6254529.jpg" alt="" class="profile_picture w-full h-full object-center object-cover">
+                                    <img src="https://64.media.tumblr.com/ceac39dd9ca3c9d08a21eb2469774a13/50c3d4c7f402cba8-53/s400x600/f6ad1c4a7d041f51b9501c2c43b2e0b7b66bb3c9.jpg" alt="" class="profile_picture w-full h-full object-center object-cover">
                                 </div>
                                 <div class="flex-1 flex flex-col gap-1">
                                     <div class="flex gap-1 h-1/2">
@@ -195,7 +195,7 @@
 
                 <br />
                 
-                <div class="DITM_post_userinfo rounded p-3 overflow-auto w-full">
+                <div class="DITM_post_userinfo rounded overflow-auto w-full text-justify max-h-96 mt-5">
                 
                     <!-- Champs de profil -->
                     <!-- BEGIN profile_field -->
@@ -204,7 +204,7 @@
                             <span class="field_label uppercase font-roboto font-medium text-two">{postrow.displayed.profile_field.LABEL}</span>
                         
                             <!-- Contenu d'un champs de profil -->
-                            <span class="field_content">{postrow.displayed.profile_field.CONTENT}</span>
+                            <span class="field_con²tent">{postrow.displayed.profile_field.CONTENT}</span>
                         
                             <!-- Séparateur entre champs de profil -->                      
                             <span class="field_separator">{postrow.displayed.profile_field.SEPARATOR}</span>
@@ -241,7 +241,7 @@
             <div class="DITM_post_content_right flex-1 rounded">
 
                 <!-- Contenu du message -->
-                <div class="bg-white dark:bg-zinc-900 postbody content rounded p-6 mr-2">
+                <div class="bg-white dark:bg-zinc-900 postbody content rounded p-6 mr-2 mb-2">
                     <div>{postrow.displayed.MESSAGE}</div>
 
                     <!-- Signature -->
@@ -375,7 +375,7 @@
         {S_SELECT_MOD}&nbsp;
         <input class="button2" type="submit" value="{L_GO}" />
     </fieldset>
-  <span class="right">{S_TOPIC_ADMIN}</span>
+  <span class="right hidden">{S_TOPIC_ADMIN}</span>
 </form>
 <!-- END viewtopic_bottom -->
 
@@ -460,6 +460,8 @@
         visible: '{JS_HIDE_HIDDEN_MESSAGE}',
         hidden: '{JS_SHOW_HIDDEN_MESSAGE}'
     };
+    
+    // Déclaration de la fonction pour afficher/masquer le message
     showHiddenMessage = function(id) {
         try {
             var regId = parseInt(id, 10);
@@ -468,7 +470,9 @@
             }
 
             if (regId > 0) {
+                // Fait basculer la visibilité de l'élément .post--[id]
                 $('.post--' + id).toggle(0, function() {
+                    // Met à jour le texte du lien en fonction de la nouvelle visibilité
                     if ($(this).is(":visible")) {
                         $('#hidden-title--' + id).html(hiddenMsgLabel.visible);
                     } else {
@@ -476,11 +480,12 @@
                     }
                 });
             }
-        } catch (e) {}
+        } catch (e) {
+            // Un bloc catch vide n'est généralement pas recommandé, 
+            // mais il est conservé ici pour respecter votre structure initiale.
+        }
 
         return false;
     };
-
     //]]>
-
 </script>

@@ -122,13 +122,13 @@
 					</div>
 				</div>
 			</div>
-			<div id="DITM_last_connected" class="w-1/4 flex flex-col">
+			<div id="DITM_last_connected" class="w-1/4 flex flex-col" style="max-height: 182px;">
 				<div class="bg-gradient flex rounded-t py-2 px-1">
 					<div class="bg-white dark:bg-zinc-900 rounded py-1 px-4 font-bold uppercase font-roboto mx-auto">
 						<span id="qeel_nb-active-users" class="text-gradient"></span>
 					</div>
 				</div>
-				<div class="rounded-b bg-white dark:bg-zinc-900 shadow p-2 grow">
+				<div class="rounded-b bg-white dark:bg-zinc-900 shadow p-2 grow text-justify overflow-auto">
 					{L_CONNECTED_MEMBERS}
 				</div>
 			</div>

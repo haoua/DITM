@@ -69,6 +69,14 @@
             <!-- END nav_tree -->
         </span>
 
+        
+        <!-- Description du sujet -->
+        <!-- BEGIN switch_description -->
+        <div class="topics_list_box__description font-roboto uppercase bg-zinc-100 dark:bg-zinc-700 rounded p-1 w-fit mr-3" style="font-size: 11px;">
+            {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
+        </div>
+        <!-- END switch_description -->
+
     </div>
 
 
@@ -100,14 +108,6 @@
             {topics_list_box.row.LAST_POST_IMG}
         </div>
     </div>
-
-
-    <!-- Description du sujet -->
-    <!-- BEGIN switch_description -->
-    <div class="topicslist-description">
-        {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
-    </div>
-    <!-- END switch_description -->
 
 
 </div>

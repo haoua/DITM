@@ -1,34 +1,27 @@
 <br />
 
-<!----------------------------------------------->
-<!-- MENU DE LA BOITE DE RECEPTION -------------->
-
-<ul id="privmsgs-menu">
-    <!-- Boîte de reception (image / lien) -->
-    <li>{INBOX_IMG} {INBOX}</li>
-    <!-- Messages envoyés (image / lien) -->
-    <li>{SENTBOX_IMG} {SENTBOX}</li>
-    <!-- Boîte d'envoi (image / lien) -->
-    <li>{OUTBOX_IMG} {OUTBOX}</li>
-    <!-- Archives (image / lien) -->
-    <li>{SAVEBOX_IMG} {SAVEBOX}</li>
-</ul>
-
-
 
 <!-- Début des interactions par MP -->
 <form action="{S_PRIVMSGS_ACTION}" method="post" name="privmsg_list">
 
     <!---------------------------------->
     <!-- BARRE DE GESTION -------------->
-    <div class="my-5">
+    <!-- MENU DE LA BOITE DE RECEPTION -------------->
+    <div class="my-5 flex justify-between items-center">
+        <ul id="privmsgs-menu">
+            <!-- Boîte de reception (image / lien) -->
+            <li>{INBOX_IMG} {INBOX}</li>
+            <!-- Messages envoyés (image / lien) -->
+            <li>{SENTBOX_IMG} {SENTBOX}</li>
+            <!-- Boîte d'envoi (image / lien) -->
+            <li>{OUTBOX_IMG} {OUTBOX}</li>
+            <!-- Archives (image / lien) -->
+            <li>{SAVEBOX_IMG} {SAVEBOX}</li>
+        </ul>
         <!-- Bouton "nouveau" -->
-        <div class="bg-white w-fit rounded shadow">
-            <a href="/privmsg?mode=post" class="newpm_button p-3 text-gradient">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
-                    <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
-                    <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"/>
-                </svg>
+        <div class="bg-zinc-200 dark:bg-zinc-800 w-fit rounded shadow p-3">
+            <a href="/privmsg?mode=post" class="newpm_button text-gradient font-roboto uppercase">
+                <i class="ri-send-plane-line mr-1 font-normal"></i>
                 Nouveau message privé
             </a>
         </div>
@@ -39,17 +32,17 @@
     <!-- LISTE DES MPs -------------->
 
     <!-- Conteneur-->
-    <div class="bg-zinc-200 rounded p-2">
+    <div class="bg-zinc-200 dark:bg-zinc-800 rounded p-2">
 
     <!-- Filtrer tous les messsages -->
         <div class="text-right mt-1 mb-3">
-            <select name="msgdays">{S_SELECT_MSG_DAYS}</select>&nbsp;
-            <input class="button2" type="submit" name="submit_msgdays" value="Filtrer" />
+            <select name="msgdays" class="p-1 rounded bg-zinc-100 dark:bg-zinc-700">{S_SELECT_MSG_DAYS}</select>&nbsp;
+            <input class="button2 p-1 rounded uppercase font-roboto font-normal bg-zinc-100 dark:bg-zinc-700" type="submit" name="submit_msgdays" value="Filtrer" />
         </div>
 
         <!-- Début d'un message privé -->
         <!-- BEGIN listrow -->
-        <div class="flex bg-white shadow rounded items-center p-3 my-4">
+        <div class="flex bg-white dark:bg-zinc-900 shadow rounded items-center p-3 my-4">
             <!-- Image MP -->
             <div class="mp_img">
                 <img class="h-14" src="{listrow.PRIVMSG_FOLDER_IMG}" />
@@ -77,11 +70,11 @@
 
         <!-- Notion "pas de message" -->
         <!-- BEGIN switch_no_messages -->
-        <div class="text-center">{L_NO_MESSAGES}</div>
+        <div class="text-center bg-zinc-100 dark:bg-zinc-900 rounded py-2 shadow">{L_NO_MESSAGES}</div>
         <!-- END switch_no_messages -->
 
         
-        <div class="flex mt-3">        
+        <div class="flex mt-3 justify-between">        
         <!-- Capacité de la boîte de réception -->
             <!-- BEGIN switch_box_size_notice -->
             <span>{BOX_SIZE_STATUS}</span>
@@ -121,9 +114,14 @@
 <!----------------------------------------------->
 <!-- BARRE DE GESTION -------------->
 
-<div class="links_bar">
+<div class="my-5 flex justify-between">
     <!-- Bouton "Nouveau" -->
-    <a href="/privmsg?mode=post" class="newpm_button buttons">Nouveau message privé</a>
+    <div class="bg-zinc-200 dark:bg-zinc-800 w-fit rounded shadow p-3">
+        <a href="/privmsg?mode=post" class="newpm_button text-gradient font-roboto uppercase">
+            <i class="ri-send-plane-line mr-1 font-normal"></i>
+            Nouveau message privé
+        </a>
+    </div>
   
     <!-- Pagination -->
     <span class="pagination right">{PAGINATION} {PAGE_NUMBER}</span>
@@ -134,22 +132,42 @@
 {JUMPBOX}
 
 <script type="text/javascript">
-    /* On affiche l'avatar de l'utilisateur qui a envoyé un message  */
+$(document).ready(function () {
     let user_img = [];
-    $(".user_sender a[href^=\'/u\']").each(function(){
-        let img;
-        let uID = $(this).attr('href').substring(2);
-        uID = uID.replace("?tt=1", "");
-        console.log('uID = '+uID);
-        if(user_img[uID] === undefined){
-            console.log("non");
-            $.get($(this)[0].href, function (d) {
-                (a = $('#user_avatar img', $(d))).length && (user_img = handleUserImage(a[0].src, user_img, uID)) && console.log(user_img);
-            });       
-        }else{
-            console.log('oui');
-            handleUserImage(user_img[uID])
+    /* TEST */
+    console.log('bonjour');
+    
+    function applySenderImage($userLink, uID) {
+        let $senderImg = $userLink.parent().parent().parent().parent().find('.sender_img');
+
+        if (user_img[uID] !== undefined) {
+            console.log('Image trouvée en cache pour uID: ' + uID);
+            $senderImg.css('background-image', 'url("' + user_img[uID] + '")');
+            
+        } else {
+            $.get($userLink.attr('href'), function (d) {
+                let $avatar = $('#user_avatar img', $(d));
+                
+                if ($avatar.length) {
+                    let img_url = $avatar.attr('src');
+                    
+                    user_img[uID] = img_url;
+                    console.log('Image chargée et mise en cache pour uID: ' + uID);
+                    
+                    $senderImg.css('background-image', 'url("' + img_url + '")');
+                }
+            }).fail(function() {
+                console.error('Erreur 404 ou autre lors du chargement du profil pour uID: ' + uID);
+            }); 
         }
+    }
+    
+
+    $(".user_sender a[href^=\'/u\']").each(function(){
+        let $userLink = $(this);
+        let uID = $userLink.attr('href').substring(2).replace("?tt=1", "");
+        
+        applySenderImage($userLink, uID);
     });
 
     $(".mp_img img").each(function(){
@@ -157,14 +175,6 @@
             $(this).parent().parent().find(".sender_img").addClass('grayscale');
         }
     });
-
-
-    function handleUserImage(img_url, imgs_array = [], uID = 0){
-        if(uID != 0){
-            imgs_array[uID] = img_url;
-        }
-        $('.sender_img').css('background-image', 'url("'+img_url+'")');
-        return imgs_array;
-    }
+});
 </script>
             

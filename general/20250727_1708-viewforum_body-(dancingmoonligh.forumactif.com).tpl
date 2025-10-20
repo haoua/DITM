@@ -60,7 +60,7 @@
 
 <!-- Bouton pour trier les sujets -->
 <!-- BEGIN switch_sort_options -->
-<div id="sort-topics" class="button">
+<div id="sort-topics" class="button hidden">
 
     <span id="sort-btn"><i class="bi bi-filter"></i> Trier les sujets</span>
 
@@ -89,7 +89,7 @@
 
 <div class="my-5 flex items-center justify-between">
     <!-- BEGIN switch_user_logged_in -->
-    <div>
+    <div id="viewforum_body__mark-as-read">
         <a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>
     </div>
     <!-- END switch_user_logged_in -->
@@ -104,7 +104,7 @@
 
 
 <!-- Conteneur : utilisateurs et pagination -->
-<div class="bg-gradient text-white rounded p-2">
+<div id="viewforum_body__pagination" class="bg-gradient text-white rounded p-2">
 
     <!-- Utilisateurs parcourant ce forum -->
     <span id="users_here" class="hidden">
@@ -173,6 +173,11 @@
 <br />
 <div class="clear"></div>
 
+<script>
+    if($('#viewforum_body__pagination .pagination').text() == ""){
+        $('#viewforum_body__pagination').addClass('hidden');
+    }
+</script>
 
 
 

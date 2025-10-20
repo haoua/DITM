@@ -28,7 +28,7 @@
 		</div>
 
 		<!-- Liste des membres -->
-		<div class="userlist flex gap-2">
+		<div class="userlist flex gap-2 flex-wrap justify-between">
 
 			<!-- Affichage d'un profil -->
 			<!-- BEGIN memberrow -->
@@ -39,7 +39,7 @@
 					{memberrow.USERNAME}
 				</a>
 
-				<div class="DITM_userlist_infos absolute p-2 bg-zinc-900 w-full h-full" style="--tw-bg-opacity: .4;">
+				<div class="DITM_userlist_infos shrink-0 absolute p-2 bg-zinc-900 w-full h-full" style="--tw-bg-opacity: .4;">
 					<div class="text-white border rounded p-2 h-full pt-14">
 						<span class="uppercase font-roboto text-zinc-400 font-bold">Avec nous depuis</span><br> {memberrow.JOINED}<br />
 						<span class="uppercase font-roboto text-zinc-400 font-bold">dernière visite</span><br> {memberrow.LASTVISIT}<br />

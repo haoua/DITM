@@ -76,18 +76,16 @@
 
 	            <!-- PROFILE FIELDS -->
 	            <div class="profile_content">
-
-	            	
 	                <!-- "Last visited" field -->
 	                <div class="profile_field">
-	                    <label>{L_LAST_VISITED} :</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{L_LAST_VISITED} :</label>
 	                    <field>{LAST_VISIT_TIME}</field>
 	                </div>
 
 	               <!-- "Private messages" field -->
 	                <!-- BEGIN switch_dhow_mp -->
 	                <div class="profile_field">
-	                    <label>{L_PRIVATE_MSG} :</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{L_PRIVATE_MSG} :</label>
 	                    <field>{PRIVATE_MSG}</field>
 	                </div>
 	                <!-- END switch_dhow_mp -->
@@ -95,7 +93,7 @@
 	                <!-- Other fields -->
 	                <!-- BEGIN profile_field -->
 	                <div class="profile_field" id="field_id{profile_field.ID}">
-	                    <label>{profile_field.LABEL}</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{profile_field.LABEL}</label>
 	                    <field>{profile_field.CONTENT}
 
 	                        <!-- "Message" field contents -->
@@ -116,7 +114,7 @@
 	                <!-- BEGIN switch_rpg -->
 	                <!-- BEGIN rpg_fields -->
 	                <div class="profile_field">
-	                    <label>{switch_rpg.rpg_fields.F_NAME} :</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{switch_rpg.rpg_fields.F_NAME} :</label>
 	                    <field>{switch_rpg.rpg_fields.F_VALUE_NEW}</field>
 	                </div>
 	                <!-- END rpg_fields -->

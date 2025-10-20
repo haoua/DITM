@@ -1,12 +1,12 @@
-<div class="bg-zinc-200 rounded shadow p-2 my-3">
-  
-    <!-- BEGIN switch_inline_mode -->
-    <h2>{L_TOPIC_REVIEW}</h2>
-    <!-- END switch_inline_mode -->
+<!-- BEGIN switch_inline_mode -->
+<h2 class="font-bold rounded-t p-3 bg-gradient uppercase">{L_TOPIC_REVIEW}</h2>
+<!-- END switch_inline_mode -->
+
+<div class="bg-zinc-200 dark:bg-zinc-800 rounded shadow p-2 flex flex-col gap-2 mb-3">
 
     <!-- Affichage d'un message simplifié -->
     <!-- BEGIN postrow -->
-    <div class="panel {postrow.ROW_CLASS}{postrow.CURRENT_MSG}">
+    <div class="p-2 bg-white dark:bg-zinc-900 rounded shadow {postrow.ROW_CLASS}{postrow.CURRENT_MSG}">
 
         <div class="flex">
             <!-- Avatar -->
@@ -29,4 +29,8 @@
     </div>
 </div>
 
-            
+<script>
+    if($('.pagination').text() == ''){
+        $('.pagination').addClass('hidden');
+    }
+</script>

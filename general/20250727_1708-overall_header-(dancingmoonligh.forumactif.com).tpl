@@ -203,7 +203,7 @@
 		/* BALISES GENERALES -*/
 		ul {list-style-type: none;padding: 0;margin: 0;}
 		fieldset {border: none;padding: 0;margin: 0;}
-		dl {display: grid;grid-template-columns: 220px auto;grid-gap: 15px}
+		dl:not(".codebox") {display: grid;grid-template-columns: 220px auto;grid-gap: 15px}
 		dd {margin: 0;}
 		dt {margin: 0}
 		dt label {font-weight: bold}
@@ -242,19 +242,6 @@
 		#cp-main#cp-main#cp-main, table, .quickreply div#textarea_content {width: 100% !important;}
 		.panel .panel { background: transparent;border: none; padding: 0;margin: 0; border-radius: 0;}
 		.social_btn {display: none;}
-
-		/* test */
-		:root{
-			--one: 241, 167, 91;
-			--two: 224, 134, 80;
-			--three: 230, 176, 120;
-		}
-		
-		[data-color-scheme="dark"] {
-			--three: 179, 108, 73;
-			--one: 145, 35, 30;
-			--two: 190, 70, 40;
-		}
 	</style>
 
 	{HOSTING_JS}
@@ -311,7 +298,7 @@
 			<a href="{U_INDEX}" id="header"><img loading="lazy" src="{LOGO}" alt="{L_INDEX}" /></a>
 
 		   <!-- Barre de navigation -->
-			<ul class="navbar flex p-2 rounded shadow items-center justify-center mb-5 bg-white">
+			<ul class="navbar flex py-3 rounded shadow items-center justify-center mt-3 bg-white dark:bg-zinc-800">
 				<li>{GENERATED_NAV_BAR}</li>
 			</ul>
 			<!-- Fin de la barre de nav -->
@@ -349,9 +336,102 @@
 			<!-- Fin des annonces défilantes -->
 		</div>
 		<!-- Fin de l'entête -->
+
+		<div id="top_template" class="bg-zinc-200 dark:bg-zinc-800 rounded sadow p-2 mt-3">
+			<div class="flex gap-2">
+				<div class="flex flex-col items-stretch">
+					<div class="bg-white dark:bg-zinc-900 rounded shadow p-2">
+						<div class="mb-1 font-roboto uppercase font-bold">
+							<div class="bg-one rounded p-1 mb-2 text-white flex items-center justify-between">
+								Personnages attendus
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"></path></svg>
+							</div>
+						</div>
+						<div class='topbox__preliens flex gap-1'>
+							<a target="_blank" href="https://dancinginthemoon.forumactif.com/t162-m-plan-coeur" class="w-12 h-12 overflow-hidden block bg-cover rounded relative">
+								<img src="https://i.pinimg.com/736x/55/90/52/55905288c334249344ad83cf92f20ccb.jpg" alt="">
+								<span class="inline-block w-full h-full absolute p-1 top-0">
+									<span class="inline-block w-full h-full border rounded"></span>
+								</span>
+							</a>   
+							<a target="_blank" href="https://dancinginthemoon.forumactif.com/t320-1f-2m-dysfunctional-family-whitworth" class="w-12 h-12 overflow-hidden block bg-cover rounded relative">
+								<img src="https://i.pinimg.com/1200x/78/48/b4/7848b4e54aa9a06cd302d42e04dfa530.jpg">
+								<span class="inline-block w-full h-full absolute p-1 top-0">
+									<span class="inline-block w-full h-full border rounded"></span>
+								</span>
+							</a>   
+							<a target="_blank" href="https://dancinginthemoon.forumactif.com/t313-m-ami-d-enfance" class="w-12 h-12 overflow-hidden block bg-cover rounded relative">
+								<img src="https://i.pinimg.com/736x/8c/47/7f/8c477f89a06cdfdc772a13208bd999b9.jpg">
+								<span class="inline-block w-full h-full absolute p-1 top-0">
+									<span class="inline-block w-full h-full border rounded"></span>
+								</span>
+							</a>   
+							<a target="_blank" href="https://dancinginthemoon.forumactif.com/t233-corvus" class="w-12 h-12 overflow-hidden block bg-cover rounded relative">
+								<img src="https://i.pinimg.com/736x/f3/b1/3d/f3b13df8c26d644481323ce49d1bb1c5.jpg">
+								<span class="inline-block w-full h-full absolute p-1 top-0">
+									<span class="inline-block w-full h-full border rounded"></span>
+								</span>
+							</a>   
+							<a target="_blank" href="https://dancinginthemoon.forumactif.com/t204-6-9-f-h-nb-the-gutter-saints" class="w-12 h-12 overflow-hidden block bg-cover rounded relative">
+								<img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735">
+								<span class="inline-block w-full h-full absolute p-1 top-0">
+									<span class="inline-block w-full h-full border rounded"></span>
+								</span>
+							</a>   
+							<a target="_blank" href="https://dancinginthemoon.forumactif.com/t225-f-nb-m-astra-noctis" class="w-12 h-12 overflow-hidden block bg-cover rounded relative">
+								<img src="https://i.pinimg.com/1200x/ba/48/3f/ba483f854b55b895344d0682055f2f8c.jpg">
+								<span class="inline-block w-full h-full absolute p-1 top-0">
+									<span class="inline-block w-full h-full border rounded"></span>
+								</span>
+							</a>  
+						</div>
+						<div class="bg-zinc-200 dark:bg-zinc-700  p-1 rounded mt-2 text-center">
+							<a href="https://dancinginthemoon.forumactif.com/f20-all-i-need-is" class="text-zinc-600 dark:text-white font-roboto uppercase font-bold">voir plus ?</a>
+						</div>
+					</div>
+
+					<div class="p-2 bg-white dark:bg-zinc-900 flex items-center justify-between mt-2 rounded shadow grow">
+						<span class="text-zinc-600  dark:text-zinc-300 font-roboto uppercase font-bold">Aide le forum en votant</span>	
+						<a href="http://www.root-top.com/topsite/obsession27/in.php?ID=27531"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
+						<a href="http://www.root-top.com/topsite/pubrpgdesign/in.php?ID=3513"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
+						<a href="http://www.root-top.com/topsite/toppg/in.php?ID=255"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
+						<a href="http://www.root-top.com/topsite/bazzart/in.php?ID=3313"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
+					</div>
+				</div>
+
+			
+				<div class="flex flex-col gap-2">
+					<a href="https://dancinginthemoon.forumactif.com/t1-reglement" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">règlement</a>
+					<a href="https://dancinginthemoon.forumactif.com/t2-contexte" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">contexte</a>
+					<a href="https://dancinginthemoon.forumactif.com/t21-bottin-des-avatars" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">bottin</a>
+					<div class="bg-white dark:bg-zinc-900 p-2 rounded text-xs text-justify grow flex items-center justify-center">
+						Toutes les idées & textes appartiennent à l'entièreté du forum ainsi que de son staff. Toute reproduction est interdite. Merci à toutes les personnes ayant participé : Neikal, Ezae, Prism, Brighty, Valar.
+					</div>
+				</div>
+
+				<div class="flex flex-col gap-2">
+					<div class="p-2 bg-white dark:bg-zinc-900 text-justify text-xs rounded shadow grow flex items-center justify-center">
+						<div>						
+							<span class="pastille bg-one text-white m-0">DITM</span> est un forum city réel sans prise de tête basé à la <strong>Nouvelle-Orléans</strong> aux Etats-Unis / réservation du faceclaim durant <i>7 jours</i> / écart de <i>5 ans maximum</i> entre l'avatar et le personnage / <span class="text-one">1 rp par mois</span> / aucun minimum de mots / les initiales ne sont pas acceptées pour le pseudo.
+							<span class="text-center block flex justify-evenly mt-1">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/jack-o-lantern_1f383.png" alt="">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/saxophone_1f3b7.png" alt="">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/sparkles_2728.png" alt="">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/tropical-drink_1f379.png" alt="">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/nazar-amulet_1f9ff.png" alt="">
+							</span>
+						</div>
+					</div>
+
+					<a href="https://dancinginthemoon.forumactif.com/f3-guides-annexes" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">annexes</a>
+					<a href="https://dancinginthemoon.forumactif.com/f6-guests-area" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">invités</a>
+				</div>
+				
+			</div>
+		</div>
 	  
-	  <!----------------------------------------------->
-	   <!-- CONTENU DU FORUM -------------->
+		<!----------------------------------------------->
+		<!-- CONTENU DU FORUM -------------->
 	   
 		<div id="page-body">
 

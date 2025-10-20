@@ -186,6 +186,9 @@
             <br/>
             <span class="info">{switch_warning_msg.WARNING_CONTENT}</span>
             <!-- END switch_warning_msg -->
+            <span id="maj_admin" class="cursor-pointer text-white font-roboto uppercase font-bold rounded shadow bg-two p-2">MAJ message admin</span>
+            <span id="maj_pl_simple" class="cursor-pointer text-white font-roboto uppercase font-bold rounded shadow bg-two p-2">MAJ PL SIMPLE</span>
+            <span id="maj_pl_famille" class="cursor-pointer text-white font-roboto uppercase font-bold rounded shadow bg-two p-2">MAJ PL FAMILLE</span>
         </fieldset>
 
     </div>
@@ -371,5 +374,144 @@
         $('#sce_smilies_body').css('background', '#f4f4f5');
     }
 </script>
+
+<script>
+$(document).ready(function () {
+    $('#maj_pl_famille').on('click', function(){
+        let htmlString = $('.sceditor-container textarea').val();
+
+        $doc = $('<div>').html(htmlString);
+        let tg = $doc.find('.rounded-t.font-semibold.bg-main.text-center.text-white.mt-2.p-2 + div').text();
+        if (tg == "Merci d'indiquer ici les trigger warnings du personnage."){
+            tg = "Aucun";
+        }
+
+        let titleDiv = $doc.find('.rounded-t.font-semibold.bg-main.text-center.text-white.p-2').filter(function() {
+        return $(this).text().indexOf('Famille') != -1;
+        }).first();
+
+        let a_savoir = titleDiv.next('div').html()  || '';
+        a_savoir = a_savoir.replace('<strong>Choses à savoir : </strong>', '');
+
+        let main_img = $doc.find('.bg-main img').attr('src');
+
+        targetDiv = $doc.find('div').filter(function() {
+        return $(this).text().trim() === "Informations supplémentaires";
+        }).first();
+
+        let pl_infos_supp = targetDiv.next('div').html() || '';
+        pl_infos_supp = pl_infos_supp.replace('<i>', '');
+        pl_infos_supp = pl_infos_supp.replace('</i>', '');
+        pl_infos_supp = pl_infos_supp.replaceAll('<strong>', '<span class="font-roboto uppercase text-xs font-bold text-white bg-one rounded p-05 px-1 shadow">');
+        pl_infos_supp = pl_infos_supp.replaceAll('</strong>', '</span>');
+
+
+        let content_new = '<div id="prelien__fiche" class="bg-zinc-200 shadow rounded dark:bg-zinc-800"><div class="bg-gradient p-2 rounded-t text-white text-right flex gap-1 justify-between items-center"><i class="ri-sparkling-line ri-2x"></i><div><p class="font-yeseva text-2xl">'+titleDiv.text()+'</p><p class="uppercase font-roboto text-xs"><tw>liste des content triggers</tw></t></p></div></div><div class="p-2 mb-5"><div class="bg-white dark:bg-zinc-900 p-2 rounded shadow flex gap-2"><div class="h-80 shrink-0"><img class="rounded h-full w-auto" src="'+ main_img+'" alt="'.titleDiv.text().'"></div><div class="text-justify h-80 overflow-auto"><span class="font-roboto uppercase text-xs font-bold text-white bg-two rounded p-05 px-1 shadow">Choses à savoir :</span> '+a_savoir+'</div></div></div></div><div class="shadow bg-zinc-200 dark:bg-zinc-800 rounded mb-5"><div class="bg-gradient p-2 rounded-t text-white text-right flex gap-1 items-center"><i class="ri-sparkling-line text-lg ml-1"></i>membres de la famille</p></div> <div class="p-2 mb-2 text-justify flex flex-col gap-2"><div class="bg-white dark:bg-zinc-900 p-2 rounded shadow text-justify"><div class="flex items-center gap-1"><span class="text-one text-lg font-yeseva">Pseudo</span><span class="text-xs uppercase font-bold font-roboto">- (libre) - <i>âge, statut, métier</i></span></div>Description ici.'+
+        '<span class="font-roboto uppercase text-xs font-bold text-white bg-two rounded p-05 px-1 shadow">Suggestions fc :</span> écrire ici.</div><div class="bg-white dark:bg-zinc-900 p-2 rounded shadow text-justify"><div class="flex items-center gap-1"><span class="text-one text-lg font-yeseva">Pseudo</span><span class="text-xs uppercase font-bold font-roboto">- (libre) - <i>âge, statut, métier</i></span></div>Description ici.'+
+        '<span class="font-roboto uppercase text-xs font-bold text-white bg-two rounded p-05 px-1 shadow">Suggestions fc :</span> écrire ici.</div></div></div><div class="shadow bg-zinc-200 dark:bg-zinc-800 rounded mb-3"><div class="rounded-t font-semibold font-roboto uppercase bg-gradient text-right text-white p-2 flex gap-1 justify-end items-center">Informations supplémentaires <i class="ri-sparkling-line text-lg mr-1"></i></div><div class=" p-2"><div class="shadow bg-white dark:bg-zinc-900 p-2 rounded">'+pl_infos_supp+'</div></div></div>';
+        
+
+        /* Remplacement de l'ancien bloc par le nouveau */
+        $('.sceditor-container textarea').val(content_new);
+    }); 
+
+    $("#maj_pl_simple").on('click', function(){
+        let htmlString = $('.sceditor-container textarea').val();
+
+        $doc = $('<div>').html(htmlString);
+
+        let h2 = $doc.find('h2').text().trim();
+        let pl_name = h2.replace(/\s*\(.*\)\s*/, '').trim(); 
+        let pl_status = (h2.match(/\(([^)]+)\)/) || [])[1] || '';
+
+        let pl_info = $doc.find('.rounded-t.font-semibold.bg-main.text-center.text-white.p-2.mt-4 + div').html()  || '';
+        pl_info = pl_info.replaceAll('<strong style="color:var(--mainColor);">', '<span class="font-roboto uppercase text-xs font-bold text-white bg-two rounded p-05 px-1 shadow">');
+        pl_info = pl_info.replaceAll('<strong>', '<span class="font-roboto uppercase text-xs font-bold text-white bg-two rounded p-05 px-1 shadow">');
+        pl_info = pl_info.replaceAll('</strong>', '</span>');
+
+        let tg = $doc.find('.rounded-t.font-semibold.bg-main.text-center.text-white.mt-2.p-2 + div').text();
+        if (tg == "Merci d'indiquer ici les trigger warnings du personnage."){
+            tg = "Aucun";
+        }
+
+        let titre = $('input[name="subject"]').val();
+        titre = titre.replace(/\s*\(.*\)\s*/, '').trim(); 
+
+        let main_img = $doc.find('.rounded.box-border.rounded-tr-none.bg-main img').attr('src');
+        let fc = $doc.find('.ml-2.text-xs.italic').text();
+        fc = fc.replace('Suggestions fc : ', '');
+
+
+        let targetDiv = $doc.find('div').filter(function() {
+        return $(this).text().trim() === "Les notes du passé";
+        }).first();
+
+        let histoire = targetDiv.next('div').html() || '';
+
+
+        targetDiv = $doc.find('div').filter(function() {
+        return $(this).text().trim() === "Informations supplémentaires";
+        }).first();
+
+        let pl_infos_supp = targetDiv.next('div').html() || '';
+        pl_infos_supp = pl_infos_supp.replace('<i>', '');
+        pl_infos_supp = pl_infos_supp.replace('</i>', '');
+        pl_infos_supp = pl_infos_supp.replaceAll('<strong>', '<span class="font-roboto uppercase text-xs font-bold text-white bg-one rounded p-05 px-1 shadow">');
+        pl_infos_supp = pl_infos_supp.replaceAll('</strong>', '</span>');
+
+        let img_liens = $doc.find('.bg-main.rounded.absolute img').attr('src');
+
+        let lien_div = $doc.find('.relative .rounded-t.font-semibold.bg-main.text-center.text-white.p-2');
+        let lien_nom = lien_div.text();
+
+        let nom_du_lien = $doc.find('.relative .ml-32').find('strong').text().trim();
+
+        let desc_lien = $doc.find('.relative .ml-32').clone().find('strong').remove().end().text().trim();
+
+
+        let content_new = '<div id="prelien__fiche" class="bg-zinc-200 shadow rounded dark:bg-zinc-800"><div class="bg-gradient p-2 rounded-t text-white text-right flex gap-1 justify-between items-center"><i class="ri-sparkling-line ri-2x"></i><div><p id="titre_pl" class="font-yeseva text-2xl">'+titre+'</p><p class="uppercase font-roboto text-xs"><tw>'+tg+'</tw></t></p></div></div><div class="p-2 mb-5"><div class="flex gap-1 justify-between mb-2"><span id="pl__nom" class="p-1 px-2 rounded bg-three shadow text-white uppercase font-roboto flex-1">'+pl_name+'</span>'+
+        '<span class="p-1 px-2 rounded bg-three shadow text-white uppercase font-roboto">AGE XXXX</span>'+
+        '<span class="p-1 px-2 rounded bg-three shadow text-white uppercase font-roboto">STATUT XXXX</span>'+
+        '<span class="p-1 px-2 rounded bg-three shadow text-white uppercase font-roboto">JOB XXXX</span></div><div class="bg-white dark:bg-zinc-900 p-2 rounded shadow flex gap-2"><div class="h-80 shrink-0"><img class="rounded h-full w-auto" src="'+main_img+'" alt="Avatar '+titre+'"></div><div class="text-justify h-80 overflow-auto">'+pl_info+'</div></div><div class="flex gap-1 justify-between mt-2 text-right"><span class="p-1 px-2 rounded shadow bg-one text-white uppercase font-roboto">Origine XXXX </span>'+
+        '<span class="p-1 px-2 rounded shadow bg-one text-white uppercase font-roboto">GROUPE XXXX</span>'+
+        '<span id="pl__status" class="p-1 px-2 rounded shadow bg-one text-white uppercase font-roboto">PL '+pl_status+'</span>'+
+        '<span class="p-1 px-2 rounded shadow bg-one text-white uppercase font-roboto flex-1">ft. '+fc+'</span></div></div></div><div class="shadow bg-zinc-200 dark:bg-zinc-800 rounded mb-5"><div class="bg-gradient p-2 rounded-t text-white text-right flex gap-1 items-center"><i class="ri-sparkling-line text-lg ml-1"></i>les notes du passé...</p></div><div class="p-2 mb-2 text-justify"><div class="bg-white dark:bg-zinc-900 p-2 rounded shadow">'+histoire+'</div></div></div><div class="bg-gradient p-2 rounded shadow mb-5"><div class="bg-white dark:bg-zinc-900 rounded p-2 shadow"><div class="float-left w-32 h-32 shrink-0 rounded bg-cover p-1 mr-2 mt-1" style="background-image:url(\''+img_liens+'\');"><div class="w-full h-full border top-0 rounded"></div></div><div class="text-justify"><div class="flex items-center gap-1"><span class="text-one text-lg font-yeseva">'+lien_nom+'</span><span class="text-xs uppercase font-bold font-roboto">- '+nom_du_lien+' </span></div>'+desc_lien+'</div><div class="clear-both"></div></div></div><div class="shadow bg-zinc-200 dark:bg-zinc-800 rounded mb-3"><div class="font-roboto uppercase font-semibold rounded-t bg-gradient text-right text-white p-2 flex gap-1 justify-end items-center">Informations supplémentaires <i class="ri-sparkling-line text-lg mr-1"></i></div><div class=" p-2"><div class="shadow bg-white dark:bg-zinc-900 p-2 rounded">'+pl_infos_supp+'</div></div></div>';
+
+        /* Remplacement de l'ancien bloc par le nouveau */
+        $('.sceditor-container textarea').val(content_new);
+    });
+
+    $("#maj_admin").on("click", function () {
+        let htmlString = $('.sceditor-container textarea').val();
+        let $doc = $('<div>').html(htmlString);
+
+        let title = $doc.find('.font-semibold.text-lg.border').html() || "";
+        title = title.replaceAll('✦', '');
+        title = $.trim(title);
+        title = title.replaceAll('[justify]', '').replaceAll('[/justify]', '');
+
+        let subtitle = $('input[name="description"]').val() || "";
+
+        let content = $doc.find('.font-semibold.text-lg.border + div').html() || "";
+        content = content.replace(/^\n+|\n+$/g, '');
+
+        let content_new = '<div class="p-2 rounded bg-gradient shadow" style="width:500px;margin:0 auto">'+
+    '<div class="flex items-center mb-2">'+
+        '<svg class="text-white mr-1 size-8" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">'+
+            '<path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" stroke-linecap="round" stroke-linejoin="round"></path>'+
+        '</svg>'+
+        '<div>'+
+            '<h2 class="text-white font-yeseva text-xl">'+title+'</h2>'+
+            '<h3 class="font-roboto pb-0 text-gray-200 text-xs uppercase">'+subtitle+'</h3>'+
+        '</div>'+
+    '</div>'+
+    '<div class="p-2 rounded bg-zinc-100 dark:bg-zinc-700 shadow text-justify">'+content+'</div>'+
+'</div>';
+
+        $('.sceditor-container textarea').val(content_new);
+    });
+});
+</script>
+
 
 {SCEDITOR}

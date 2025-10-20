@@ -56,7 +56,7 @@
 		<!-- BEGIN forumrow -->
 		<!-- Affichage d'un forum -->
 		<div class="forum row forum_row__row {catrow.forumrow.FOLDER_CLASSNAME} bg-white dark:bg-zinc-900 rounded shadow">
-			<img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" class="hidden forum-row__img-status">
+			<div class="hidden"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" class="hidden forum-row__img-status"></div>
 			<div class="DITM_forum-container flex flex-col p-3 gap-3">
 				<div class="flex">
 					<div class="forum_avatar lastpostavatar rounded bg-gradient">

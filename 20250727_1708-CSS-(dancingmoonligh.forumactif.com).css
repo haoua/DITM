@@ -18,11 +18,11 @@
 	color-scheme: light;
 	--header: url('https://i.postimg.cc/kGw1LZ4D/hh.png');
 
-	--color1: #d58553;
-	--color2: #e5f1d7;
+	--color1: #efa45a;
+	--color2: #e2b59c;
 	--color3: #cba6de;
 	--color4: #e5edcf;
-	--color5: #79432b;
+	--color5: #e5ac75;
 	--color6: #fff;
 	--colortitre: #fff;
 	--coloracc: #cba6de;
@@ -63,9 +63,9 @@
 	--whiteBG: #FFFFFF; 
 	--back: #fafbfc;
 
-	--one: 213, 137, 89;
-	--two: 215, 104, 40;
-	--three: 111, 63, 43;
+	--one: 241, 167, 91;
+	--two: 224, 134, 80;
+	--three: 230, 176, 120;
 
 	--gra: -webkit-linear-gradient(45deg, rgba(var(--one), 1) 0%, rgba(var(--two), 1) 50%, rgba(var(--three), 1) 100%);
 	--gra800: -webkit-linear-gradient(45deg, rgba(var(--one), .8) 0%, rgba(var(--two), .8) 50%, rgba(var(--three), .8) 100%);
@@ -81,7 +81,7 @@
 	--bg-zinc-100: 244 244 245;
 	--bg-zinc-200: 228 228 231;
 	--bg-white:255 255 255;
-	--bg-input:255 255 255;
+	--bg-input:244 244 245;
  }
 
 /* VARIABLES DU MODE INVERSE (ici sombre) */
@@ -90,7 +90,7 @@
 	--header: url('https://i.postimg.cc/Y2xs4439/hh2.png');
 
 	--neutral: #3f4347;
-	--neutralDark: #7f1d14;
+	--neutralDark: #be4628;
 	--neutralDarker: #33373c;
 
 	--contrast: #e5e5f0;
@@ -100,16 +100,16 @@
 	--accentClr: #7583ff;
 	--accentClrDark: #333c92;
 
-	--color1: #2d201a;
-	--color2: #2d201a;
-	--color3: #b16544;
+	--color1: #93241e;
+	--color2: #b46846;
+	--color3: #bd4728;
 	--color6: #462d23;
-	--color5: #7f1d14;
+	--color5: #be4628;
 	--color4: #000;
 	--coloracc: #453a47;
 	--colorcontainer: #2d201a;
 	--colortitre: #d3d3dd;
-	--transparent: #7f1d14;
+	--transparent: #be4628;
 	--gradient: linear-gradient(to right, var(--color1), var(--color3), var(--color2));
 	--shadow: 0 0 5px black;
 
@@ -123,13 +123,13 @@
 
 	--mainColor: var(--color1);  
 	--whiteBG: #462d23;
-	--back: #7f1d14;
+	--back: #be4628;
 
-	--pacolor: #7f1d14;
+	--pacolor: #be4628;
 	--patitle: #462d23;
 
-	--one: 40, 32, 26;
-	--two: 155, 29, 18;
+	--one: 145, 35, 30;
+	--two: 190, 70, 40;
 	--three: 179, 108, 73;
 
 	/* TAILWIND UTILITIES */
@@ -179,6 +179,10 @@ a.text-gradient:hover{
 .font-yeseva{font-family: "Yeseva One", serif;}
 .font-cinzel{font-family: "Cinzel", serif;}
 
+/* AUTRE ---*/
+.p-05{
+	padding: 0.125rem;
+}
 
 blockquote {
 	margin: 0 50px!important;
@@ -516,9 +520,9 @@ button {
 
 /* MENUS DEROULANTS --- */
 select {
-	font-size: var(--normal-size);
-	padding: 8px 10px;
-	color: var(--textColor);
+	background-color: rgb(var(--bg-input));
+	padding: 0.5rem!important;
+	border-radius: 0.25rem;
 }
 
 select:focus-visible {
@@ -735,10 +739,31 @@ summary {
 
 /* Lien spécial mis en avant */
 .specials_links a,
-a.specials_links {
-	background: var(--color1);
-	padding: 2px 6px;
-	border-radius: 5px;
+a.specials_links,
+#viewforum_body__mark-as-read a {
+	padding: 0.25rem 0.5rem;
+	border-radius: .25rem;
+	background: var(--gra);
+	color: white;
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+}
+
+.specials_links a:hover,
+a.specials_links:hover,
+#viewforum_body__mark-as-read a:hover{
+	background: rgb(var(--one));
+}
+
+#viewforum_body__mark-as-read a{
+	align-items: center;
+	display: flex;
+}
+
+#viewforum_body__mark-as-read a::before{
+	content: "\F340";
+	font-family: "Bootstrap-icons";
+	margin-right: 0.25rem;
 }
 
 /* Suppression des liens vides */
@@ -1306,29 +1331,57 @@ li.fa_separator {
 /* Conteneur de la barre de nav */
 
 /* Suppression des liens peu utilisés*/
-.navbar a[href^="/faq"],
-/*faq*/
-.navbar a[href^="/calendar"],
-/*calendrier*/
-.navbar a[href^="/groups"],
-/*groupes*/
-.navbar a[href^="/images"]
-/*Dernières images*/
-	{
+
+.navbar li:has(a[href^="/discover"]), /* activités */ 
+.navbar li:has(a[href^="/faq"]), /*faq*/
+.navbar li:has(a[href^="/calendar"]), /*calendrier*/
+.navbar li:has(a[href^="/groups"]), /*groupes*/
+.navbar li:has(a[href^="/images"])/*Dernières images*/
+{
 	display: none;
 }
 
-/* liens de navigation */
-a.mainmenu {
-	padding: 5px;
-	text-transform: uppercase;
-	color: white;
+.navbar {
+	gap: 0.5rem;
+	position: relative;
 }
 
-/* Lien navigation au survol*/
-a.mainmenu:hover {
-	background: var(--neutral);
-	border-radius: 5px;
+.navbar a {
+	color: rgb(var(--one));
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	transition: 0.3s ease;
+	position: relative;
+	border-radius: 0.25rem;
+	padding:0.25rem;
+}
+
+.navbar a::after {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: var(--gra);
+	transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+	width: 100%;
+}
+
+.navbar a:hover {
+	color: rgb(var(--two)); /* accent au survol */
+	text-shadow: 0 0 5px rgba(209, 92, 43, 0.2);
+	background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+}
+
+.dark .navbar a:hover {
+	color: #fff;
+	text-shadow: 0 0 8px rgb(var(--three));
+	background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
 }
 
 /* Image des liens */
@@ -1349,6 +1402,15 @@ a.mainmenu img {
 
 /****** ------------------------------------------------------------------------------
 ****** PAGE PRINCIPALE, INDEX ------------------------------------------------------- ******/
+
+.topbox__preliens img{
+	transition: transform 0.3s ease;
+}
+
+.topbox__preliens a:hover img{
+	transform: rotate(-10deg) scale(1.6);
+	filter: blur(.6px) grayscale(1);
+}
 
 /* PAGE D'ACCUEIL ---*/
 .introduction {}
@@ -1650,15 +1712,6 @@ a.groups:last-child {
 	padding: 2px;
 }
 
-
-
-.topicslist-description {
-	padding: 5px;
-	background: var(--color6);
-	border-radius: 3px;
-	width: 100%;
-}
-
 /* ligne qui séparent les annonces et les notes des autres sujets (à activer dans "message > configuration") */
 .topic_separator {
 	height: 5px;
@@ -1670,7 +1723,8 @@ a.groups:last-child {
 /* Bouton "trier les sujets" */
 #sort-topics {
 	position: relative;
-	display: inline;
+	/*display: inline;*/
+	display: none;
 	background: var(--color1);
 	margin: 10px 0;
 }
@@ -1860,16 +1914,6 @@ button.rep-button .rep-nb {
 	width: 95%;
 }
 
-/* Lien "@" de mention */
-a.fa-mention {
-	cursor: pointer;
-}
-
-/* Retirer le fond des mentions de groupe */
-.group-mentiontag{
-	background: none!important;
-}
-
 /* Mention "en ligne" */
 .presence {
 	display: none
@@ -2043,32 +2087,62 @@ a.fa-mention {
 
 /*** ------------------------------- ***/
 /*** TEXTES, BALISES, ETC ---------- ***/
+/* Mention utilisateurs et groupes*/
+.group-mentiontag, 
+a.mentiontag {
+	text-transform: uppercase;
+	font-family: "Roboto Condensed", sans-serif;
+	padding: 0.125rem 0.25rem;
+	border-radius: .25rem;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+	transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
 
-/* Lien-tag des utilisateurs */
-.mentiontag {}
+a.mentiontag {color: rgb(var(--two));}
+
+a.mentiontag:hover {
+	color: white;
+	background: rgb(var(--two));
+}
+
+.group-mentiontag{color: white;}
+
+.group-mentiontag:hover{
+	background-clip: text;
+	color: transparent
+}
+
+/* Lien "@" de mention */
+a.fa-mention {
+	cursor: pointer;
+}
+
 
 /* BALISES DE MESSAGE : spoiler, code, quote... */
 
 /* Balise code, spoiler et hide*/
-.codebox {
+.codebox:not(.hidecode) {
 	display: block;
 	width: 90%;
 	margin: 0 auto;
 	text-align: justify;
+	border-radius: 0.25rem; /* .rounded */
+	background-color: rgb(var(--bg-input));
 }
 
 /* Contenu code, spoiler et hide*/
-.codebox dd {
-	background-color: rgb(63 63 70); /* .bg-zinc-700 */
-	border-bottom-left-radius: 0.25rem; /* .rounded-b */
-	border-bottom-right-radius: 0.25rem; /* .rounded-b */
+.codebox:not(.hidecode) dd {
 	padding: 0.5rem;
 	max-height: 200px;
 	overflow: auto;
 }
 
 /* Nom de balise "code, spoiler" */
-.codebox dt {
+.codebox:not(.hidecode) dt {
 	font-weight: 700;
 	--tw-text-opacity: 1;
 	color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -2161,10 +2235,8 @@ overflow: auto;
 	grid-gap: 10px;
 }
 
-.profile_field label,
 .profile_field label>span {
-	font-weight: 600;
-	color: white!important;
+	color: inherit!important;
 }
 
 .profile_field field {
@@ -2385,13 +2457,13 @@ margin-right: 5px;
 	color: white;
 	font-family: "Yeseva One", serif;
 	font-weight: normal;
-	font-size: 22px;
+	font-size: 16px;
 }
 
 .DITM_userlist_profil img + a{
 	transition: all 0.3s ease;
 	z-index: 2;
-	transform: translateY(80%);
+	transform: translateY(85%);
 }
 
 .DITM_userlist_profil:hover img + a{
@@ -2418,14 +2490,34 @@ margin-right: 5px;
 #privmsgs-menu {
 	display: flex;
 	justify-content: center;
-	gap: 20px;
-	margin: 20px auto;
+	gap: 0.5rem;
 }
 
 #privmsgs-menu li {
-	display: flex;
-	align-items: center;
-	gap: 5px;
+	padding: 0.75rem; /* .p-3 */
+	border-radius: 0.25rem;
+	background-color: rgb(var(--bg-zinc-200));
+
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#privmsgs-menu li a{
+	color: rgb(var(--one));
+}
+
+#privmsgs-menu img{
+	display: none!important;
+}
+
+#privmsgs-menu li:not(:has(a)) {
+	background: var(--gra);
+	color:white;
 }
 
 /* Marge pour l'icon répondu */
@@ -2433,14 +2525,6 @@ margin-right: 5px;
 
 /*** ------------------------------- ***/
 /*** AFFICHAGE D'UN MESSAGE PRIVÉ -- ***/
-
-.message {
-	background: var(--color6);
-	border-radius: 5px;
-	display: flex;
-	flex-direction: column;
-	height: 87%;
-}
 
 .message_from {
 	background: var(--color6);
@@ -2478,6 +2562,12 @@ margin-right: 5px;
 .message_content {
 	padding: 25px;
 	height: 100%;
+}
+
+.mp-single__sender_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /****** ------------------------------------------------------------------------------
@@ -2803,14 +2893,78 @@ margin-right: 5px;
 	color: var(--mainColor);
 }
 
+/* A SUPPRIMER APRES */
+.dark  .bg-white{
+	background-color: rgb(var(--bg-white));
+}
+
 .glass{
 	background: rgba(157, 131, 183, 0.2);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 }
 
+/* v3*/
+.pastille{
+	text-transform: uppercase;
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	border-radius: 0.25rem;
+	padding: 0.125rem 0.25rem;
+	font-family: "Roboto Condensed", sans-serif;
+	margin: 0 .25rem;
+}
 
+#presentation__fiche-single strong{color: rgb(var(--one));}
 
+/* Onglet */
+.tab-container input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+
+.tab-container { max-width: 900px; margin: 0 auto; border-radius: 12px; overflow: hidden; }
+
+.tab-container label:hover {
+	background: rgb(var(--one));
+	cursor: default;
+}
+
+#tab1:checked + label[for="tab1"],
+#tab2:checked + label[for="tab2"] {
+	background: var(--gra);
+	cursor:normal;
+}
+
+.presentation__tab-content {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity .35s ease, max-height .45s ease;
+}
+
+/* when corresponding radio is checked, show the block */
+#tab1:checked ~ .content #content1,
+#tab2:checked ~ .content #content2 {
+	opacity: 1;
+	max-height: 600px; /* assez grand pour ton contenu */
+}
+
+.tab-container{
+	display: flex;
+	flex-wrap: wrap; 
+	gap: 4px;
+}
+
+.tab-container > label {
+    flex-basis: calc(50% - 2px); /* w-1/2 - 1/2 du gap */
+}
+
+.tab-container > .content {
+    flex-basis: 100%; /* w-full */
+}
 
 /*** ------------------------------- ***/
 /*** CHATBOX ----------------------- ***/
@@ -2958,4 +3112,17 @@ tw:hover, .tw:hover{filter: blur(0px); }
 /* Saut de ligne qu'on veut pas afficher */
 #qeel__online_users_list br, .quickreply br,  #parent_editor_simple #message-box>br {
 	display: none;
+}
+
+#viewforum_body__mark-as-read a::before{
+content: "\F340";
+  font-family: "Bootstrap-icons";
+}
+
+.sceditor-mention-user{
+	display: flex;
+}
+
+img{
+	display: initial!important;
 }
