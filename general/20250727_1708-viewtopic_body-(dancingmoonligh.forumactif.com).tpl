@@ -6,16 +6,16 @@
 <div class="mb-3 flex justify-end gap-2">
         <!-- Boutons : nouveau -->
         <!-- BEGIN switch_user_authpost -->
-        <div class="bg-white dark:bg-zinc-900 rounded">
-            <a class="text-gradient px-2 py-1 uppercase font-roboto" href="{U_POST_NEW_TOPIC}" rel="nofollow" title="{T_POST_NEW_TOPIC}">{L_POST_NEW_TOPIC}</a>&nbsp;
-        </div>        
+        <a class="bg-gradient hover:bg-white rounded py-1 px-3 text-white font-roboto uppercase shadow flex items-center" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">
+            <i class="ri-file-add-line mr-1 font-normal"></i> Poster un nouveau sujet
+        </a>
         <!-- END switch_user_authpost -->
 
         <!-- Bouton : répondre -->
         <!-- BEGIN switch_user_authreply -->
-        <div class="bg-gray-200 dark:bg-zinc-900 rounded">
-            <a class="text-gradient px-2 py-1 uppercase font-roboto" href="{U_POST_REPLY_TOPIC}" title="{T_POST_REPLY_TOPIC}">{L_POST_REPLY_TOPIC}</a>
-        </div>
+        <a class="bg-gradient hover:bg-none hover:bg-white dark:hover:bg-zinc-800 rounded py-1 px-3 text-white font-roboto uppercase shadow flex items-center" href="{U_POST_REPLY_TOPIC}" title="{T_POST_REPLY_TOPIC}">
+            <i class="ri-reply-line mr-1 font-normal"></i> {L_POST_REPLY_TOPIC}
+        </a>
         <!-- END switch_user_authreply -->
 </div>
 
@@ -151,14 +151,14 @@
                 <div class="post_avatar relative">
                     {postrow.displayed.POSTER_AVATAR}
                     <!-- En ligne -->
-                    <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white dark:border-zinc-900" style="bottom: -2px;right: -2px;"></div>
+                    <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white dark:border-zinc-900 hidden" style="bottom: -2px;right: -2px;"></div>
                     <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 dark:bg-zinc-700 rounded opacity-0 transition-all duration-300 ease-in-out translate-y-full">
                         <div class="post_rank bg-gradient uppercase text-white p-2 rounded-t">
                             <div class="border p-2 rounded-t">
                                 {postrow.displayed.POSTER_RANK_NEW}
                             </div>
                         </div>
-                        <div class="p-2 flex flex-col gap-2">
+                        <div class="p-2 flex flex-col gap-2" style="height: 83%;">
                             <div class="flex gap-2">
                                 <div class="w-1/2" style="height: 92px;">
                                     <img src="https://64.media.tumblr.com/ceac39dd9ca3c9d08a21eb2469774a13/50c3d4c7f402cba8-53/s400x600/f6ad1c4a7d041f51b9501c2c43b2e0b7b66bb3c9.jpg" alt="" class="profile_picture w-full h-full object-center object-cover">
@@ -183,11 +183,11 @@
                                 </div>
                             </div>
                             <div class="h-1/3 text-justify bg-white dark:bg-zinc-800 shadow p-1 rounded pt-0 overflow-auto">
-                                <span class="text-gradient font-roboto font-bold font-medium">triggers warning :</span> violences faites aux enfants et aux animaux, auto mutilation
+                                <span class="text-gradient font-roboto font-bold font-medium">triggers warning :</span> <span class="viewtopic_body__profile-triggers"></span>
                             </div>
 
                             <div class="h-1/3 text-justify bg-white dark:bg-zinc-800 shadow p-1 rounded pt-0 overflow-auto">
-                                <span class="text-gradient font-roboto font-bold font-medium">content warning :</span> blessure, alcoolisme, dépendances, pression familiale
+                                <span class="text-gradient font-roboto font-bold font-medium">content warning :</span> <span class="viewtopic_body__profile-content-warning"></span>
                             </div>
                         </div>
                     </div>
@@ -204,7 +204,7 @@
                             <span class="field_label uppercase font-roboto font-medium text-two">{postrow.displayed.profile_field.LABEL}</span>
                         
                             <!-- Contenu d'un champs de profil -->
-                            <span class="field_con²tent">{postrow.displayed.profile_field.CONTENT}</span>
+                            <span class="field_content">{postrow.displayed.profile_field.CONTENT}</span>
                         
                             <!-- Séparateur entre champs de profil -->                      
                             <span class="field_separator">{postrow.displayed.profile_field.SEPARATOR}</span>
@@ -267,8 +267,8 @@
 <!-- BARRE DE GESTION -------------->
 
 
-<div class="links_bar">
-  
+<div class="my-5">
+
         <!-- Lien "surveiller le sujet" -->
         <!-- BEGIN switch_user_logged_in -->
         <!-- BEGIN watchtopic -->
@@ -327,22 +327,30 @@
 <!-- BARRE DE GESTION -------------->
 
 
-<div class="links_bar">
-        <!-- Boutons : nouveau -->
+<div class="my-5 flex justify-between">
+    <!-- Boutons : nouveau -->
+    <div class="flex gap-2">
         <!-- BEGIN switch_user_authpost -->
-        <a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow" title="{T_POST_NEW_TOPIC}">{L_POST_NEW_TOPIC}</a>&nbsp;
+        <a class="bg-gradient hover:bg-white rounded py-1 px-3 text-white font-roboto uppercase shadow flex items-center" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">
+            <i class="ri-file-add-line mr-1 font-normal"></i> {L_POST_REPLY_TOPIC}
+        </a>
+
         <!-- END switch_user_authpost -->
 
         <!-- Bouton : répondre -->
+        <!-- Bouton : répondre -->
         <!-- BEGIN switch_user_authreply -->
-        <a class="buttons" href="{U_POST_REPLY_TOPIC}" title="{T_POST_REPLY_TOPIC}">{L_POST_REPLY_TOPIC}</a>
+        <a class="bg-gradient hover:bg-none hover:bg-white dark:hover:bg-zinc-800 rounded py-1 px-3 text-white font-roboto uppercase shadow flex items-center" href="{U_POST_REPLY_TOPIC}" title="{T_POST_REPLY_TOPIC}">
+            <i class="ri-reply-line mr-1 font-normal"></i> {L_POST_REPLY_TOPIC}
+        </a>
         <!-- END switch_user_authreply -->
-
+    </div>
+    
     <!-- BEGIN switch_plus_menu -->
     <span class="right">
         <a href="{U_FAVOURITE_JS_PLUS_MENU}">Ajouter le sujet à ses favoris</a>
     </span>
-  <!-- END switch_plus_menu -->
+<!-- END switch_plus_menu -->
 
 </div>
 
@@ -375,7 +383,7 @@
         {S_SELECT_MOD}&nbsp;
         <input class="button2" type="submit" value="{L_GO}" />
     </fieldset>
-  <span class="right hidden">{S_TOPIC_ADMIN}</span>
+<span class="right hidden">{S_TOPIC_ADMIN}</span>
 </form>
 <!-- END viewtopic_bottom -->
 
@@ -386,7 +394,18 @@
 <script>
 //<![CDATA[
     $( window ).on( "load", function() {
+        $(".online").each(function(){
+            $(this).removeClass('hidden');
+        });
+        
         $(".post").each(function(){
+            /* Warning et triggers */
+            $('.viewtopic_body__profile-triggers').text($('.user_field.field-triggers span.field_content').text());
+            $('.viewtopic_body__profile-content-warning').text($('.user_field.field-warnings span.field_content').text());
+            $('.user_field.field-triggers span.field_content').parent().addClass('hidden');
+            $('.user_field.field-warnings span.field_content').parent().addClass('hidden');
+
+
             $(this).find('.viewtopic_body__contact-dm').attr('href', $(this).find('.post_contact .profile-icon').attr('href'));
             $(this).find('.post_contact .profile-icon').addClass('hidden');
             let $postContainer = $(this); 
@@ -455,13 +474,12 @@
 </script>
 <!-- END switch_plus_menu -->
 <script type="text/javascript">
-    //<![CDATA[
+    /*<![CDATA[*/
     var hiddenMsgLabel = {
         visible: '{JS_HIDE_HIDDEN_MESSAGE}',
         hidden: '{JS_SHOW_HIDDEN_MESSAGE}'
     };
     
-    // Déclaration de la fonction pour afficher/masquer le message
     showHiddenMessage = function(id) {
         try {
             var regId = parseInt(id, 10);
@@ -470,9 +488,7 @@
             }
 
             if (regId > 0) {
-                // Fait basculer la visibilité de l'élément .post--[id]
                 $('.post--' + id).toggle(0, function() {
-                    // Met à jour le texte du lien en fonction de la nouvelle visibilité
                     if ($(this).is(":visible")) {
                         $('#hidden-title--' + id).html(hiddenMsgLabel.visible);
                     } else {
@@ -481,11 +497,9 @@
                 });
             }
         } catch (e) {
-            // Un bloc catch vide n'est généralement pas recommandé, 
-            // mais il est conservé ici pour respecter votre structure initiale.
         }
 
         return false;
     };
-    //]]>
+    /* //]]> */
 </script>
