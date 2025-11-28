@@ -6,7 +6,7 @@
 
     <!-- Username -->
     <div class="flex items-center gap-2">
-	    <div class="page-title rounded p-1 text-center shadow w-full bg-white">
+	    <div class="page-title rounded p-1 text-center shadow w-full bg-white dark:bg-zinc-800">
 		    <h1 style="color:var(--color5);">
 		    	{USERNAME}
 			</h1>
@@ -16,28 +16,28 @@
 			</span>
 		</div>
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
+			<a href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-envelope text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Contacter</span>
 		</div>
 
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
+			<a href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-file-earmark-plus text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Sujets ouverts</span>
 		</div>
 
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
+			<a href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-file-earmark-text text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Sujets participés</span>
 		</div>
 
 		<div class="profile_link_tooltip_trigger relative">
-			<a href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}" class="rounded shadow bg-white flex items-center profile_btn">
+			<a href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-pencil text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Messages</span>
@@ -48,11 +48,11 @@
     <div class="flex py-4 gap-4">
         <div>
         	<!-- Avatar -->
-	        <div class="relative profile_avatar p-2 shadow rounded bg-white" id="user_avatar">
+	        <div class="relative profile_avatar p-2 shadow rounded bg-white dark:bg-zinc-800" id="user_avatar">
 	        	{AVATAR_IMG}
 	        	<!-- Statut: en ligne -->
 	            <!-- BEGIN switch_show_status -->
-	            <div class="absolute bg-green-400 h-4 w-4 rounded-full border-2" style="bottom: 5px;right: 5px; border-color:white;"></div>
+	            <div class="absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white dark:border-zinc-800" style="bottom: 5px;right: 5px; "></div>
 	            <!-- END switch_show_status -->
 	        </div>
         </div>
@@ -60,12 +60,12 @@
       
 		<div class="w-full">
 			<div class="flex uppercase gap-4 mb-4">
-				<div class="w-1/2 p-2 rounded shadow text-center bg-white"><span id="nbmessages"></span> messages</div>
-				<div class="w-1/2 p-2 rounded shadow text-center bg-white"><span id="nbjetons"></span> jetons</div>
+				<div class="w-1/2 p-2 rounded shadow text-center bg-white dark:bg-zinc-800"><span id="nbmessages"></span> messages</div>
+				<div class="w-1/2 p-2 rounded shadow text-center bg-white dark:bg-zinc-800"><span id="nbjetons"></span> jetons</div>
 			</div>
 
 	        <!-- Profile info -->
-	        <div class="profile_infos w-full p-2 shadow rounded bg-white">
+	        <div class="profile_infos w-full p-2 shadow rounded bg-white dark:bg-zinc-800">
 
 	            <!-- Contact image link -->
 	            <form action="{S_PROFILE_ACTION}" method="post" name="post" class="profile_contact" style="display: none;">
@@ -76,18 +76,16 @@
 
 	            <!-- PROFILE FIELDS -->
 	            <div class="profile_content">
-
-	            	
 	                <!-- "Last visited" field -->
 	                <div class="profile_field">
-	                    <label>{L_LAST_VISITED} :</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{L_LAST_VISITED} :</label>
 	                    <field>{LAST_VISIT_TIME}</field>
 	                </div>
 
 	               <!-- "Private messages" field -->
 	                <!-- BEGIN switch_dhow_mp -->
 	                <div class="profile_field">
-	                    <label>{L_PRIVATE_MSG} :</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{L_PRIVATE_MSG} :</label>
 	                    <field>{PRIVATE_MSG}</field>
 	                </div>
 	                <!-- END switch_dhow_mp -->
@@ -95,7 +93,7 @@
 	                <!-- Other fields -->
 	                <!-- BEGIN profile_field -->
 	                <div class="profile_field" id="field_id{profile_field.ID}">
-	                    <label>{profile_field.LABEL}</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{profile_field.LABEL}</label>
 	                    <field>{profile_field.CONTENT}
 
 	                        <!-- "Message" field contents -->
@@ -116,7 +114,7 @@
 	                <!-- BEGIN switch_rpg -->
 	                <!-- BEGIN rpg_fields -->
 	                <div class="profile_field">
-	                    <label>{switch_rpg.rpg_fields.F_NAME} :</label>
+	                    <label class="text-one font-roboto uppercase font-semibold font-bold">{switch_rpg.rpg_fields.F_NAME} :</label>
 	                    <field>{switch_rpg.rpg_fields.F_VALUE_NEW}</field>
 	                </div>
 	                <!-- END rpg_fields -->
@@ -135,24 +133,24 @@
     </div>
 
     <div id="profile_liens" class="flex gap-4">
-    	<a href="#" id="profile_pres" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center bg-white">
+    	<a href="#" id="profile_pres" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center bg-white dark:bg-zinc-800">
     		<i class="mr-1 bi bi-person-vcard"></i> 
     		Présentation
     	</a>
-    	<a href="#" id="profile_fdl" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center">
+    	<a href="#" id="profile_fdl" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center bg-white dark:bg-zinc-800">
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mr-1 bi bi-person-plus-fill" viewBox="0 0 16 16">
     		  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
     		  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
     		</svg>
     		Fiche de liens
     	</a>
-    	<a href="#" id="profile_insta" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center">
+    	<a href="#" id="profile_insta" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center bg-white dark:bg-zinc-800">
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mr-1 bi bi-instagram" viewBox="0 0 16 16">
     		  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
     		</svg> 
     		Instagram
     	</a>
-    	<a href="#" id="profile_tinder" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center">
+    	<a href="#" id="profile_tinder" class="w-1/4 rounded shadow text-center p-2 profile_btn flex items-center justify-center bg-white dark:bg-zinc-800">
     		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mr-1 bi bi-fire" viewBox="0 0 16 16">
 			  <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
 			</svg> 

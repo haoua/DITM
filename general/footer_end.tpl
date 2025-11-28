@@ -55,13 +55,15 @@ $(document).ready(function() {
 </script>
 
 <script>
-    location.pathname == "/search" && location.search == "?search_id=draftsearch" && $(function () {
+    location.pathname == "/search" && location.search.startsWith("?search_id=draftsearch") && $(function () {
         $('body').addClass('drafts__main');
+        
         $('h1.page-title').addClass('DITM_page_title font-bold text-white text-center font-yeseva lowercase bg-gradient rounded-t py-2');
         $('h1.DITM_page_title').removeClass('page-title');
         $('.row3').removeClass('panel');
-        $('.panel').addClass('bg-zinc-200 p-2 rounded-b mb-4');
+        $('.panel').addClass('bg-zinc-200 dark:bg-zinc-800 p-2 rounded-b mb-4');
         $('.panel').removeClass('panel');
+        
         if($(".table1 tbody tr td").length == 1){
             $('thead').addClass('hidden');
             $('td').addClass('bg-white rounded shadow p-2');
@@ -70,10 +72,10 @@ $(document).ready(function() {
                 $(this).addClass("hidden");
             });
 
-            $('table').addClass("rounded bg-zinc-100 shadow mb-2");
+            $('table').addClass("rounded bg-zinc-100 dark:bg-zinc-900 shadow mb-2");
 
             $('.row3 p.right-box').html($('.row3 p.right-box').html().replace('::', ''));
-            $('.row3 p.right-box a').wrap('<div class="bg-white w-fit rounded shadow">');
+            $('.row3 p.right-box a').wrap('<div class="bg-white dark:bg-zinc-900 w-fit rounded shadow">');
             $('.row3 p.right-box a').addClass('p-1 px-2 text-gradient flex');
             $('p.right-box:first').addClass('flex gap-4 justify-end');
             $('p.right-box:first').append($('.submit-buttons').html());
@@ -82,11 +84,11 @@ $(document).ready(function() {
             $('.button1').addClass('bg-red-500 text-white p-1 px-2 rounded shadow');
 
             $('tbody td').each(function(){
-                $(this).addClass("border-b border-blue-gray-50 p-2 bg-white text-left");
+                $(this).addClass("border-b border-blue-gray-50 dark:border-gray-700 p-2 bg-white dark:bg-zinc-700 text-left");
             });
 
             $('thead th').each(function(){
-                $(this).addClass("p-2 text-left border-b border-blue-gray-100");
+                $(this).addClass("p-2 text-left border-b border-blue-gray-100 dark:border-gray-600");
             });
 
             $('thead th:last').removeClass('text-left');
@@ -94,6 +96,13 @@ $(document).ready(function() {
 
             $('thead th:last').addClass('w-1');
             $("thead th").eq(-2).addClass('w-1');
+
+            $('tbody tr:last td').each(function(){
+                $(this).removeClass("border-b");
+            });
+
+            $('tbody tr:last td:first').addClass('rounded-bl');
+            $('tbody tr:last td:last').addClass('rounded-br');
             
             $('table').find('tr:last').find('td:first').addClass('rounded-bl'); 
             $('table').find('tr:last').find('td:last').addClass('rounded-br');
@@ -101,6 +110,7 @@ $(document).ready(function() {
             $('.topictitle').each(function(){
                 $(this).removeClass('topictitle');
             });
+        
         }
     });
 
@@ -115,7 +125,7 @@ $(document).ready(function() {
         $('.login__register-infos .content').addClass('pb-2');
 
         $('#main-content').addClass('flex gap-5');
-        $('.inner').addClass('rounded shadow bg-zinc-200 pb-2');
+        $('.inner').addClass('rounded shadow bg-zinc-200 dark:bg-zinc-800 pb-2');
         $('.inner .content').removeClass('content');
 
         $('.login__form .h3').addClass('bg-gradient p-2 text-white rounded-t text-center flex items-center font-roboto uppercase text-lg');
@@ -124,7 +134,7 @@ $(document).ready(function() {
         $('.login__register-infos .h3').addClass('bg-gradient p-2 text-white rounded-t text-center flex items-center font-roboto uppercase text-lg');
         $('.login__register-infos .h3').html('<i class="ri-sparkling-line font-normal mr-1"></i> Nous rejoindre');
         $('.login__register-infos p').addClass('m-2 p-2 rounded shadow');
-        $('.login__register-infos p:first').addClass('bg-white text-center');
+        $('.login__register-infos p:first').addClass('bg-white dark:bg-zinc-900 text-center');
         $('.login__register-infos p:first').html('Sous les néons et les secrets de la Nouvelle-Orléans, un nouveau chapitre vous attend.<br>Créez votre compte et entrez dans la danse.');
 
         $('.login__register-infos p:last').addClass('my-0 bg-gradient text-center');
@@ -136,7 +146,7 @@ $(document).ready(function() {
         $('.login__register-infos hr').addClass('hidden');
 
         $('.fields1').removeClass('left');
-        $('.fields1').addClass('p-2 rounded bg-white m-2 mb-0');
+        $('.fields1').addClass('p-2 rounded bg-white dark:bg-zinc-900 m-2 mb-0');
     
         $('fieldset dl:first').addClass('flex items-center mb-2');
         $('fieldset dl:first dt').addClass('w-32');
@@ -152,8 +162,8 @@ $(document).ready(function() {
         $('.password-container img').css('top', '50%');
         $('.password-container img').css('transform', 'translate(-50%, -50%)');
 
-        $('#username').addClass('bg-zinc-100 rounded w-full');
-        $('#password').addClass('bg-zinc-100 rounded w-full');
+        $('#username').addClass('bg-zinc-100 dark:bg-zinc-700 rounded w-full');
+        $('#password').addClass('bg-zinc-100 dark:bg-zinc-700 rounded w-full');
 
         $('fieldset dl:last').addClass('block mt-1');
         $('fieldset dl:last dt').addClass('hidden');

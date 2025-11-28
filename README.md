@@ -28,6 +28,9 @@ buttons =>
 * ~~MAJ de bootstrap pour les icons manquants : Profil présentation, QEEL bouton~~ 1.4.0 -> 1.13.0
 * Affichage mobile : réponse
 * Titre comme sur la recherche ?
+* Taille des boutons fin de tableau brouillon
+* Couleur de fond des smiley
+* Popup rechercher un utilisateur : messages privés
 ### Memberlist
 * Ajouter des liens (présentation etc)
 * Afficher utilisateur en ligne
@@ -40,11 +43,11 @@ buttons =>
 * Modale Wombat
 ### Page Accueil
 * ~~Module météo icon~~
-* QEEL
-    * Liens PL ou autres 
+* ~~QEEL~~
+    * ~~Liens PL ou autres~~ 
 
 ## TO DO TOUT DE SUITE
-* MP
+* ~~MP~~
 * ~~Recherche par messages~~
 * ~~Affichage des catégories~~
 * ~~QEEL~~
@@ -55,13 +58,13 @@ buttons =>
 * PA
 * Infos importante en haut ?
 * ~~Notification~~
-* Mentions
+* ~~Mentions~~
 * Mentions automatique recherche
 * ~~Sous forums ?!~~
-* Barre de navigation
+* ~~Barre de navigation~~
 * ~~Message Admin~~ // A tester avec d'autre modèle que les membres en danger 
-* Pré lien
-* Présentation
+* ~~Pré lien~~
+* ~~Présentation~~
 * ~~Poster un nouveau message : ~~
     * ~~Prévisualisation~~
     * ~~Vérifier le poste d'un nouveau sujet~~
@@ -71,25 +74,31 @@ buttons =>
     * Ajouter un sondage
     * ~~Les dés ?~~
 * Pop-up recherche
+* Bouton bas MP
 
 ### Dark theme
-* MP
-* Recherche par messages
-* Affichage des catégories
-* QEEL
+* ~~MP~~
+* ~~Recherche par messages~~
+* ~~Affichage des catégories~~
+* ~~QEEL~~
 * ~~Member List~~
-* Affichage d'un forum
-* Affichage d'un message
-* Pop Up profil
+* ~~Affichage d'un forum~~
+* ~~Affichage d'un message~~
+* ~~Pop Up profil~~
 * PA
 * Infos importante en haut ?
-* Notification
-* Mentions
+* ~~Notification~~
+* ~~Mentions~~
 * Mentions automatique recherche
-* Sous forums ?!
-* Barre de navigation
-* Message Admin
-* Pré lien
-* Présentation
-* Poster un nouveau message :
+* ~~Sous forums ?!~~
+* ~~Barre de navigation~~
+* ~~Message Admin~~
+* ~~Pré lien~~
+* ~~Présentation~~
+* ~~Poster un nouveau message~~
 * Pop-up recherche
+* ~~Brouillon~~
+
+# V4
+## A améliorer
+* boutons mentionner

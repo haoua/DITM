@@ -13,7 +13,7 @@
 
 
 <!-- Conteneur d'un sujet -->
-<div class="DITM_topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS} bg-white p-2 flex shadow mb-3 rounded items-center">
+<div class="DITM_topicslist_row row {topics_list_box.row.FOLDER_CLASSNAME} {topics_list_box.row.TOPIC_READ_STATUS} bg-white dark:bg-zinc-900 p-2 flex shadow mb-3 rounded items-center">
 
 
     <!-- Image statut d'un sujet -->
@@ -22,7 +22,7 @@
     </div>
     
     <!-- Avatar du dernier posteur-->
-    <div class="topicslist-row__lastpost-user-img w-14 h-14 bg-cover rounded shadow p-1 bg-zinc-200 mx-3">
+    <div class="topicslist-row__lastpost-user-img w-14 h-14 bg-cover rounded shadow p-1 bg-zinc-200 dark:bg-zinc-800 mx-3">
         <div class="w-full h-full border rounded"></div>
         <div class="hidden">
             <!-- BEGIN avatar -->
@@ -69,6 +69,14 @@
             <!-- END nav_tree -->
         </span>
 
+        
+        <!-- Description du sujet -->
+        <!-- BEGIN switch_description -->
+        <div class="topics_list_box__description font-roboto uppercase bg-zinc-100 dark:bg-zinc-700 rounded p-1 w-fit mr-3" style="font-size: 11px;">
+            {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
+        </div>
+        <!-- END switch_description -->
+
     </div>
 
 
@@ -100,14 +108,6 @@
             {topics_list_box.row.LAST_POST_IMG}
         </div>
     </div>
-
-
-    <!-- Description du sujet -->
-    <!-- BEGIN switch_description -->
-    <div class="topicslist-description">
-        {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
-    </div>
-    <!-- END switch_description -->
 
 
 </div>

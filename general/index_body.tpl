@@ -122,13 +122,13 @@
 					</div>
 				</div>
 			</div>
-			<div id="DITM_last_connected" class="w-1/4 flex flex-col">
+			<div id="DITM_last_connected" class="w-1/4 flex flex-col" style="max-height: 182px;">
 				<div class="bg-gradient flex rounded-t py-2 px-1">
 					<div class="bg-white dark:bg-zinc-900 rounded py-1 px-4 font-bold uppercase font-roboto mx-auto">
 						<span id="qeel_nb-active-users" class="text-gradient"></span>
 					</div>
 				</div>
-				<div class="rounded-b bg-white dark:bg-zinc-900 shadow p-2 grow">
+				<div class="rounded-b bg-white dark:bg-zinc-900 shadow p-2 grow text-justify overflow-auto">
 					{L_CONNECTED_MEMBERS}
 				</div>
 			</div>
@@ -154,20 +154,20 @@
 		</div>
 	</div>
 	<div class="w-10 flex flex-col justify-between">
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-suit-heart mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/t1-reglement" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-git-repository-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-people-fill mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/t4-staff" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-vip-crown-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-chat-right-dots mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/f20-all-i-need-is" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-team-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-briefcase-fill mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/f6-guests-area" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-questionnaire-line mx-auto" style="font-size:20px;"></i>
 		</a>
-		<a href="/memberlist" class="text-white bg-gradient rounded shadow h-10 flex items-center">
-			<i class="bi bi-stars mx-auto" style="font-size:20px;"></i>
+		<a href="https://dancinginthemoon.forumactif.com/t5-credits" class="text-white bg-gradient rounded shadow h-10 flex items-center font-normal hover:bg-white hover:bg-none">
+			<i class="ri-copyright-line mx-auto" style="font-size:20px;"></i>
 		</a>
 	</div>
 </div>
