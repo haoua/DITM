@@ -358,7 +358,7 @@
             <!----------------------------->
             <!-- Page : gestion d'avatar -->
             <!-- BEGIN switch_avatar_block -->
-            <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_AVATAR_PANEL}</h1> // HAOUA
+            <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{L_AVATAR_PANEL}</h1>
             <div class="p-2 bg-white dark:bg-zinc-900 rounded-b mb-5 profil_editavatar">
 
                 <fieldset>

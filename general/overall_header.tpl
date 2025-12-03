@@ -282,23 +282,18 @@
 
 <body id="blanktheme">
 	<!-- Structure du forum -->
-	<div class="main_forum rounded p-5 bg-zinc-100 dark:bg-zinc-900">
-
-		<!-- Ascenseur : renvoi vers le haut de la page -->
-		<a id="top" name="top" accesskey="t"></a>
+	 <!-- #nom pour ascenseur : renvoi vers le haut de la page -->
+	<div id="top" name="top" class="main_forum rounded bg-zinc-100 dark:bg-zinc-900">
 		{JAVASCRIPT}
-	  
-	  
 	   <!----------------------------------------------->
 	   <!-- ENTETE DU FORUM (au-dessus de la pub) -------------->
 
 		<div id="page-header">
-
 		   <!-- Bannière -->
 			<a href="{U_INDEX}" id="header"><img loading="lazy" src="{LOGO}" alt="{L_INDEX}" /></a>
 
 		   <!-- Barre de navigation -->
-			<ul class="navbar flex py-3 rounded shadow items-center justify-center mt-3 bg-white dark:bg-zinc-800">
+			<ul class="navbar flex mx-5 py-3 rounded shadow items-center justify-center mt-3 bg-white dark:bg-zinc-800">
 				<li>{GENERATED_NAV_BAR}</li>
 			</ul>
 			<!-- Fin de la barre de nav -->
@@ -337,7 +332,7 @@
 		</div>
 		<!-- Fin de l'entête -->
 
-		<div id="top_template" class="bg-zinc-200 dark:bg-zinc-800 rounded sadow p-2 mt-3">
+		<div id="top_template" class="bg-zinc-200 dark:bg-zinc-800 rounded sadow p-2 my-3 mx-5">
 			<div class="flex gap-2">
 				<div class="flex flex-col items-stretch">
 					<div class="bg-white dark:bg-zinc-900 rounded shadow p-2">
@@ -392,18 +387,18 @@
 
 					<div class="p-2 bg-white dark:bg-zinc-900 flex items-center justify-between mt-2 rounded shadow grow">
 						<span class="text-zinc-600  dark:text-zinc-300 font-roboto uppercase font-bold">Aide le forum en votant</span>	
-						<a href="http://www.root-top.com/topsite/obsession27/in.php?ID=27531"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
-						<a href="http://www.root-top.com/topsite/pubrpgdesign/in.php?ID=3513"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
-						<a href="http://www.root-top.com/topsite/toppg/in.php?ID=255"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
-						<a href="http://www.root-top.com/topsite/bazzart/in.php?ID=3313"><i class="ri-ghost-line font-normal text-xl dark:text-zinc-300"></i></a>
+						<a href="http://www.root-top.com/topsite/obsession27/in.php?ID=27531"><i class="ri-gift-2-line font-normal text-xl text-one"></i></a>
+						<a href="http://www.root-top.com/topsite/pubrpgdesign/in.php?ID=3513"><i class="ri-gift-2-line font-normal text-xl text-one"></i></a>
+						<a href="http://www.root-top.com/topsite/toppg/in.php?ID=255"><i class="ri-gift-2-line font-normal text-xl text-one"></i></a>
+						<a href="http://www.root-top.com/topsite/bazzart/in.php?ID=3313"><i class="ri-gift-2-line font-normal text-xl text-one"></i></a>
 					</div>
 				</div>
 
 			
 				<div class="flex flex-col gap-2">
-					<a href="https://dancinginthemoon.forumactif.com/t1-reglement" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">règlement</a>
-					<a href="https://dancinginthemoon.forumactif.com/t2-contexte" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">contexte</a>
-					<a href="https://dancinginthemoon.forumactif.com/t21-bottin-des-avatars" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">bottin</a>
+					<a href="https://dancinginthemoon.forumactif.com/t1-reglement" class="bg-two rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">règlement</a>
+					<a href="https://dancinginthemoon.forumactif.com/t2-contexte" class="bg-two rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">contexte</a>
+					<a href="https://dancinginthemoon.forumactif.com/t21-bottin-des-avatars" class="bg-two rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">bottin</a>
 					<div class="bg-white dark:bg-zinc-900 p-2 rounded text-xs text-justify grow flex items-center justify-center">
 						Toutes les idées & textes appartiennent à l'entièreté du forum ainsi que de son staff. Toute reproduction est interdite. Merci à toutes les personnes ayant participé : Neikal, Ezae, Prism, Brighty, Valar.
 					</div>
@@ -414,11 +409,11 @@
 						<div>						
 							<span class="pastille bg-one text-white m-0">DITM</span> est un forum city réel sans prise de tête basé à la <strong>Nouvelle-Orléans</strong> aux Etats-Unis / réservation du faceclaim durant <i>7 jours</i> / écart de <i>5 ans maximum</i> entre l'avatar et le personnage / <span class="text-one">1 rp par mois</span> / aucun minimum de mots / les initiales ne sont pas acceptées pour le pseudo.
 							<span class="text-center block flex justify-evenly mt-1">
-								<img class="w-5" src="https://em-content.zobj.net/source/google/439/jack-o-lantern_1f383.png" alt="">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/christmas-tree_1f384.png" alt="">
 								<img class="w-5" src="https://em-content.zobj.net/source/google/439/saxophone_1f3b7.png" alt="">
 								<img class="w-5" src="https://em-content.zobj.net/source/google/439/sparkles_2728.png" alt="">
-								<img class="w-5" src="https://em-content.zobj.net/source/google/439/tropical-drink_1f379.png" alt="">
-								<img class="w-5" src="https://em-content.zobj.net/source/google/439/nazar-amulet_1f9ff.png" alt="">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/clinking-glasses_1f942.png" alt="">
+								<img class="w-5" src="https://em-content.zobj.net/source/google/439/snowman-without-snow_26c4.png" alt="">
 							</span>
 						</div>
 					</div>
@@ -433,7 +428,7 @@
 		<!----------------------------------------------->
 		<!-- CONTENU DU FORUM -------------->
 	   
-		<div id="page-body">
+		<div id="page-body" class="p-5 pt-0">
 
 			<div id="{ID_CONTENT_CONTAINER}" {CLASS_CONTENT_CONTAINER}>
 				<div id="outer-wrapper">

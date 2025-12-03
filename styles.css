@@ -16,13 +16,13 @@
 /* VARIABLE DU MODE DE BASE (ici clair) */
 :root {
 	color-scheme: light;
-	--header: url('https://i.postimg.cc/kGw1LZ4D/hh.png');
+	--header: url('https://i.postimg.cc/4xsLNjBT/1.png');
 
-	--color1: #efa45a;
-	--color2: #e2b59c;
+	--color1: #d24541;
+	--color2: #e5f1d7;
 	--color3: #cba6de;
 	--color4: #e5edcf;
-	--color5: #e5ac75;
+	--color5: #5cbc72;
 	--color6: #fff;
 	--colortitre: #fff;
 	--coloracc: #cba6de;
@@ -31,10 +31,10 @@
 	--gradient: linear-gradient(to right, var(--color1), var(--color5));
 	--shadow: 0 0 5px gray;
 
-	--background: url('https://i.postimg.cc/MKVctcW9/2.png');
+	--background: url('https://i.postimg.cc/5t6qFmf7/mur-blanc-1194-5956.png');
 
 	--neutral: #fffff;
-	--neutralDark: #d76929;
+	--neutralDark: #5cbc72;
 	--neutralDarker: #dce3f4;
 
 	--contrast: #171938;
@@ -63,9 +63,9 @@
 	--whiteBG: #FFFFFF; 
 	--back: #fafbfc;
 
-	--one: 241, 167, 91;
-	--two: 224, 134, 80;
-	--three: 230, 176, 120;
+	--one: 210, 67, 64;
+	--two: 191, 163, 135;
+	--three: 83, 191, 112;
 
 	--gra: -webkit-linear-gradient(45deg, rgba(var(--one), 1) 0%, rgba(var(--two), 1) 50%, rgba(var(--three), 1) 100%);
 	--gra800: -webkit-linear-gradient(45deg, rgba(var(--one), .8) 0%, rgba(var(--two), .8) 50%, rgba(var(--three), .8) 100%);
@@ -87,10 +87,10 @@
 /* VARIABLES DU MODE INVERSE (ici sombre) */
 [data-color-scheme="dark"] {
 	color-scheme: dark;
-	--header: url('https://i.postimg.cc/Y2xs4439/hh2.png');
+	--header: url('https://i.postimg.cc/prwYhzxr/2.png');
 
 	--neutral: #3f4347;
-	--neutralDark: #be4628;
+	--neutralDark: #bf7033;
 	--neutralDarker: #33373c;
 
 	--contrast: #e5e5f0;
@@ -100,20 +100,20 @@
 	--accentClr: #7583ff;
 	--accentClrDark: #333c92;
 
-	--color1: #93241e;
-	--color2: #b46846;
-	--color3: #bd4728;
+	--color1: #eaad44;
+	--color2: #eaad44;
+	--color3: #bf7033;
 	--color6: #462d23;
-	--color5: #be4628;
+	--color5: #bf7033;
 	--color4: #000;
 	--coloracc: #453a47;
 	--colorcontainer: #2d201a;
 	--colortitre: #d3d3dd;
-	--transparent: #be4628;
+	--transparent: #18181b;
 	--gradient: linear-gradient(to right, var(--color1), var(--color3), var(--color2));
 	--shadow: 0 0 5px black;
 
-	--background:  url('https://i.postimg.cc/yxRgSxQL/1.png');
+	--background:  url('https://i.postimg.cc/tTZw6dWX/noir-grunge-texture-du-mur.jpg');
 	--textColor: #fffefe;
 	--textColorAccent: #fffefe;
 
@@ -123,14 +123,14 @@
 
 	--mainColor: var(--color1);  
 	--whiteBG: #462d23;
-	--back: #be4628;
+	--back: #bf7033;
 
-	--pacolor: #be4628;
+	--pacolor: #bf7033;
 	--patitle: #462d23;
 
-	--one: 145, 35, 30;
-	--two: 190, 70, 40;
-	--three: 179, 108, 73;
+	--one: 234, 170, 64;
+	--two: 191, 112, 51;
+	--three: 232, 179, 83;
 
 	/* TAILWIND UTILITIES */
 	--bg-zinc-100: 63 63 70; /* .bg-zinc-700 */
@@ -309,7 +309,7 @@ body#sce_smilies_body{
 .main_forum {
 	/*largeur forum*/
 	width: 940px;
-	margin: 50px auto 20px auto;
+	margin: 57px auto 20px auto;
 	background: var(--transparent);
 }
 
@@ -319,9 +319,9 @@ body#sce_smilies_body{
 	background-image: var(--header);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: auto;
-	width: 900px;
-	height: 495px;
+	background-size: cover;
+	width: 100%;
+	height: 451px;
 	display: block;
 }
 
@@ -520,9 +520,9 @@ button {
 
 /* MENUS DEROULANTS --- */
 select {
-	background-color: rgb(var(--bg-input));
-	padding: 0.5rem!important;
-	border-radius: 0.25rem;
+	font-size: var(--normal-size);
+	padding: 8px 10px;
+	color: var(--textColor);
 }
 
 select:focus-visible {
@@ -823,7 +823,8 @@ a.specials_links:empty {
 	border-radius: .25rem;  
 }
 
-#fa_notifications {
+#fa_notifications,
+#fa_right a.rightHeaderLink[href*="/register"] {
 	border-radius: .25rem;
 	text-transform: uppercase;
 }
@@ -1332,7 +1333,6 @@ li.fa_separator {
 
 /* Suppression des liens peu utilisés*/
 
-.navbar li:has(a[href^="/discover"]), /* activités */ 
 .navbar li:has(a[href^="/faq"]), /*faq*/
 .navbar li:has(a[href^="/calendar"]), /*calendrier*/
 .navbar li:has(a[href^="/groups"]), /*groupes*/
@@ -1710,6 +1710,15 @@ a.groups:last-child {
 	background: var(--color6);
 	border-radius: 3px;
 	padding: 2px;
+}
+
+
+
+.topicslist-description {
+	padding: 5px;
+	background: var(--color6);
+	border-radius: 3px;
+	width: 100%;
 }
 
 /* ligne qui séparent les annonces et les notes des autres sujets (à activer dans "message > configuration") */
@@ -2235,8 +2244,10 @@ overflow: auto;
 	grid-gap: 10px;
 }
 
+.profile_field label,
 .profile_field label>span {
-	color: inherit!important;
+	font-weight: 600;
+	color: white!important;
 }
 
 .profile_field field {
@@ -2457,13 +2468,13 @@ margin-right: 5px;
 	color: white;
 	font-family: "Yeseva One", serif;
 	font-weight: normal;
-	font-size: 16px;
+	font-size: 22px;
 }
 
 .DITM_userlist_profil img + a{
 	transition: all 0.3s ease;
 	z-index: 2;
-	transform: translateY(85%);
+	transform: translateY(80%);
 }
 
 .DITM_userlist_profil:hover img + a{
@@ -2512,7 +2523,7 @@ margin-right: 5px;
 }
 
 #privmsgs-menu img{
-	display: none!important;
+	display: none;
 }
 
 #privmsgs-menu li:not(:has(a)) {
@@ -2590,6 +2601,7 @@ margin-right: 5px;
 /*** EDITION DE PROFIL ------------- ***/
 /* Onglets dans la modification de profil */
 #tabs ul {
+	margin-top: 0.75rem; /* .mt-3 */
 	font-size: 12px;
 	display: flex;
 	justify-content: space-between;
@@ -2616,7 +2628,10 @@ margin-right: 5px;
 }
 
 /* Suppression de l'onglet "amis et ignorés" / Membres suivis / Favoris */
-#tabs li:nth-child(4), #tabs li:nth-child(5), #tabs li:nth-child(8) {
+#tabs li:has(a[href$="tags"]),
+#tabs li:has(a[href$="friendsfoes"]),
+#tabs li:has(a[href$="favouritesearch"])
+{
 	display: none;
 }
 
@@ -2667,15 +2682,22 @@ margin-right: 5px;
 
 #profile-edit__main input:not([type='reset']) {
 	border-radius: 0.25rem; /* .rounded */
-	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1));
+	margin-bottom: 0.25rem;
 }
 
-#profile-edit__main input:not([type='checkbox']):not([type='submit']):not([type='reset']) {    
-	width: 100%;
+#profile-edit__main input:not([type='checkbox']):not([type='submit']):not([type='reset']):not([type='radio']) {    
+	width: 100%!important;
 }
 
 .dark #profile-edit__main input:not([type='reset']) {
 
+}
+
+#profile-edit__main dt span{
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: inherit!important;
 }
 
 /*** ------------------------------- ***/
@@ -2891,11 +2913,6 @@ margin-right: 5px;
 
 .presentation_DITM strong{
 	color: var(--mainColor);
-}
-
-/* A SUPPRIMER APRES */
-.dark  .bg-white{
-	background-color: rgb(var(--bg-white));
 }
 
 .glass{
@@ -3118,6 +3135,7 @@ tw:hover, .tw:hover{filter: blur(0px); }
 content: "\F340";
   font-family: "Bootstrap-icons";
 }
+
 
 .sceditor-mention-user{
 	display: flex;
