@@ -119,6 +119,7 @@
                     <i class="ri-router-line"></i>
                 </a>
             </div>
+            <!-- BEGIN switch_user_logged_in -->
             <ul class="flex gap-1 mr-1 hidden">
                 <li class="btn-quote">
                     <a href="{postrow.displayed.QUOTE_URL}" class="hover:color-one">
@@ -141,6 +142,7 @@
                     </a>
                 </li>
             </ul>
+            <!-- END switch_user_logged_in -->
         </div>
 
         <!-- Contenenur des messages -->
@@ -267,8 +269,7 @@
 <!-- BARRE DE GESTION -------------->
 
 
-<div class="my-5">
-
+<div class="my-5 hidden">
         <!-- Lien "surveiller le sujet" -->
         <!-- BEGIN switch_user_logged_in -->
         <!-- BEGIN watchtopic -->
@@ -278,7 +279,7 @@
         
         <!-- BEGIN switch_plus_menu -->
         <!-- Lien "sujets surveillés" -->
-        &nbsp;<a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}">Sujets surveillés</a>
+        &nbsp;<a class="specials_links hidden" href="{U_WATCHSEARCH_JS_PLUS_MENU}">Sujets surveillés</a>
         <!-- END switch_plus_menu -->
 
     <!-- Pagination -->
@@ -312,17 +313,6 @@
 </div>
 <!-- END switch_forum_rules -->
 
-
-<!-------------------------------->
-<!-- REPONSE RAPIDE -------------->
-
-<div class="bg-zinc-200 dark:bg-zinc-800 rounded shadow quickreply p-2" id="quickreply_content">
-    <!-- BEGIN switch_user_logged_in -->
-        {QUICK_REPLY_FORM}
-    <!-- END switch_user_logged_in -->
-</div>
-
-
 <!---------------------------------->
 <!-- BARRE DE GESTION -------------->
 
@@ -347,14 +337,46 @@
     </div>
     
     <!-- BEGIN switch_plus_menu -->
-    <span class="right">
+    <span class="right hidden">
         <a href="{U_FAVOURITE_JS_PLUS_MENU}">Ajouter le sujet à ses favoris</a>
     </span>
 <!-- END switch_plus_menu -->
 
+    <!-- Lien "surveiller le sujet" -->
+    <!-- BEGIN switch_user_logged_in -->
+    <!-- BEGIN watchtopic -->
+    <span class="specials_links">{S_WATCH_TOPIC}</span>
+    <!-- END watchtopic -->
+    <!-- END switch_user_logged_in -->
+
 </div>
 
-<br/>
+<!-------------------------------->
+<!-- REPONSE RAPIDE -------------->
+<div class="bg-zinc-200 dark:bg-zinc-800 rounded shadow quickreply p-2 mb-5" id="quickreply_content">
+    <!-- BEGIN switch_user_logged_in -->
+        {QUICK_REPLY_FORM}
+    <!-- END switch_user_logged_in -->
+</div>
+
+
+<div class="bg-zinc-200 dark:bg-zinc-800 rounded flex justify-between items-center px-3 py-2 dark:text-gray-300 mb-5 shadow">
+    <div class="text-xs">
+        <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
+        <span class="navigation_chain">
+            {NAV_CAT_DESC}
+        </span>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        {PAGINATION}
+    </div>
+</div>
+
+
+
 
 <!-------------------------------------------->
 <!-- SAUTER VERS UN AUTRE FORUM -------------->
@@ -502,4 +524,8 @@
         return false;
     };
     /* //]]> */
+</script>
+
+<script>
+    $(".pagination").html($(".pagination").html().replace('•<span> <strong>1</strong>', '<span><strong>1</strong>'));
 </script>

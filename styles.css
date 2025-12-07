@@ -141,6 +141,10 @@
 
 /*** ----------------------------
 *** GENERAL --------------- ***/
+img{
+	display: initial;
+}
+
 /* BACKGROUND ---*/
 .bg-color5{background: var(--color5);}
 
@@ -367,11 +371,16 @@ body#sce_smilies_body{
 	width: 52.5px;
 	z-index: 999;
 	bottom: 10px;
+	right: 10px;
 }
 
 /* Lien de renvoi haut/bas */
-.sidebar_bottom>a {
+.sidebar_bottom > a {
 	background: var(--neutralDark);
+}
+
+.sidebar_bottom > a:hover, .color-scheme-toggle:hover {
+	color: rgb(var(--bg-white));
 }
 
 /* BOUTON CHANGEMENT DE THEME ---*/
@@ -405,9 +414,6 @@ body#sce_smilies_body{
 	color: var(--textColor);
 }
 
-.color-scheme-toggle:hover {
-	color: var(--accentClr);
-}
 
 /****** ------------------------------------------------------------------------------
 ****** GÉNÉRALITÉS ------------------------------------------------------------------ 
@@ -649,9 +655,10 @@ body#sce_smilies_body {
 
 /*lien actif : page sur laquelle vous vous trouvez */
 .pagination span strong {
-	background-color: var(--neutralDark);
-	border-radius: 3px;
-	padding: 1px 4px;
+	background-color: rgb(var(--bg-white));
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	border-radius: 0.25rem;
 }
 
 /*suppression de l'image-lien "aller à la page suivante" */
@@ -741,12 +748,14 @@ summary {
 .specials_links a,
 a.specials_links,
 #viewforum_body__mark-as-read a {
-	padding: 0.25rem 0.5rem;
+	padding: 0.25rem 0.75rem;
 	border-radius: .25rem;
 	background: var(--gra);
 	color: white;
 	font-family: "Roboto Condensed", sans-serif;
 	text-transform: uppercase;
+	min-height: 29px;
+	display:inline-block;
 }
 
 .specials_links a:hover,
@@ -811,13 +820,10 @@ a.specials_links:empty {
 	background:var(--back);
 }
 
-#fa_right a.rightHeaderLink[href*="/login"] {
-}
-
 #fa_right a.rightHeaderLink[href*="/register"] {
 }
 
-#fa_welcome {
+#fa_right a.rightHeaderLink[href*="/login"], #fa_welcome {
 	text-transform: uppercase;
 	margin-right: .5rem;
 	border-radius: .25rem;  
@@ -1336,7 +1342,8 @@ li.fa_separator {
 .navbar li:has(a[href^="/faq"]), /*faq*/
 .navbar li:has(a[href^="/calendar"]), /*calendrier*/
 .navbar li:has(a[href^="/groups"]), /*groupes*/
-.navbar li:has(a[href^="/images"])/*Dernières images*/
+.navbar li:has(a[href^="/images"]),/*Dernières images*/
+.navbar li:has(a[href^="/discover"])/*Activités*/
 {
 	display: none;
 }
@@ -1562,7 +1569,7 @@ a.groups:last-child {
 }
 
 
-/****** ------------------------------------------------------------------------------
+/****** -------------------------------------------------------------------------------------
 ****** LISTE DES SUJETS ------------------------------------------------------------- ******/
 
 /*** --------------------------------------- ***/
@@ -1582,7 +1589,7 @@ a.groups:last-child {
 .navigation_chain a {
 	font-size: var(--normal-size);
 	/*rétablit la taille des liens*/
-	margin-right: 8px;
+	margin-right: 3px;
 }
 
 .navigation_chain a::before {
@@ -1590,6 +1597,27 @@ a.groups:last-child {
 	/*symbole ou texte modifiable*/
 	font-size: var(--nomal-size);
 	margin-right: 3px;
+}
+
+.navigation_chain a:hover::before{
+	color: initial;
+}
+
+.navigation_chain a:first-child::before {
+  content: "";
+  margin: 0;
+}
+
+.navigation_chain a span{
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+	padding: .25rem;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+	border-radius: 0.25rem;
+	display: inline-block;
+
 }
 
 /* BOUTONS DE MESSAGE : Répondre, Nouveau,... ---* 
@@ -1754,13 +1782,19 @@ a.groups:last-child {
 	display: block;
 }
 
+
+
+
+
+
+
 /****** -------------------------------------------------------------------------------------
 ****** AFFICHAGE D'UN SUJET --------------------------------------------------------- ******/
-
-
-
-
 .title_container {	
+}
+
+.DITM_post_content_right div div:first-child{
+	text-align: justify;
 }
 
 /*---- forum ---*/
@@ -2022,6 +2056,11 @@ button.rep-button .rep-nb {
 	gap: 0.25rem; /* gap-2 */
 }
 
+#quick_reply .button2{
+	text-transform: uppercase;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
 #quick_reply > div:nth-child(2) .button2{
 	flex: 1;
 	border-radius: 0.25rem; /* .rounded */
@@ -2225,6 +2264,30 @@ blockquote cite a {
 	opacity: 0.8;
 }
 
+/* Footer Liste des sujets */ 
+.jumpbox select, .quickmod select,
+.jumpbox .button2, .quickmod .button2{
+	background-color: rgb(var(--bg-zinc-200));
+	border-radius: 0.25rem; /* .rounded */
+ 	/* .shadow */
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	padding: 0.5rem;
+}
+
+.jumpbox .button2, .quickmod .button2{
+	margin-left: 10px;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+}
+
+
+
+
+
 /*** ----------------------------
 *** LISTE DES MEMBRES ------ ***/
 
@@ -2233,8 +2296,12 @@ blockquote cite a {
 /*** ----------------------------
 *** PAGE DE PROFIL -------- ***/
 .profile_content {
-height: 265px;
-overflow: auto;
+	height: 265px;
+	overflow: auto;
+}
+
+.profile_content field div{
+	text-align: justify;
 }
 
 .profile_field {
@@ -3141,6 +3208,3 @@ content: "\F340";
 	display: flex;
 }
 
-img{
-	display: initial!important;
-}

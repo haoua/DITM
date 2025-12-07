@@ -338,4 +338,12 @@ $(document).ready(function() {
   
 </script>
 
+<script>
+    if($(".msgdie-panel").text().indexOf('Aucun message') != -1){
+        $(".msgdie-panel").parent().append('<div class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">Informations</div>');
+        $(".msgdie-panel").parent().append('<div class="bg-zinc-200 dark:bg-zinc-800 rounded shadow p-3"><div class="bg-white dark:bg-zinc-900 rounded shadow text-center p-2">Aucun message ou sujet ne correspond à vos critères de recherche.</div></div>');
+        $(".msgdie-panel").addClass('hidden');
+    }
+</script>
+
 </html>

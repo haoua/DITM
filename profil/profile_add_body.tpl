@@ -64,7 +64,7 @@
             <!-- END switch_span_div -->
           
           
-            <!----------------------------->
+            <!-------------------------------------->
             <!-- Cadre champs de profil du compte -->
             <!-- BEGIN switch_profile_fields -->
             <h1 class="DITM_page_title font-bold text-white text-center uppercase bg-gradient rounded-t py-2">{switch_informations_menu.switch_profile_fields.L_PROFILE_FIELDS}</h1>

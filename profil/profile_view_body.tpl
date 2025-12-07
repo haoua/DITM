@@ -5,7 +5,7 @@
 <div class="rounded p-4 bg-gradient" id="wombat">
 
     <!-- Username -->
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-1">
 	    <div class="page-title rounded p-1 text-center shadow w-full bg-white dark:bg-zinc-800">
 		    <h1 style="color:var(--color5);">
 		    	{USERNAME}
@@ -15,28 +15,38 @@
 				{POSTER_RANK}
 			</span>
 		</div>
-		<div class="profile_link_tooltip_trigger relative">
+		<div class="flex flex-col gap-1">
+			<div class="flex gap-1">
+				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}">Envoyer un MP</a>
+				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}">Messages</a>
+			</div>
+			<div class="flex gap-1">
+				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}">Sujets ouverts</a>
+				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}">Sujets participés</a>
+			</div>
+		</div>
+		<div class="profile_link_tooltip_trigger hidden relative">
 			<a href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-envelope text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Contacter</span>
 		</div>
 
-		<div class="profile_link_tooltip_trigger relative">
+		<div class="profile_link_tooltip_trigger hidden relative">
 			<a href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-file-earmark-plus text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Sujets ouverts</span>
 		</div>
 
-		<div class="profile_link_tooltip_trigger relative">
+		<div class="profile_link_tooltip_trigger hidden relative">
 			<a href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-file-earmark-text text-gradient mx-auto"></i>
 			</a>
 			<span class="profile_link_tooltip uppercase absolute p-2 rounded shadow whitespace-nowrap">Sujets participés</span>
 		</div>
 
-		<div class="profile_link_tooltip_trigger relative">
+		<div class="profile_link_tooltip_trigger hidden relative">
 			<a href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}" class="rounded shadow bg-white dark:bg-zinc-800 flex items-center profile_btn">
 				<i class="bi bi-pencil text-gradient mx-auto"></i>
 			</a>

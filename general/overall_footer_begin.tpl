@@ -21,8 +21,6 @@
 <!-------------------------------->
 <!-------------------------------->
 
-
-<br/>
 <div class="clear"></div>
 
 <!-- Conteneur du bas de page, ne pas retirer l'ID -->
