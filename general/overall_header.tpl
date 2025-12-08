@@ -396,9 +396,9 @@
 
 			
 				<div class="flex flex-col gap-2">
-					<a href="https://dancinginthemoon.forumactif.com/t1-reglement" class="bg-two rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">règlement</a>
-					<a href="https://dancinginthemoon.forumactif.com/t2-contexte" class="bg-two rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">contexte</a>
-					<a href="https://dancinginthemoon.forumactif.com/t21-bottin-des-avatars" class="bg-two rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">bottin</a>
+					<a href="https://dancinginthemoon.forumactif.com/t1-reglement" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">règlement</a>
+					<a href="https://dancinginthemoon.forumactif.com/t2-contexte" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">contexte</a>
+					<a href="https://dancinginthemoon.forumactif.com/t21-bottin-des-avatars" class="bg-one rounded text-white font-roboto uppercase text-center px-4 shadow hover:bg-white dark:hover:bg-zinc-900">bottin</a>
 					<div class="bg-white dark:bg-zinc-900 p-2 rounded text-xs text-justify grow flex items-center justify-center">
 						Toutes les idées & textes appartiennent à l'entièreté du forum ainsi que de son staff. Toute reproduction est interdite. Merci à toutes les personnes ayant participé : Neikal, Ezae, Prism, Brighty, Valar.
 					</div>

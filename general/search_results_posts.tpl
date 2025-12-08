@@ -1,5 +1,5 @@
 <br />
-<div class="shadow rounded bg-zinc-200 dark:bg-zinc-800 mb-3">
+<div class="shadow rounded bg-zinc-200 dark:bg-zinc-800 mb-3 pb-2">
     <h1 class="DITM_page_title text-white text-center font-yeseva bg-gradient rounded-t py-2">{L_SEARCH_MATCHES}</h1>
     <div class="p-2">
         <!-- BEGIN searchresults -->
@@ -28,9 +28,9 @@
             </div>
         </div>
         <!-- END searchresults -->
-
-        <p id="search__pagination" class="DITM_pagination bg-white dark:bg-zinc-900 p-2 rounded shadow text-center">{PAGINATION}</p>
     </div>
+
+            <p id="search__pagination" class="DITM_pagination bg-white dark:bg-zinc-900 p-2 rounded shadow text-center mt-2 mx-2">{PAGINATION}</p>
 </div>
 
 {JUMPBOX}

@@ -166,19 +166,19 @@
     
         <!----------------------------------------------->
         <!-- BOUTONS (envoyer, prévisu,...) -------------->
-        <fieldset class="submit-buttons posting-buttons flex justify-around">
+        <fieldset class="submit-buttons posting-buttons flex justify-around gap-2">
             {S_HIDDEN_FORM_FIELDS}
             <input type="hidden" name="lt" value="{LAST_TOPIC_ID}" />
             <!-- BEGIN switch_preview -->
-            <input class="button2 w-1/6 rounded shadow py-1 bg-white dark:bg-zinc-900 text-one" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" />&nbsp;
+            <input class="button2 grow rounded shadow py-1 bg-white dark:bg-zinc-900 text-one" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" />&nbsp;
             <!-- END switch_preview -->
             <!-- BEGIN switch_draft -->
-            <input class="button2 w-1/6 rounded shadow py-1 bg-white dark:bg-zinc-900 text-two {BTN_DRAFT_CLASS}" type="submit" name="draft" value="{L_DRAFT}" title="{L_DRAFT_TITLE}" tabindex="7" accesskey="d" {switch_draft.DISABLED_DRAFT} />&nbsp;
+            <input class="button2 grow rounded shadow py-1 bg-white dark:bg-zinc-900 text-two {BTN_DRAFT_CLASS}" type="submit" name="draft" value="{L_DRAFT}" title="{L_DRAFT_TITLE}" tabindex="7" accesskey="d" {switch_draft.DISABLED_DRAFT} />&nbsp;
             <!-- END switch_draft -->
             <!-- BEGIN switch_publish -->
-            <input class="button2" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" />&nbsp;
+            <input class="button2 grow" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" />&nbsp;
             <!-- END switch_publish -->
-            <input class="button1 w-1/6 rounded shadow py-1 bg-gradient text-white" type="submit" name="post" value="{L_SUBMIT}" title="{L_SUBMIT_TITLE}" tabindex="6" accesskey="s" {DISABLED_SUBMIT} />
+            <input class="button1 grow rounded shadow py-1 bg-gradient text-white" type="submit" name="post" value="{L_SUBMIT}" title="{L_SUBMIT_TITLE}" tabindex="6" accesskey="s" {DISABLED_SUBMIT} />
             <!-- BEGIN switch_signature -->
             <input type="hidden" name="submit" value="{L_SUBMIT}" />
             <!-- END switch_signature -->

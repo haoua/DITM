@@ -17,12 +17,12 @@
 		</div>
 		<div class="flex flex-col gap-1">
 			<div class="flex gap-1">
-				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}">Envoyer un MP</a>
-				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}">Messages</a>
+				<a class="shadow bg-white dark:bg-zinc-800 rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/privmsg?mode=post&u={CUR_USER_ID}">Envoyer un MP</a>
+				<a class="shadow bg-white dark:bg-zinc-800 rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/spa/u{CUR_USER_ID}">Messages</a>
 			</div>
 			<div class="flex gap-1">
-				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}">Sujets ouverts</a>
-				<a class="shadow bg-white rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}">Sujets participés</a>
+				<a class="shadow bg-white dark:bg-zinc-800 rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/st/u{CUR_USER_ID}">Sujets ouverts</a>
+				<a class="shadow bg-white dark:bg-zinc-800 rounded w-36 uppercase text-center p-1" href="https://dancinginthemoon.forumactif.com/sta/u{CUR_USER_ID}">Sujets participés</a>
 			</div>
 		</div>
 		<div class="profile_link_tooltip_trigger hidden relative">

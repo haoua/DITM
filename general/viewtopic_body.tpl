@@ -100,22 +100,22 @@
 
             <div class="flex gap-2">
                 <!-- Citer -->
-                <a href="{postrow.displayed.QUOTE_URL}" class="rounded p-4 bg-two font-normal text-white h-14 w-14 flex items-center text-2xl justify-center">
+                <a href="{postrow.displayed.QUOTE_URL}" class="rounded p-4 bg-two font-normal text-white h-10 w-10 flex items-center text-2xl justify-center">
                     <i class="ri-double-quotes-l"></i>
                 </a>
 
                 <!-- Editer -->
-                <a href="{postrow.displayed.EDIT_URL}" class="rounded p-4 bg-two font-normal text-white h-14 w-14 flex items-center text-2xl justify-center">
+                <a href="{postrow.displayed.EDIT_URL}" class="rounded p-4 bg-two font-normal text-white h-10 w-10 flex items-center text-2xl justify-center">
                     <i class="ri-edit-2-line"></i>
                 </a>
 
                 <!-- Supprimer -->
-                <a href="{postrow.displayed.DELETE_URL}" class="rounded p-4 bg-two font-normal text-white h-14 w-14 flex items-center text-2xl justify-center">
+                <a href="{postrow.displayed.DELETE_URL}" class="rounded p-4 bg-two font-normal text-white h-10 w-10 flex items-center text-2xl justify-center">
                     <i class="ri-chat-delete-line"></i>
                 </a>
 
                 <!-- IP -->
-                <a href="{postrow.displayed.IP_URL}" class="rounded p-4 bg-two font-normal text-white h-14 w-14 flex items-center text-2xl justify-center">
+                <a href="{postrow.displayed.IP_URL}" class="rounded p-4 bg-two font-normal text-white h-10 w-10 flex items-center text-2xl justify-center">
                     <i class="ri-router-line"></i>
                 </a>
             </div>
@@ -156,17 +156,17 @@
                     <div class="{postrow.displayed.ONLINE_IMG_NEW} absolute bg-green-400 h-4 w-4 rounded-full border-2 border-white dark:border-zinc-900 hidden" style="bottom: -2px;right: -2px;"></div>
                     <div class="absolute flex flex-col w-full h-full top-0 bg-zinc-100 dark:bg-zinc-700 rounded opacity-0 transition-all duration-300 ease-in-out translate-y-full">
                         <div class="post_rank bg-gradient uppercase text-white p-2 rounded-t">
-                            <div class="border p-2 rounded-t">
+                            <div class="border p-2 rounded">
                                 {postrow.displayed.POSTER_RANK_NEW}
                             </div>
                         </div>
                         <div class="p-2 flex flex-col gap-2" style="height: 83%;">
                             <div class="flex gap-2">
                                 <div class="w-1/2" style="height: 92px;">
-                                    <img src="https://64.media.tumblr.com/ceac39dd9ca3c9d08a21eb2469774a13/50c3d4c7f402cba8-53/s400x600/f6ad1c4a7d041f51b9501c2c43b2e0b7b66bb3c9.jpg" alt="" class="profile_picture w-full h-full object-center object-cover">
+                                    <img src="https://64.media.tumblr.com/e386107c8e3181dd06e1398f01dcbfa0/19a00fcb2139260f-55/s400x600/4fd4a939b1e2c2646e2e3841fc566e5512aa6555.pnj" alt="" class="profile_picture w-full h-full object-center object-cover">
                                 </div>
                                 <div class="flex-1 flex flex-col gap-1">
-                                    <div class="flex gap-1 h-1/2">
+                                    <div class="flex gap-1 h-1/2">  
                                         <a class="message__profile-links-pres opacity-0 bg-gradient text-white rounded w-1/2 flex items-center justify-around" style="height: 40px;" href="#">
                                             <i class="bi bi-person-vcard"></i>
                                         </a>
@@ -528,4 +528,4 @@
 
 <script>
     $(".pagination").html($(".pagination").html().replace('•<span> <strong>1</strong>', '<span><strong>1</strong>'));
-</script>
+</script>	

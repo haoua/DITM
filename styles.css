@@ -142,7 +142,7 @@
 /*** ----------------------------
 *** GENERAL --------------- ***/
 img{
-	display: initial;
+	display: initial!important;
 }
 
 /* BACKGROUND ---*/
@@ -204,21 +204,25 @@ blockquote {
 /*--- décoration de text ---*/
 titre {
 	display: inline-block;
-	margin-bottom: 2px;
 	background: var(--gradient);
 	padding: 0 10px;
-	border-radius: 10px;
+	border-radius: 0.25rem;
 	text-transform: uppercase;
-	color: var(--colortitre);
-	font-family: Cinzel;
+	color: white;
+	font-family: "Yeseva One", serif;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
 }
 
 titre2 {
 	display: inline-block;
-	box-shadow: inset 0 -.7em var(--color1);
-	font-family: 'Manrope',sans-Cinzel;
+	box-shadow: inset 0 -.7em rgba(var(--one), .5);
+	font-family: "Roboto Condensed", sans-serif;
 	padding: 0 3px;
 	margin-bottom: 5px;
+	font-weight: 500;
 }
 
 soustitre {
@@ -332,7 +336,7 @@ body#sce_smilies_body{
 /* Conteneur de toutes les sous-sections
 * comme les encadrés d'options, de rappel, etc... */
 .panel {
-	background: var(--color6);
+	background: var(--bg-white);
 	border: var(--border);
 	border-radius: 5px;
 	padding: 10px;
@@ -622,7 +626,7 @@ body#sce_smilies_body {
 	padding-left: 0.5rem; /* .px-2 */
 	padding-right: 0.5rem; /* .px-2 */
 	border-radius: 0.25rem; /* .rounded */
-  	background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1)); /* .bg-zinc-200 */
+  	background-color: rgb(var(--bg-zinc-100) / var(--tw-bg-opacity, 1)); /* .bg-zinc-200 */
 
 	display: inline-flex; 
 	align-items: center; 
@@ -1455,6 +1459,10 @@ a.mainmenu img {
 }
 
 /* dernier message */
+.forum-row__last_post_infos, .DITM_topicslist-stats {
+  min-width: 199px;
+}
+
 .forum-row__last_post_infos img{
 	display: initial;
 }
@@ -1590,6 +1598,7 @@ a.groups:last-child {
 	font-size: var(--normal-size);
 	/*rétablit la taille des liens*/
 	margin-right: 3px;
+	color: rgb(var(--one));
 }
 
 .navigation_chain a::before {
@@ -1614,7 +1623,7 @@ a.groups:last-child {
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
 	padding: .25rem;
-	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+	background-color: rgb(var(--bg-white) / var(--tw-bg-opacity, 1));
 	border-radius: 0.25rem;
 	display: inline-block;
 
@@ -2157,7 +2166,10 @@ a.mentiontag:hover {
 	background: rgb(var(--two));
 }
 
-.group-mentiontag{color: white;}
+.group-mentiontag{
+	color: white;
+	background: rgb(var(--three))!important;
+}
 
 .group-mentiontag:hover{
 	background-clip: text;
@@ -2312,9 +2324,9 @@ blockquote cite a {
 }
 
 .profile_field label,
-.profile_field label>span {
+.profile_field label > span {
 	font-weight: 600;
-	color: white!important;
+	color: rgb(var(--one))!important;
 }
 
 .profile_field field {
@@ -2590,7 +2602,7 @@ margin-right: 5px;
 }
 
 #privmsgs-menu img{
-	display: none;
+	display: none!important;
 }
 
 #privmsgs-menu li:not(:has(a)) {
@@ -3176,8 +3188,7 @@ text-align: right;
 
 /*** ------------------------------- ***/
 /*** SURCHARGE TAILWINDCSS --------- ***/
-img{display:initial}
-/* .bg-white{background:var(--whiteBG);} */
+ .bg-white{background:rgb(var(--bg-white))!important;}
 .container{
 	max-width: 100%!important;
 }
