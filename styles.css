@@ -1250,22 +1250,22 @@ li.fa_separator {
 	top: 50%;
 	left: 50%;
 	opacity: 0;
-	width: 94%;
-	padding: 30px;
+	width: 100%;
+	max-width: 560px!important;
 	transition: 0.2s opacity ease;
 	transform: translate(-50%, -50%);
-	border-radius: 10px;
-	background: var(--colorcontainer);
-	padding: 50px;
-	box-shadow: var(--shadowBox);
+	border-radius: 0.25rem;
+	background: rgb(var(--bg-zinc-200));
+
+	padding: 2.5rem;
+
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* Champs à remplir */
 .switcheroo__form-row {
-	display: flex;
-	flex-flow: column;
-	align-items: flex-start;
-	margin-bottom: 20px;
 }
 
 /* Nom du champ */
@@ -1281,30 +1281,31 @@ li.fa_separator {
 	padding: 6px !important;
 	border-radius: 4px;
 	width: 100%;
-	background-color: var(--neutral);
+	background-color: rgb(var(--bg-input));
 	color: var(--contrastLight);
 	cursor: text;
+	margin-bottom: 15px;
 }
 
 /* Bouton de connexion */
 .switcheroo__form-button {
-	border-radius: 8px;
-	padding: 4px 10px 5px;
+	border-radius: 0.25rem;
+	padding: 0.5rem 0;
 	border: none;
 	outline: none;
 	box-shadow: none;
 	text-transform: uppercase;
 	font-size: 14px;
-	align-self: center;
-	background-color: var(--accentClr);
+	background: var(--gra);
+	font-family: "Roboto Condensed", sans-serif;
 	cursor: pointer;
-	color: var(--neutral);
+	color: white;
 	font-weight: 600;
-	margin-top: 10px;
+	width: 100%;
 }
 
 .switcheroo__form-button:hover {
-	background: var(--contrastLight);
+	background: rgb(var(--one));
 }
 
 .monomer-modal.monomer-open,
@@ -1319,21 +1320,18 @@ li.fa_separator {
 	width: 18px;
 	height: 18px;
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 10px;
+	right: 10px;
 	cursor: pointer;
-	color: var(--textColor);
+	color: rgb(var(--bg-white));
 	border: 0;
 	outline: none;
-	background: var(--contrastLighter);
-	border-radius: 4px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	background-color: rgb(252 165 165);
+	border-radius: .25rem;
 }
 
 .monomer-close:hover {
-	background: var(--contrastLight);
+	background-color: rgb(239 68 68);
 }
 
 /*** ------------------------------- ***/
